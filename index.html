@@ -10,7 +10,7 @@
 
 <meta
     name="description"
-    content="JumaaBonus – ausgewählte Casino Deals, Twitch Streams, Bonusaktionen und Community an einem Ort."
+    content="JumaaBonus – Casino Deals, Twitch Streams und Community an einem Ort."
 >
 
 <meta name="theme-color" content="#050505">
@@ -808,8 +808,6 @@ img {
         0 0 10px #50ff7a;
 }
 
-/* REAL BITKINGZ LOGO */
-
 .bk-logo {
     width: 190px;
     height: 120px;
@@ -1098,8 +1096,6 @@ img {
     font-weight: 900;
 }
 
-/* BITKINGZ LOGO IN DEAL CARD */
-
 .deal-logo {
     width: 100px;
     height: 70px;
@@ -1164,8 +1160,6 @@ img {
 
     font-weight: 900;
 }
-
-/* COMING SOON */
 
 .coming-card {
     display: flex;
@@ -1266,13 +1260,6 @@ img {
         1px solid rgba(255,106,0,0.16);
 
     color: var(--orange);
-}
-
-.benefit-icon svg {
-    width: 21px;
-    height: 21px;
-
-    stroke: currentColor;
 }
 
 .benefit-card h3 {
@@ -1530,7 +1517,32 @@ details {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.018);
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.025),
+            rgba(255,255,255,0.01)
+        );
+
+    transition:
+        border-color 0.25s,
+        background 0.25s;
+}
+
+details:hover {
+    border-color:
+        rgba(255,106,0,0.16);
+}
+
+details[open] {
+    border-color:
+        rgba(255,106,0,0.25);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,106,0,0.045),
+            rgba(255,255,255,0.012)
+        );
 }
 
 summary {
@@ -1539,7 +1551,7 @@ summary {
     cursor: pointer;
 
     padding:
-        21px 22px;
+        22px 24px;
 
     display: flex;
 
@@ -1551,7 +1563,7 @@ summary {
 
     font-size: 13px;
 
-    font-weight: 800;
+    font-weight: 850;
 }
 
 summary::-webkit-details-marker {
@@ -1561,9 +1573,13 @@ summary::-webkit-details-marker {
 summary::after {
     content: "+";
 
+    flex-shrink: 0;
+
     color: var(--orange);
 
-    font-size: 22px;
+    font-size: 23px;
+
+    font-weight: 400;
 }
 
 details[open] summary::after {
@@ -1572,13 +1588,15 @@ details[open] summary::after {
 
 .faq-answer {
     padding:
-        0 22px 22px;
+        0 24px 24px;
+
+    max-width: 900px;
 
     color: var(--muted);
 
     font-size: 12px;
 
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 /* ======================================================
@@ -1892,6 +1910,10 @@ details[open] summary::after {
             column;
     }
 
+    .faq-answer {
+        font-size: 11.5px;
+    }
+
 }
 
 </style>
@@ -1965,9 +1987,7 @@ details[open] summary::after {
             rel="noopener noreferrer"
             class="social-button discord-header"
         >
-
             DISCORD
-
         </a>
 
     </div>
@@ -2262,8 +2282,6 @@ details[open] summary::after {
 
     <div class="deals-grid">
 
-        <!-- BITKINGZ -->
-
         <article class="deal-card featured reveal">
 
             <div class="deal-badge">
@@ -2301,8 +2319,6 @@ details[open] summary::after {
             </a>
 
         </article>
-
-        <!-- PARTNER -->
 
         <article class="deal-card coming-card reveal">
 
@@ -2369,9 +2385,9 @@ details[open] summary::after {
             Casino-Angebote mit Entertainment,
             Streams und Community.
 
-            Unser Ziel ist eine übersichtliche
-            Plattform, auf der du alle wichtigen
-            Inhalte schnell findest.
+            Unser Ziel ist ein zentraler Ort,
+            an dem unsere Community alle wichtigen
+            Inhalte schnell findet.
 
         </p>
 
@@ -2392,7 +2408,7 @@ details[open] summary::after {
             <p>
 
                 Kein unnötiges Suchen auf mehreren
-                Plattformen.
+                Seiten.
 
                 Bei JumaaBonus findest du unsere
                 aktuellen Partner-Angebote zentral
@@ -2400,8 +2416,9 @@ details[open] summary::after {
 
                 <br><br>
 
-                Neue Deals können jederzeit ergänzt
-                werden.
+                Neue Deals und Partner können jederzeit
+                ergänzt werden, sodass unser Angebot
+                gemeinsam mit der Community weiter wächst.
 
             </p>
 
@@ -2419,15 +2436,16 @@ details[open] summary::after {
 
             <p>
 
+                JumaaBonus besteht nicht nur aus Deals.
+
                 Über unseren Twitch-Kanal kannst du
-                Streams und weitere Inhalte von
-                JumaaBonus verfolgen.
+                Streams und weitere Inhalte verfolgen
+                und direkt Teil des Geschehens sein.
 
                 <br><br>
 
                 Twitch ist sowohl im Header als auch
-                im Community-Bereich direkt
-                erreichbar.
+                im Community-Bereich erreichbar.
 
             </p>
 
@@ -2445,12 +2463,17 @@ details[open] summary::after {
 
             <p>
 
-                Über unseren Discord bleibst du
-                direkt mit der Community verbunden.
+                Der Discord ist der zentrale Treffpunkt
+                unserer Community.
 
-                Dort können neue Deals,
-                Stream-Informationen und wichtige
-                Updates zentral geteilt werden.
+                Dort teilen wir neue Deals,
+                Stream-Informationen, Ankündigungen
+                und weitere Updates.
+
+                <br><br>
+
+                So bleibst du immer mit JumaaBonus
+                und der Community verbunden.
 
             </p>
 
@@ -2494,8 +2517,6 @@ details[open] summary::after {
 
         <div class="community-grid">
 
-            <!-- DISCORD -->
-
             <div class="community-card">
 
                 <div class="community-platform-info">
@@ -2534,8 +2555,6 @@ details[open] summary::after {
                 </a>
 
             </div>
-
-            <!-- TWITCH -->
 
             <div class="community-card">
 
@@ -2602,8 +2621,16 @@ details[open] summary::after {
         </div>
 
         <h2 class="section-title">
-            FAQ
+            Häufige Fragen
         </h2>
+
+        <p class="section-intro">
+
+            Hier findest du die wichtigsten Infos rund um
+            JumaaBonus, unsere Community, Deals,
+            Twitch und Discord.
+
+        </p>
 
     </div>
 
@@ -2617,9 +2644,49 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                JumaaBonus ist eine Plattform für
-                ausgewählte Casino-Deals,
-                Twitch-Content und Community-Updates.
+                JumaaBonus ist keine klassische Plattform,
+                sondern eine Community rund um Casino-Content,
+                aktuelle Deals, Streams und gemeinsame Unterhaltung.
+
+                <br><br>
+
+                Unser Ziel ist es, einen zentralen Ort zu schaffen,
+                an dem sich unsere Community informieren,
+                austauschen und neue Inhalte entdecken kann.
+
+                <br><br>
+
+                Neben aktuellen Deals findest du bei uns auch
+                Twitch-Streams, Discord-Updates und weitere Inhalte,
+                die sich rund um unsere Community entwickeln.
+
+            </div>
+
+        </details>
+
+        <details>
+
+            <summary>
+                Was finde ich bei JumaaBonus?
+            </summary>
+
+            <div class="faq-answer">
+
+                Bei JumaaBonus findest du ausgewählte Deals,
+                aktuelle Partner-Angebote, Twitch-Content
+                und direkte Verbindungen zu unserer Community.
+
+                <br><br>
+
+                Wir möchten die wichtigsten Inhalte möglichst
+                übersichtlich an einem Ort bündeln, damit du nicht
+                zwischen verschiedenen Seiten suchen musst.
+
+                <br><br>
+
+                Sobald neue Partner, Aktionen oder Inhalte
+                hinzukommen, werden sie direkt auf unserer
+                Website oder in der Community veröffentlicht.
 
             </div>
 
@@ -2633,9 +2700,23 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Über den jeweiligen Deal-Button
-                gelangst du direkt zur Seite des
-                entsprechenden Partners.
+                Unsere aktuellen Partner-Deals findest du direkt
+                im Bereich „Aktuelle Deals“.
+
+                <br><br>
+
+                Über den jeweiligen Button gelangst du auf die
+                Website des entsprechenden Partners und kannst
+                dir dort das jeweilige Angebot ansehen.
+
+                <br><br>
+
+                Einige dieser Links können Affiliate-Links sein.
+                Das bedeutet, dass JumaaBonus möglicherweise
+                eine Provision erhält, wenn du über unseren Link
+                ein Angebot nutzt.
+
+                Für dich entstehen dadurch keine zusätzlichen Kosten.
 
             </div>
 
@@ -2644,14 +2725,27 @@ details[open] summary::after {
         <details>
 
             <summary>
-                Wo finde ich den Twitch-Kanal?
+                Warum gibt es JumaaBonus?
             </summary>
 
             <div class="faq-answer">
 
-                Twitch ist oben rechts im Header
-                und zusätzlich im Community-Bereich
-                verlinkt.
+                JumaaBonus wurde aufgebaut, um Deals,
+                Entertainment und Community an einem Ort
+                zusammenzubringen.
+
+                <br><br>
+
+                Statt einfach nur einzelne Links zu teilen,
+                möchten wir langfristig eine aktive Community
+                aufbauen, in der Streams, neue Partnerschaften,
+                Aktionen und weitere Inhalte gemeinsam verfolgt
+                werden können.
+
+                <br><br>
+
+                Die Website dient dabei als zentrale Übersicht
+                für alles, was rund um JumaaBonus passiert.
 
             </div>
 
@@ -2660,14 +2754,125 @@ details[open] summary::after {
         <details>
 
             <summary>
-                Gibt es eine Discord-Community?
+                Wo finde ich eure Streams?
             </summary>
 
             <div class="faq-answer">
 
-                Ja. Über den Discord-Link kannst du
-                unserer Community beitreten und
-                aktuelle Updates verfolgen.
+                Unsere Streams findest du auf unserem
+                Twitch-Kanal.
+
+                <br><br>
+
+                Du kannst Twitch direkt über den Button
+                oben rechts auf der Website oder über
+                den Community-Bereich öffnen.
+
+                <br><br>
+
+                Dort findest du unsere Streams und weitere
+                Live-Inhalte von JumaaBonus.
+
+            </div>
+
+        </details>
+
+        <details>
+
+            <summary>
+                Was erwartet mich auf dem Discord?
+            </summary>
+
+            <div class="faq-answer">
+
+                Unser Discord ist der zentrale Treffpunkt
+                der JumaaBonus-Community.
+
+                <br><br>
+
+                Dort teilen wir neue Deals, Stream-Infos,
+                Ankündigungen und weitere Updates.
+
+                <br><br>
+
+                Außerdem kannst du dich dort mit anderen
+                Mitgliedern austauschen und bleibst über
+                neue Inhalte auf dem Laufenden.
+
+            </div>
+
+        </details>
+
+        <details>
+
+            <summary>
+                Werden neue Deals und Partner hinzukommen?
+            </summary>
+
+            <div class="faq-answer">
+
+                Ja. JumaaBonus soll sich mit der Zeit
+                weiterentwickeln und gemeinsam mit der
+                Community wachsen.
+
+                <br><br>
+
+                Neue Partner, Deals und weitere Inhalte
+                werden ergänzt, sobald passende
+                Möglichkeiten verfügbar sind.
+
+                <br><br>
+
+                Dadurch soll unsere Auswahl Schritt für
+                Schritt größer und abwechslungsreicher werden.
+
+            </div>
+
+        </details>
+
+        <details>
+
+            <summary>
+                Kostet JumaaBonus etwas?
+            </summary>
+
+            <div class="faq-answer">
+
+                Nein. Die Nutzung unserer Website,
+                unseres Twitch-Kanals und der
+                Discord-Community ist grundsätzlich kostenlos.
+
+                <br><br>
+
+                Bei externen Casino-Angeboten oder Partnerseiten
+                gelten selbstverständlich die jeweiligen
+                Bedingungen des entsprechenden Anbieters.
+
+            </div>
+
+        </details>
+
+        <details>
+
+            <summary>
+                Muss ich volljährig sein?
+            </summary>
+
+            <div class="faq-answer">
+
+                Ja. Inhalte rund um Glücksspiel und
+                Casino-Angebote richten sich ausschließlich
+                an volljährige Personen.
+
+                <br><br>
+
+                Glücksspiel sollte immer verantwortungsvoll
+                betrachtet werden.
+
+                Spiele nur mit Geld, dessen Verlust du
+                verkraften kannst, und informiere dich über
+                die gesetzlichen Regelungen an deinem
+                Aufenthaltsort.
 
             </div>
 
@@ -2734,8 +2939,8 @@ details[open] summary::after {
 
             <p class="footer-description">
 
-                Ausgewählte Deals, Twitch Content
-                und Community – zentral an einem Ort.
+                Deals, Streams und Community –
+                zentral an einem Ort.
 
             </p>
 
@@ -2762,7 +2967,7 @@ details[open] summary::after {
                 </a>
 
                 <a href="#faq">
-                    FAQ
+                    Häufige Fragen
                 </a>
 
             </div>
@@ -2780,6 +2985,7 @@ details[open] summary::after {
                 <a
                     href="https://www.twitch.tv/jumaabonus"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     Twitch
                 </a>
@@ -2787,6 +2993,7 @@ details[open] summary::after {
                 <a
                     href="https://discord.gg/NKxX9DB3ay"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     Discord
                 </a>
