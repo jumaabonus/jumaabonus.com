@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>jumaabonus.com | Casino Deals</title>
 
-<meta name="description" content="jumaabonus.com – aktuelle Casino Deals, Bonusaktionen, Twitch Content und Community.">
+<meta
+    name="description"
+    content="jumaabonus.com – aktuelle Casino Deals, Bonusaktionen, Twitch Content und Community."
+>
 
 <style>
 
@@ -17,7 +21,6 @@
     --purple: #9146ff;
 
     --bg: #050505;
-    --bg2: #0b0b0b;
     --card: #101010;
 
     --text: #ffffff;
@@ -28,6 +31,10 @@
 
     --max: 1180px;
 }
+
+/* =========================
+   RESET
+========================= */
 
 * {
     margin: 0;
@@ -41,6 +48,7 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background:
         radial-gradient(
             circle at 50% -10%,
@@ -50,6 +58,7 @@ body {
         var(--bg);
 
     color: var(--text);
+
     overflow-x: hidden;
 }
 
@@ -69,13 +78,16 @@ a {
 
 header {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
 
     z-index: 1000;
 
-    background: rgba(5,5,5,0.82);
+    background: rgba(5,5,5,0.85);
+
     backdrop-filter: blur(18px);
 
     border-bottom: 1px solid var(--border);
@@ -83,18 +95,23 @@ header {
 
 .navbar {
     width: min(var(--max), calc(100% - 40px));
+
     height: 76px;
 
     margin: auto;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
 .logo {
     font-size: 25px;
+
     font-weight: 950;
+
     letter-spacing: -1px;
 }
 
@@ -104,7 +121,9 @@ header {
 
 .nav-links {
     display: flex;
+
     align-items: center;
+
     gap: 30px;
 }
 
@@ -112,6 +131,7 @@ header {
     color: #aaa;
 
     font-size: 13px;
+
     font-weight: 700;
 
     transition: 0.25s;
@@ -123,13 +143,17 @@ header {
 
 .header-buttons {
     display: flex;
+
     align-items: center;
+
     gap: 9px;
 }
 
 .header-button {
     display: flex;
+
     align-items: center;
+
     gap: 8px;
 
     padding: 10px 15px;
@@ -137,6 +161,7 @@ header {
     border-radius: 10px;
 
     font-size: 11px;
+
     font-weight: 900;
 
     transition: 0.25s;
@@ -146,21 +171,13 @@ header {
     transform: translateY(-2px);
 }
 
-.discord-button {
-    background: linear-gradient(
-        135deg,
-        var(--orange),
-        var(--red)
-    );
-
-    box-shadow:
-        0 8px 25px rgba(255,106,0,0.18);
-}
+/* TWITCH HEADER */
 
 .twitch-button {
     background: rgba(145,70,255,0.13);
 
-    border: 1px solid rgba(145,70,255,0.3);
+    border:
+        1px solid rgba(145,70,255,0.3);
 
     color: #c9a8ff;
 }
@@ -178,8 +195,85 @@ header {
 
     border-radius: 50%;
 
-    background: #9146ff;
-    box-shadow: 0 0 10px #9146ff;
+    background: var(--purple);
+
+    box-shadow:
+        0 0 10px var(--purple);
+}
+
+/* DISCORD HEADER */
+
+.discord-button {
+    background:
+        linear-gradient(
+            135deg,
+            var(--orange),
+            var(--red)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(255,106,0,0.18);
+}
+
+/* =========================
+   TOP BANNER
+========================= */
+
+.top-banner {
+    padding-top: 115px;
+}
+
+.top-banner-box {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    border:
+        1px solid rgba(255,145,0,0.25);
+
+    background: #080808;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,0.55),
+        0 0 40px rgba(255,106,0,0.06);
+}
+
+.top-banner-box::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 40%;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.15)
+        );
+
+    pointer-events: none;
+}
+
+.top-banner-box img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.top-banner-box:hover img {
+    transform: scale(1.015);
 }
 
 /* =========================
@@ -187,19 +281,16 @@ header {
 ========================= */
 
 .hero {
-    min-height: 780px;
+    padding-top: 70px;
 
-    padding-top: 155px;
-    padding-bottom: 100px;
-
-    display: flex;
-    align-items: center;
+    padding-bottom: 110px;
 }
 
 .hero-grid {
     display: grid;
 
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns:
+        1.05fr 0.95fr;
 
     gap: 75px;
 
@@ -208,19 +299,25 @@ header {
 
 .eyebrow {
     display: inline-flex;
+
     align-items: center;
+
     gap: 9px;
 
     padding: 8px 13px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
+
     border-radius: 999px;
 
-    background: rgba(255,255,255,0.025);
+    background:
+        rgba(255,255,255,0.025);
 
     color: #aaa;
 
     font-size: 10px;
+
     font-weight: 900;
 
     letter-spacing: 1.6px;
@@ -243,7 +340,8 @@ header {
 
     max-width: 800px;
 
-    font-size: clamp(50px, 6vw, 82px);
+    font-size:
+        clamp(50px, 6vw, 82px);
 
     line-height: 0.95;
 
@@ -253,6 +351,8 @@ header {
 }
 
 .gradient-text {
+    display: block;
+
     background:
         linear-gradient(
             90deg,
@@ -262,6 +362,7 @@ header {
         );
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     color: transparent;
@@ -296,6 +397,7 @@ header {
     border-radius: 12px;
 
     font-size: 13px;
+
     font-weight: 900;
 
     transition: 0.25s;
@@ -314,24 +416,28 @@ header {
 }
 
 .primary-btn:hover {
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 18px 40px rgba(255,106,0,0.28);
 }
 
 .secondary-btn {
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
-    background: rgba(255,255,255,0.03);
+    background:
+        rgba(255,255,255,0.03);
 }
 
 .secondary-btn:hover {
-    background: rgba(255,255,255,0.07);
+    background:
+        rgba(255,255,255,0.07);
 }
 
 /* =========================
-   HERO CARD
+   HERO DEAL CARD
 ========================= */
 
 .hero-card-wrap {
@@ -359,7 +465,8 @@ header {
             #080808
         );
 
-    border: 1px solid rgba(255,255,255,0.1);
+    border:
+        1px solid rgba(255,255,255,0.1);
 
     box-shadow:
         0 45px 100px rgba(0,0,0,0.7),
@@ -369,7 +476,8 @@ header {
 
     transform-style: preserve-3d;
 
-    transition: transform 0.15s ease-out;
+    transition:
+        transform 0.15s ease-out;
 }
 
 .hero-card::before {
@@ -385,7 +493,8 @@ header {
 
     border-radius: 50%;
 
-    background: rgba(255,106,0,0.12);
+    background:
+        rgba(255,106,0,0.12);
 
     filter: blur(55px);
 }
@@ -394,7 +503,9 @@ header {
     position: relative;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 }
 
@@ -420,10 +531,13 @@ header {
     width: 105px;
     height: 105px;
 
-    margin: 65px auto 28px;
+    margin:
+        65px auto 28px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 25px;
@@ -442,7 +556,8 @@ header {
     box-shadow:
         0 20px 50px rgba(255,106,0,0.25);
 
-    transform: translateZ(35px);
+    transform:
+        translateZ(35px);
 }
 
 .hero-card h3 {
@@ -489,7 +604,8 @@ header {
 }
 
 .card-button:hover {
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 }
 
 /* =========================
@@ -497,16 +613,21 @@ header {
 ========================= */
 
 .stats {
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    border-top:
+        1px solid var(--border);
 
-    background: rgba(255,255,255,0.015);
+    border-bottom:
+        1px solid var(--border);
+
+    background:
+        rgba(255,255,255,0.015);
 }
 
 .stats-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 }
 
 .stat {
@@ -514,7 +635,8 @@ header {
 
     text-align: center;
 
-    border-right: 1px solid var(--border);
+    border-right:
+        1px solid var(--border);
 }
 
 .stat:last-child {
@@ -542,7 +664,7 @@ header {
 }
 
 /* =========================
-   GENERAL SECTIONS
+   SECTIONS
 ========================= */
 
 .section {
@@ -566,7 +688,8 @@ header {
 .section h2 {
     margin-top: 10px;
 
-    font-size: clamp(36px, 4vw, 54px);
+    font-size:
+        clamp(36px, 4vw, 54px);
 
     letter-spacing: -2px;
 }
@@ -578,7 +701,8 @@ header {
 .deals-grid {
     display: grid;
 
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns:
+        1.4fr 1fr 1fr;
 
     gap: 18px;
 }
@@ -594,7 +718,8 @@ header {
 
     border-radius: 20px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     background:
         linear-gradient(
@@ -607,7 +732,8 @@ header {
 }
 
 .deal:hover {
-    transform: translateY(-6px);
+    transform:
+        translateY(-6px);
 
     border-color:
         rgba(255,106,0,0.3);
@@ -634,7 +760,8 @@ header {
 
     border-radius: 7px;
 
-    background: rgba(255,106,0,0.12);
+    background:
+        rgba(255,106,0,0.12);
 
     color: var(--orange);
 
@@ -652,7 +779,9 @@ header {
     margin-top: 55px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 17px;
@@ -689,6 +818,7 @@ header {
     position: absolute;
 
     left: 25px;
+
     bottom: 25px;
 
     color: var(--orange);
@@ -742,7 +872,8 @@ header {
 .benefits {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 18px;
 
@@ -754,9 +885,10 @@ header {
 
     padding: 32px;
 
-    min-height: 310px;
+    min-height: 330px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 20px;
 
@@ -781,6 +913,7 @@ header {
     height: 120px;
 
     right: -60px;
+
     bottom: -60px;
 
     border-radius: 50%;
@@ -792,7 +925,8 @@ header {
 }
 
 .benefit:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
     border-color:
         rgba(255,106,0,0.25);
@@ -803,7 +937,9 @@ header {
     height: 42px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 12px;
@@ -852,7 +988,8 @@ header {
 
     border-radius: 28px;
 
-    border: 1px solid rgba(255,106,0,0.18);
+    border:
+        1px solid rgba(255,106,0,0.18);
 
     background:
         radial-gradient(
@@ -871,8 +1008,8 @@ header {
     max-width: 650px;
 }
 
-.community-box p {
-    max-width: 620px;
+.community-box > p {
+    max-width: 650px;
 
     margin-top: 15px;
 
@@ -883,31 +1020,146 @@ header {
     font-size: 14px;
 }
 
-.community-button {
-    display: inline-block;
+.community-links {
+    display: grid;
 
-    margin-top: 28px;
+    grid-template-columns:
+        1fr 1fr;
 
-    padding: 15px 22px;
+    gap: 16px;
 
-    border-radius: 12px;
+    margin-top: 38px;
+}
 
+.community-platform {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 22px;
+
+    border-radius: 17px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    background:
+        rgba(255,255,255,0.025);
+
+    transition: 0.3s;
+}
+
+.community-platform:hover {
+    transform:
+        translateY(-4px);
+
+    background:
+        rgba(255,255,255,0.04);
+}
+
+.platform-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.platform-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    font-size: 18px;
+
+    font-weight: 900;
+}
+
+.discord-platform-icon {
     background:
         linear-gradient(
             135deg,
-            var(--orange),
-            var(--red)
+            #ff6a00,
+            #e50914
         );
+}
 
-    font-size: 13px;
+.twitch-platform-icon {
+    background: var(--purple);
+}
+
+.platform-info h3 {
+    font-size: 15px;
+
+    font-weight: 900;
+}
+
+.platform-info span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+.community-platform-button {
+    flex-shrink: 0;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    font-size: 10px;
 
     font-weight: 900;
 
     transition: 0.25s;
 }
 
-.community-button:hover {
-    transform: translateY(-3px);
+.community-platform-button:hover {
+    transform:
+        translateY(-2px);
+}
+
+.discord-community-button {
+    background:
+        linear-gradient(
+            135deg,
+            #ff6a00,
+            #e50914
+        );
+}
+
+.twitch-community-button {
+    background:
+        rgba(145,70,255,0.15);
+
+    border:
+        1px solid rgba(145,70,255,0.35);
+
+    color: #c9a8ff;
+}
+
+.twitch-community-button:hover {
+    background:
+        var(--purple);
+
+    color: white;
 }
 
 /* =========================
@@ -923,7 +1175,8 @@ header {
 details {
     padding: 20px 22px;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 14px;
 
@@ -982,15 +1235,18 @@ details p {
 ========================= */
 
 footer {
-    border-top: 1px solid var(--border);
+    border-top:
+        1px solid var(--border);
 
-    padding: 55px 0 35px;
+    padding:
+        55px 0 35px;
 }
 
 .footer-grid {
     display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr 1fr;
 
     gap: 40px;
 }
@@ -1038,7 +1294,8 @@ footer {
 
     padding-top: 20px;
 
-    border-top: 1px solid var(--border);
+    border-top:
+        1px solid var(--border);
 
     color: #555;
 
@@ -1046,10 +1303,10 @@ footer {
 }
 
 /* =========================
-   MOBILE
+   TABLET
 ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .hero-grid {
         grid-template-columns: 1fr;
@@ -1068,7 +1325,8 @@ footer {
     }
 
     .deals-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .deal.featured {
@@ -1079,7 +1337,15 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .community-links {
+        grid-template-columns: 1fr;
+    }
+
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 650px) {
 
@@ -1100,7 +1366,7 @@ footer {
     }
 
     .logo {
-        font-size: 21px;
+        font-size: 20px;
     }
 
     .header-buttons {
@@ -1113,14 +1379,28 @@ footer {
         font-size: 9px;
     }
 
-    .hero {
-        padding-top: 120px;
+    .top-banner {
+        padding-top: 100px;
+    }
 
-        min-height: auto;
+    .top-banner-box {
+        border-radius: 15px;
+    }
+
+    .top-banner-box img {
+        min-height: 150px;
+
+        object-fit: cover;
+    }
+
+    .hero {
+        padding-top: 55px;
+
+        padding-bottom: 80px;
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 46px;
 
         letter-spacing: -2.5px;
     }
@@ -1170,6 +1450,18 @@ footer {
         padding: 45px 25px;
     }
 
+    .community-platform {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .community-platform-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
@@ -1181,12 +1473,12 @@ footer {
 }
 
 /* =========================
-   SMALL MOBILE HEADER
+   SMALL MOBILE
 ========================= */
 
 @media (max-width: 450px) {
 
-    .header-button span {
+    .header-button span:not(.twitch-dot) {
         display: none;
     }
 
@@ -1202,11 +1494,10 @@ footer {
 }
 
 </style>
+
 </head>
 
-
 <body>
-
 
 <!-- =========================
      HEADER
@@ -1219,7 +1510,6 @@ footer {
     <a href="#" class="logo">
         jumaa<span>bonus.com</span>
     </a>
-
 
     <div class="nav-links">
 
@@ -1241,7 +1531,6 @@ footer {
 
     </div>
 
-
     <div class="header-buttons">
 
         <!-- TWITCH -->
@@ -1260,7 +1549,6 @@ footer {
             </span>
 
         </a>
-
 
         <!-- DISCORD -->
 
@@ -1285,18 +1573,36 @@ footer {
 
 </header>
 
+<main>
 
+<!-- =========================
+     TOP BANNER
+========================= -->
+
+<section class="top-banner">
+
+<div class="container">
+
+    <div class="top-banner-box">
+
+        <img
+            src="images/jumaabonus-banner.jpg"
+            alt="JumaaBonus Casino Deals Banner"
+        >
+
+    </div>
+
+</div>
+
+</section>
 
 <!-- =========================
      HERO
 ========================= -->
 
-<main>
-
 <section class="hero">
 
 <div class="container hero-grid">
-
 
     <div>
 
@@ -1308,7 +1614,6 @@ footer {
 
         </div>
 
-
         <h1>
 
             Entdecke deine
@@ -1319,16 +1624,17 @@ footer {
 
         </h1>
 
-
         <p class="hero-description">
 
-            Entdecke aktuelle Casino-Angebote, Bonusaktionen
-            und exklusive Inhalte von jumaabonus. Alles
-            übersichtlich an einem Ort – von Deals bis hin
-            zu Twitch und unserer Community.
+            Entdecke aktuelle Casino-Angebote,
+            Bonusaktionen und exklusive Inhalte von
+            jumaabonus.
+
+            Alles übersichtlich an einem Ort –
+            von ausgewählten Deals bis hin zu Twitch
+            und unserer Community.
 
         </p>
-
 
         <div class="hero-buttons">
 
@@ -1338,7 +1644,6 @@ footer {
             >
                 Deals entdecken →
             </a>
-
 
             <a
                 href="#community"
@@ -1351,9 +1656,7 @@ footer {
 
     </div>
 
-
-
-    <!-- BITKINGZ CARD -->
+    <!-- BITKINGZ HERO CARD -->
 
     <div class="hero-card-wrap">
 
@@ -1374,21 +1677,17 @@ footer {
 
             </div>
 
-
             <div class="card-logo">
                 B
             </div>
-
 
             <h3>
                 BitKingz
             </h3>
 
-
             <p class="card-bonus">
                 Aktuelles Casino-Angebot
             </p>
-
 
             <a
                 href="https://www.bitkingzmedia.com/aohkhftix"
@@ -1407,8 +1706,6 @@ footer {
 
 </section>
 
-
-
 <!-- =========================
      STATS
 ========================= -->
@@ -1416,7 +1713,6 @@ footer {
 <section class="stats">
 
 <div class="container stats-grid">
-
 
     <div class="stat">
 
@@ -1430,7 +1726,6 @@ footer {
 
     </div>
 
-
     <div class="stat">
 
         <strong>
@@ -1442,7 +1737,6 @@ footer {
         </span>
 
     </div>
-
 
     <div class="stat">
 
@@ -1456,12 +1750,9 @@ footer {
 
     </div>
 
-
 </div>
 
 </section>
-
-
 
 <!-- =========================
      DEALS
@@ -1473,7 +1764,6 @@ footer {
 >
 
 <div class="container">
-
 
     <div class="section-head">
 
@@ -1487,9 +1777,7 @@ footer {
 
     </div>
 
-
     <div class="deals-grid">
-
 
         <!-- BITKINGZ -->
 
@@ -1499,22 +1787,18 @@ footer {
                 TOP DEAL
             </span>
 
-
             <div class="deal-icon">
                 B
             </div>
-
 
             <h3>
                 BitKingz
             </h3>
 
-
             <p>
-                Aktuelles Casino-Angebot über
-                jumaabonus.
+                Entdecke das aktuelle BitKingz-Angebot
+                über jumaabonus.
             </p>
-
 
             <a
                 href="https://www.bitkingzmedia.com/aohkhftix"
@@ -1527,7 +1811,6 @@ footer {
 
         </div>
 
-
         <!-- PARTNER 2 -->
 
         <div class="deal coming">
@@ -1536,18 +1819,15 @@ footer {
                 +
             </div>
 
-
             <h3>
                 Partner #2
             </h3>
-
 
             <p>
                 Neuer Partner wird bald hinzugefügt.
             </p>
 
         </div>
-
 
         <!-- PARTNER 3 -->
 
@@ -1557,11 +1837,9 @@ footer {
                 +
             </div>
 
-
             <h3>
                 Partner #3
             </h3>
-
 
             <p>
                 Neuer Partner wird bald hinzugefügt.
@@ -1569,14 +1847,11 @@ footer {
 
         </div>
 
-
     </div>
 
 </div>
 
 </section>
-
-
 
 <!-- =========================
      VORTEILE
@@ -1589,36 +1864,31 @@ footer {
 
 <div class="container">
 
-
     <div class="section-head">
 
         <div class="section-label">
             WARUM JUMAA BONUS
         </div>
 
-
         <h2>
             Mehr als nur Deals.
         </h2>
 
-
         <p class="benefits-intro">
 
-            jumaabonus verbindet aktuelle Casino-Angebote
-            mit Entertainment und Community. Unser Ziel ist
-            es, interessante Angebote übersichtlich
-            darzustellen und gleichzeitig einen zentralen
-            Anlaufpunkt für Twitch, Discord und neue
-            Updates zu bieten.
+            jumaabonus verbindet ausgewählte
+            Casino-Angebote mit Entertainment und
+            Community.
+
+            Unser Ziel ist es, alle wichtigen Inhalte
+            übersichtlich und modern an einem zentralen
+            Ort zusammenzubringen.
 
         </p>
 
     </div>
 
-
-
     <div class="benefits">
-
 
         <!-- VORTEIL 1 -->
 
@@ -1628,30 +1898,26 @@ footer {
                 01
             </div>
 
-
             <h3>
                 Übersichtliche Deals
             </h3>
-
 
             <p>
 
                 Statt verschiedene Angebote auf mehreren
                 Plattformen zusammensuchen zu müssen,
-                findest du bei jumaabonus ausgewählte Deals
-                zentral an einem Ort.
+                findest du bei jumaabonus ausgewählte
+                Deals zentral an einem Ort.
 
                 <br><br>
 
                 Neue Partner und Angebote können jederzeit
-                ergänzt werden, sodass die Deal-Seite
-                kontinuierlich erweitert werden kann.
+                ergänzt werden, sodass unsere Deal-Seite
+                kontinuierlich erweitert wird.
 
             </p>
 
         </div>
-
-
 
         <!-- VORTEIL 2 -->
 
@@ -1661,30 +1927,25 @@ footer {
                 02
             </div>
 
-
             <h3>
                 Twitch & Entertainment
             </h3>
 
-
             <p>
 
-                Neben den Deals steht auch der Entertainment-
-                Bereich im Mittelpunkt.
+                Über unseren Twitch-Kanal kannst du
+                unsere Streams und weitere Inhalte
+                direkt verfolgen.
 
                 <br><br>
 
-                Über unseren Twitch-Kanal kannst du Streams,
-                Casino-Content und weitere Inhalte verfolgen.
-                Der Twitch-Kanal ist direkt über die Website
-                erreichbar und wird regelmäßig mit neuen
-                Inhalten erweitert.
+                Twitch ist sowohl im oberen Bereich der
+                Website als auch direkt in unserer
+                Community-Sektion verlinkt.
 
             </p>
 
         </div>
-
-
 
         <!-- VORTEIL 3 -->
 
@@ -1694,35 +1955,30 @@ footer {
                 03
             </div>
 
-
             <h3>
                 Community & Updates
             </h3>
 
-
             <p>
 
-                Über unsere Discord-Community bleibst du
-                direkt mit jumaabonus verbunden.
+                Über unsere Discord-Community bleibst
+                du direkt mit jumaabonus verbunden.
 
                 <br><br>
 
-                Dort können neue Deals, Ankündigungen,
-                Stream-Informationen und weitere Updates
-                zentral mit der Community geteilt werden.
+                Dort findest du neue Deals,
+                Ankündigungen, Stream-Informationen
+                und weitere Community-Updates.
 
             </p>
 
         </div>
-
 
     </div>
 
 </div>
 
 </section>
-
-
 
 <!-- =========================
      COMMUNITY
@@ -1735,50 +1991,107 @@ footer {
 
 <div class="container">
 
-
     <div class="community-box">
-
 
         <div class="section-label">
             JUMAA BONUS COMMUNITY
         </div>
 
-
         <h2>
             Sei direkt dabei.
         </h2>
 
-
         <p>
 
-            Tritt unserer Discord-Community bei und bleibe
-            über neue Deals, Streams und wichtige Updates
-            informiert.
-
-            <br><br>
-
-            Deine zentrale Anlaufstelle für jumaabonus –
-            direkt mit der Community verbunden.
+            Werde Teil unserer Community und bleibe über
+            neue Deals, Streams, Aktionen und wichtige
+            Updates informiert.
 
         </p>
 
+        <div class="community-links">
 
-        <a
-            href="https://discord.gg/NKxX9DB3ay"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="community-button"
-        >
-            DISCORD BEITRETEN →
-        </a>
+            <!-- DISCORD -->
+
+            <div class="community-platform">
+
+                <div class="platform-info">
+
+                    <div
+                        class="platform-icon discord-platform-icon"
+                    >
+                        D
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Discord Community
+                        </h3>
+
+                        <span>
+                            Deals, Updates & Community
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="https://discord.gg/NKxX9DB3ay"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="community-platform-button discord-community-button"
+                >
+                    DISCORD BEITRETEN →
+                </a>
+
+            </div>
+
+            <!-- TWITCH -->
+
+            <div class="community-platform">
+
+                <div class="platform-info">
+
+                    <div
+                        class="platform-icon twitch-platform-icon"
+                    >
+                        ▶
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Twitch Kanal
+                        </h3>
+
+                        <span>
+                            Streams & Live Content
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="https://www.twitch.tv/jumaabonus"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="community-platform-button twitch-community-button"
+                >
+                    TWITCH BESUCHEN →
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
 </div>
 
 </section>
-
-
 
 <!-- =========================
      FAQ
@@ -1791,13 +2104,11 @@ footer {
 
 <div class="container">
 
-
     <div class="section-head">
 
         <div class="section-label">
             FRAGEN & ANTWORTEN
         </div>
-
 
         <h2>
             FAQ
@@ -1805,10 +2116,7 @@ footer {
 
     </div>
 
-
-
     <div class="faq">
-
 
         <details>
 
@@ -1819,13 +2127,12 @@ footer {
             <p>
 
                 jumaabonus.com ist eine Plattform für
-                aktuelle Casino-Deals, Bonusaktionen,
+                ausgewählte Casino-Deals, Bonusaktionen,
                 Twitch-Content und Community-Updates.
 
             </p>
 
         </details>
-
 
         <details>
 
@@ -1843,7 +2150,6 @@ footer {
 
         </details>
 
-
         <details>
 
             <summary>
@@ -1852,13 +2158,13 @@ footer {
 
             <p>
 
-                Der Twitch-Kanal ist direkt oben rechts
-                über den Twitch-Button erreichbar.
+                Unser Twitch-Kanal ist oben rechts über
+                den Twitch-Button erreichbar und zusätzlich
+                im Community-Bereich verlinkt.
 
             </p>
 
         </details>
-
 
         <details>
 
@@ -1868,7 +2174,7 @@ footer {
 
             <p>
 
-                Ja. Über den Discord kannst du der
+                Ja. Über unseren Discord kannst du der
                 jumaabonus-Community beitreten und
                 aktuelle Updates erhalten.
 
@@ -1876,10 +2182,7 @@ footer {
 
         </details>
 
-
     </div>
-
-
 
     <!-- RESPONSIBLE GAMBLING -->
 
@@ -1892,28 +2195,27 @@ footer {
         <br><br>
 
         Glücksspiel kann süchtig machen und zu
-        finanziellen Problemen führen. Spiele nur,
-        wenn Glücksspiel an deinem Aufenthaltsort
-        legal ist und du volljährig bist.
+        finanziellen Problemen führen.
+
+        Spiele nur, wenn Glücksspiel an deinem
+        Aufenthaltsort legal ist und du volljährig bist.
 
         <br><br>
 
         Einige Links auf dieser Website können
-        Affiliate-Links sein. Dadurch kann
-        jumaabonus.com eine Provision erhalten,
-        ohne dass dir dadurch zusätzliche Kosten
-        entstehen.
+        Affiliate-Links sein.
+
+        Dadurch kann jumaabonus.com eine Provision
+        erhalten, ohne dass dir dadurch zusätzliche
+        Kosten entstehen.
 
     </div>
-
 
 </div>
 
 </section>
 
 </main>
-
-
 
 <!-- =========================
      FOOTER
@@ -1923,9 +2225,7 @@ footer {
 
 <div class="container">
 
-
     <div class="footer-grid">
-
 
         <div>
 
@@ -1933,9 +2233,10 @@ footer {
                 href="#"
                 class="logo"
             >
-                jumaa<span>bonus.com</span>
-            </a>
 
+                jumaa<span>bonus.com</span>
+
+            </a>
 
             <p
                 style="
@@ -1950,14 +2251,11 @@ footer {
 
         </div>
 
-
-
         <div>
 
             <div class="footer-title">
                 NAVIGATION
             </div>
-
 
             <div class="footer-links">
 
@@ -1981,14 +2279,11 @@ footer {
 
         </div>
 
-
-
         <div>
 
             <div class="footer-title">
                 COMMUNITY
             </div>
-
 
             <div class="footer-links">
 
@@ -1999,7 +2294,6 @@ footer {
                 >
                     Twitch
                 </a>
-
 
                 <a
                     href="https://discord.gg/NKxX9DB3ay"
@@ -2013,10 +2307,7 @@ footer {
 
         </div>
 
-
     </div>
-
-
 
     <div class="footer-bottom">
 
@@ -2024,19 +2315,15 @@ footer {
             © 2026 jumaabonus.com
         </span>
 
-
         <span>
             18+ · Verantwortungsvolles Spielen
         </span>
 
     </div>
 
-
 </div>
 
 </footer>
-
-
 
 <!-- =========================
      JAVASCRIPT
@@ -2044,7 +2331,9 @@ footer {
 
 <script>
 
-/* Smooth Scroll */
+/* =========================
+   SMOOTH SCROLL
+========================= */
 
 document
 .querySelectorAll('a[href^="#"]')
@@ -2054,10 +2343,23 @@ document
         "click",
         function(e) {
 
+            const href =
+                this.getAttribute("href");
+
+            if (href === "#") {
+
+                e.preventDefault();
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+                return;
+            }
+
             const target =
-                document.querySelector(
-                    this.getAttribute("href")
-                );
+                document.querySelector(href);
 
             if (target) {
 
@@ -2074,13 +2376,12 @@ document
 
 });
 
-
-
-/* 3D HERO CARD */
+/* =========================
+   3D HERO CARD
+========================= */
 
 const card =
     document.getElementById("heroCard");
-
 
 if (card) {
 
@@ -2116,7 +2417,6 @@ if (card) {
         }
     );
 
-
     card.addEventListener(
         "mouseleave",
         function() {
@@ -2130,7 +2430,6 @@ if (card) {
 }
 
 </script>
-
 
 </body>
 </html>
