@@ -25,36 +25,22 @@
 
 <style>
 
-/* ======================================================
-   ROOT
-====================================================== */
-
 :root {
     --orange: #ff6a00;
     --orange-light: #ff9a45;
     --red: #e50914;
-
     --purple: #9146ff;
     --purple-light: #c19cff;
-
     --green: #50ff7a;
-
     --bg: #050505;
     --card: #111113;
-
     --text: #f7f7f7;
     --muted: #a1a1a6;
     --muted2: #6e6e73;
-
     --border: rgba(255,255,255,0.085);
     --border-hover: rgba(255,106,0,0.32);
-
     --max: 1180px;
 }
-
-/* ======================================================
-   RESET
-====================================================== */
 
 * {
     margin: 0;
@@ -68,7 +54,6 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
     color: var(--text);
 
     background:
@@ -90,7 +75,6 @@ body {
         );
 
     min-height: 100vh;
-
     overflow-x: hidden;
 }
 
@@ -123,30 +107,21 @@ img {
 
 .age-gate {
     position: fixed;
-
     inset: 0;
-
     z-index: 99999;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     padding: 25px;
 
-    background:
-        rgba(0,0,0,0.82);
+    background: rgba(0,0,0,0.82);
 
-    backdrop-filter:
-        blur(15px);
-
-    -webkit-backdrop-filter:
-        blur(15px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
     opacity: 1;
-
     visibility: visible;
 
     transition:
@@ -164,7 +139,6 @@ img {
     position: relative;
 
     width: min(520px, 100%);
-
     padding: 42px;
 
     overflow: hidden;
@@ -198,36 +172,14 @@ img {
         0 0 60px rgba(255,106,0,0.10);
 }
 
-.age-card::before {
-    content: "";
-
-    position: absolute;
-
-    width: 180px;
-    height: 180px;
-
-    top: -90px;
-    right: -70px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(255,106,0,0.16);
-
-    filter:
-        blur(35px);
-}
-
 .age-badge {
     width: 92px;
     height: 92px;
 
-    margin: 0 auto 24px;
+    margin: 0 auto 22px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 50%;
@@ -235,7 +187,6 @@ img {
     color: white;
 
     font-size: 31px;
-
     font-weight: 950;
 
     background:
@@ -249,12 +200,18 @@ img {
         0 18px 45px rgba(255,106,0,0.28);
 }
 
-.age-gate-logo {
-    width: 120px;
-    height: 120px;
+.age-brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
 
-    margin:
-        0 auto 8px;
+    margin-top: 2px;
+}
+
+.age-gate-logo {
+    width: 72px;
+    height: 72px;
 
     display: block;
 
@@ -264,12 +221,30 @@ img {
 
     filter:
         drop-shadow(
-            0 10px 30px rgba(255,156,0,0.25)
+            0 8px 22px rgba(255,140,0,0.25)
         );
 }
 
+.age-brand-text {
+    display: inline-flex;
+    align-items: baseline;
+
+    font-size: 23px;
+    font-weight: 950;
+
+    letter-spacing: -1px;
+}
+
+.logo-jumaa {
+    color: white;
+}
+
+.logo-bonus {
+    color: var(--orange);
+}
+
 .age-card h2 {
-    margin-top: 18px;
+    margin-top: 22px;
 
     font-size: 29px;
 
@@ -446,7 +421,7 @@ img {
 }
 
 /* ======================================================
-   LOGO
+   LOGO + TEXT
 ====================================================== */
 
 .logo {
@@ -454,7 +429,7 @@ img {
 
     align-items: center;
 
-    justify-content: center;
+    gap: 12px;
 
     flex-shrink: 0;
 }
@@ -462,8 +437,8 @@ img {
 .logo-image {
     display: block;
 
-    width: 62px;
-    height: 62px;
+    width: 58px;
+    height: 58px;
 
     object-fit: contain;
 
@@ -475,13 +450,28 @@ img {
 
     filter:
         drop-shadow(
-            0 5px 14px rgba(255,140,0,0.15)
+            0 5px 14px rgba(255,140,0,0.18)
         );
 }
 
+.logo-text {
+    display: inline-flex;
+
+    align-items: baseline;
+
+    font-size: 27px;
+
+    font-weight: 950;
+
+    letter-spacing: -1.2px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
 .logo:hover .logo-image {
-    transform:
-        scale(1.06);
+    transform: scale(1.06);
 
     filter:
         drop-shadow(
@@ -590,8 +580,7 @@ img {
 }
 
 .social-button:hover {
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .twitch-header {
@@ -754,28 +743,6 @@ img {
     position: relative;
 }
 
-.top-banner::before {
-    content: "";
-
-    position: absolute;
-
-    width: 600px;
-    height: 400px;
-
-    left: 5%;
-    top: 30px;
-
-    background:
-        rgba(255,106,0,0.08);
-
-    border-radius: 50%;
-
-    filter:
-        blur(100px);
-
-    pointer-events: none;
-}
-
 .banner-frame {
     position: relative;
 
@@ -793,25 +760,6 @@ img {
         0 0 65px rgba(255,106,0,0.10);
 }
 
-.banner-frame::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,106,0,0.04),
-            transparent 30%,
-            transparent 70%,
-            rgba(229,9,20,0.04)
-        );
-}
-
 .banner-frame img {
     display: block;
 
@@ -824,8 +772,7 @@ img {
 }
 
 .banner-frame:hover img {
-    transform:
-        scale(1.015);
+    transform: scale(1.015);
 }
 
 /* ======================================================
@@ -883,9 +830,6 @@ img {
 
     letter-spacing:
         1.5px;
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 .live-dot {
@@ -1050,7 +994,7 @@ img {
 }
 
 /* ======================================================
-   BITKINGZ HERO
+   BITKINGZ
 ====================================================== */
 
 .deal-showcase-wrap {
@@ -1077,11 +1021,6 @@ img {
             rgba(255,106,0,0.26),
             transparent 30%
         ),
-        radial-gradient(
-            circle at 15% 90%,
-            rgba(145,70,255,0.06),
-            transparent 30%
-        ),
         linear-gradient(
             145deg,
             #1b1b1d,
@@ -1089,8 +1028,7 @@ img {
         );
 
     box-shadow:
-        0 45px 100px rgba(0,0,0,0.60),
-        inset 0 1px 0 rgba(255,255,255,0.05);
+        0 45px 100px rgba(0,0,0,0.60);
 
     transform-style:
         preserve-3d;
@@ -1099,31 +1037,7 @@ img {
         transform 0.14s ease-out;
 }
 
-.deal-showcase::before {
-    content: "";
-
-    position: absolute;
-
-    width: 250px;
-    height: 250px;
-
-    right: -120px;
-    bottom: -100px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(255,106,0,0.10);
-
-    filter:
-        blur(45px);
-}
-
 .deal-showcase-top {
-    position: relative;
-
-    z-index: 2;
-
     display: flex;
 
     align-items: center;
@@ -1170,10 +1084,6 @@ img {
 }
 
 .bk-logo {
-    position: relative;
-
-    z-index: 2;
-
     width: 190px;
     height: 120px;
 
@@ -1197,14 +1107,8 @@ img {
             #303440
         );
 
-    border:
-        1px solid rgba(255,255,255,0.08);
-
     box-shadow:
         0 20px 50px rgba(0,0,0,0.32);
-
-    transform:
-        translateZ(35px);
 }
 
 .bk-logo img {
@@ -1213,15 +1117,9 @@ img {
     height: 100%;
 
     object-fit: contain;
-
-    display: block;
 }
 
 .deal-showcase h3 {
-    position: relative;
-
-    z-index: 2;
-
     text-align: center;
 
     font-size: 31px;
@@ -1230,10 +1128,6 @@ img {
 }
 
 .deal-showcase-sub {
-    position: relative;
-
-    z-index: 2;
-
     margin-top: 7px;
 
     text-align: center;
@@ -1244,10 +1138,6 @@ img {
 }
 
 .deal-showcase-button {
-    position: relative;
-
-    z-index: 2;
-
     margin-top: 29px;
 
     min-height: 48px;
@@ -1267,9 +1157,6 @@ img {
             #e92b12
         );
 
-    box-shadow:
-        0 12px 30px rgba(255,106,0,0.17);
-
     font-size: 11px;
 
     font-weight: 900;
@@ -1280,18 +1167,13 @@ img {
 .deal-showcase-button:hover {
     transform:
         translateY(-2px);
-
-    box-shadow:
-        0 17px 40px rgba(255,106,0,0.28);
 }
 
 /* ======================================================
-   TRUST BAR
+   TRUST
 ====================================================== */
 
 .trust-bar {
-    position: relative;
-
     border-top:
         1px solid rgba(255,255,255,0.08);
 
@@ -1355,7 +1237,7 @@ img {
 }
 
 /* ======================================================
-   GENERAL SECTIONS
+   SECTIONS
 ====================================================== */
 
 .section {
@@ -1408,9 +1290,7 @@ img {
     line-height: 1.8;
 }
 
-/* ======================================================
-   DEALS
-====================================================== */
+/* DEALS */
 
 #deals {
     background:
@@ -1424,9 +1304,6 @@ img {
             #0b0b0d,
             #101012
         );
-
-    border-bottom:
-        1px solid rgba(255,255,255,0.05);
 }
 
 .deals-grid {
@@ -1458,9 +1335,6 @@ img {
             #18181b,
             #101012
         );
-
-    box-shadow:
-        0 18px 50px rgba(0,0,0,0.16);
 
     transition:
         0.30s;
@@ -1534,12 +1408,6 @@ img {
             #454a59,
             #303440
         );
-
-    border:
-        1px solid rgba(255,255,255,0.07);
-
-    box-shadow:
-        0 12px 28px rgba(0,0,0,0.24);
 }
 
 .deal-logo img {
@@ -1548,8 +1416,6 @@ img {
     height: 100%;
 
     object-fit: contain;
-
-    display: block;
 }
 
 .deal-card h3 {
@@ -1583,12 +1449,6 @@ img {
     font-size: 10px;
 
     font-weight: 900;
-
-    transition: 0.2s;
-}
-
-.deal-card-link:hover {
-    color: var(--orange-light);
 }
 
 .coming-card {
@@ -1610,9 +1470,6 @@ img {
     justify-content: center;
 
     border-radius: 18px;
-
-    border:
-        1px solid rgba(255,255,255,0.07);
 
     background:
         rgba(255,255,255,0.045);
@@ -1661,13 +1518,9 @@ img {
 }
 
 .benefit-card {
-    position: relative;
-
     min-height: 335px;
 
     padding: 31px;
-
-    overflow: hidden;
 
     border-radius: 21px;
 
@@ -1681,31 +1534,8 @@ img {
             #111113
         );
 
-    box-shadow:
-        0 18px 50px rgba(0,0,0,0.16);
-
     transition:
         0.30s;
-}
-
-.benefit-card::after {
-    content: "";
-
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    right: -70px;
-    bottom: -70px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(255,106,0,0.10);
-
-    filter:
-        blur(25px);
 }
 
 .benefit-card:hover {
@@ -1714,9 +1544,6 @@ img {
 
     border-color:
         rgba(255,106,0,0.30);
-
-    box-shadow:
-        0 25px 65px rgba(0,0,0,0.28);
 }
 
 .benefit-icon {
@@ -1732,14 +1559,7 @@ img {
     border-radius: 13px;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,106,0,0.15),
-            rgba(229,9,20,0.06)
-        );
-
-    border:
-        1px solid rgba(255,106,0,0.20);
+        rgba(255,106,0,0.12);
 
     color: var(--orange);
 
@@ -1785,21 +1605,11 @@ img {
             #0e0e11,
             #09090b
         );
-
-    border-top:
-        1px solid rgba(255,255,255,0.04);
-
-    border-bottom:
-        1px solid rgba(255,255,255,0.04);
 }
 
 .community-panel {
-    position: relative;
-
     padding:
         65px 52px;
-
-    overflow: hidden;
 
     border-radius: 29px;
 
@@ -1812,20 +1622,11 @@ img {
             rgba(145,70,255,0.14),
             transparent 35%
         ),
-        radial-gradient(
-            circle at 10% 80%,
-            rgba(255,106,0,0.10),
-            transparent 30%
-        ),
         linear-gradient(
             145deg,
             #1a1a1d,
             #101012
         );
-
-    box-shadow:
-        0 35px 90px rgba(0,0,0,0.32),
-        inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 .community-panel h2 {
@@ -1884,11 +1685,7 @@ img {
         1px solid rgba(255,255,255,0.09);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.055),
-            rgba(255,255,255,0.02)
-        );
+        rgba(255,255,255,0.035);
 
     transition:
         0.3s;
@@ -1902,16 +1699,6 @@ img {
         rgba(255,255,255,0.065);
 }
 
-.community-card:first-child:hover {
-    border-color:
-        rgba(255,106,0,0.32);
-}
-
-.community-card:last-child:hover {
-    border-color:
-        rgba(145,70,255,0.42);
-}
-
 .community-platform-info {
     display: flex;
 
@@ -1923,8 +1710,6 @@ img {
 .community-platform-icon {
     width: 52px;
     height: 52px;
-
-    flex-shrink: 0;
 
     display: flex;
 
@@ -1949,9 +1734,6 @@ img {
             #ff7600,
             #e82c12
         );
-
-    box-shadow:
-        0 12px 30px rgba(255,106,0,0.18);
 }
 
 .twitch-icon {
@@ -1961,9 +1743,6 @@ img {
             #a15cff,
             #702de4
         );
-
-    box-shadow:
-        0 12px 30px rgba(145,70,255,0.25);
 }
 
 .community-platform-info h3 {
@@ -1988,8 +1767,6 @@ img {
     padding:
         0 14px;
 
-    flex-shrink: 0;
-
     display: flex;
 
     align-items: center;
@@ -2004,11 +1781,6 @@ img {
 
     transition:
         0.25s;
-}
-
-.community-link:hover {
-    transform:
-        translateY(-2px);
 }
 
 .discord-link {
@@ -2028,13 +1800,6 @@ img {
 
     background:
         rgba(145,70,255,0.18);
-}
-
-.twitch-link:hover {
-    color: white;
-
-    background:
-        var(--purple);
 }
 
 /* ======================================================
@@ -2075,36 +1840,11 @@ details {
             #171719,
             #101012
         );
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,0.12);
-
-    transition:
-        border-color 0.25s,
-        background 0.25s,
-        transform 0.25s;
-}
-
-details:hover {
-    border-color:
-        rgba(255,106,0,0.20);
 }
 
 details[open] {
     border-color:
         rgba(255,106,0,0.30);
-
-    background:
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(255,106,0,0.07),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
-            #19191c,
-            #111113
-        );
 }
 
 summary {
@@ -2135,10 +1875,10 @@ summary::-webkit-details-marker {
 summary::after {
     content: "+";
 
-    flex-shrink: 0;
-
     width: 32px;
     height: 32px;
+
+    flex-shrink: 0;
 
     display: flex;
 
@@ -2153,12 +1893,7 @@ summary::after {
     background:
         rgba(255,106,0,0.08);
 
-    border:
-        1px solid rgba(255,106,0,0.12);
-
     font-size: 20px;
-
-    font-weight: 400;
 }
 
 details[open] summary::after {
@@ -2193,11 +1928,7 @@ details[open] summary::after {
         1px solid rgba(255,255,255,0.075);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.035),
-            rgba(255,255,255,0.015)
-        );
+        rgba(255,255,255,0.025);
 
     color: #77777b;
 
@@ -2215,8 +1946,6 @@ details[open] summary::after {
 ====================================================== */
 
 .footer {
-    position: relative;
-
     border-top:
         1px solid rgba(255,255,255,0.08);
 
@@ -2224,11 +1953,6 @@ details[open] summary::after {
         55px 0 30px;
 
     background:
-        radial-gradient(
-            circle at 80% 100%,
-            rgba(145,70,255,0.05),
-            transparent 30%
-        ),
         linear-gradient(
             180deg,
             #09090a,
@@ -2245,9 +1969,17 @@ details[open] summary::after {
     gap: 40px;
 }
 
+.footer-brand {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
 .footer-logo-image {
-    width: 95px;
-    height: 95px;
+    width: 78px;
+    height: 78px;
 
     object-fit: contain;
 
@@ -2259,6 +1991,20 @@ details[open] summary::after {
         drop-shadow(
             0 8px 22px rgba(255,140,0,0.20)
         );
+}
+
+.footer-logo-text {
+    display: inline-flex;
+
+    align-items: baseline;
+
+    font-size: 24px;
+
+    font-weight: 950;
+
+    letter-spacing: -1px;
+
+    line-height: 1;
 }
 
 .footer-description {
@@ -2298,9 +2044,6 @@ details[open] summary::after {
     color: #aaa;
 
     font-size: 11px;
-
-    transition:
-        0.2s;
 }
 
 .footer-links a:hover {
@@ -2366,16 +2109,6 @@ details[open] summary::after {
     .hero-grid {
         grid-template-columns:
             1fr;
-
-        gap: 55px;
-    }
-
-    .deal-showcase-wrap {
-        max-width: 650px;
-
-        width: 100%;
-
-        margin: auto;
     }
 
     .deals-grid {
@@ -2422,9 +2155,17 @@ details[open] summary::after {
             );
     }
 
+    .logo {
+        gap: 8px;
+    }
+
     .logo-image {
-        width: 52px;
-        height: 52px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .logo-text {
+        font-size: 19px;
     }
 
     .header-actions {
@@ -2434,20 +2175,19 @@ details[open] summary::after {
     .age-card {
         padding:
             32px 22px;
-
-        border-radius: 22px;
     }
 
-    .age-badge {
-        width: 78px;
-        height: 78px;
-
-        font-size: 27px;
+    .age-brand {
+        gap: 9px;
     }
 
     .age-gate-logo {
-        width: 95px;
-        height: 95px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .age-brand-text {
+        font-size: 19px;
     }
 
     .age-card h2 {
@@ -2484,10 +2224,6 @@ details[open] summary::after {
             -2.5px;
     }
 
-    .hero-description {
-        font-size: 13px;
-    }
-
     .hero-actions {
         display: grid;
 
@@ -2497,12 +2233,6 @@ details[open] summary::after {
 
     .btn {
         width: 100%;
-    }
-
-    .bk-logo {
-        width: 165px;
-
-        height: 105px;
     }
 
     .trust-grid {
@@ -2515,10 +2245,6 @@ details[open] summary::after {
 
         border-bottom:
             1px solid var(--border);
-    }
-
-    .trust-item:last-child {
-        border-bottom: none;
     }
 
     .section {
@@ -2558,18 +2284,22 @@ details[open] summary::after {
             1fr;
     }
 
+    .footer-brand {
+        gap: 10px;
+    }
+
+    .footer-logo-image {
+        width: 62px;
+        height: 62px;
+    }
+
+    .footer-logo-text {
+        font-size: 20px;
+    }
+
     .footer-bottom {
         flex-direction:
             column;
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    * {
-        animation: none !important;
-        transition: none !important;
     }
 
 }
@@ -2581,22 +2311,21 @@ details[open] summary::after {
 <body class="age-locked">
 
 <!-- ====================================================
-     18+ AGE GATE
+     18+ POPUP
 ==================================================== -->
 
 <div
     class="age-gate"
     id="ageGate"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="ageGateTitle"
 >
 
-    <div class="age-card">
+<div class="age-card">
 
-        <div class="age-badge">
-            18+
-        </div>
+    <div class="age-badge">
+        18+
+    </div>
+
+    <div class="age-brand">
 
         <img
             src="images/jumaabonus-logo.png"
@@ -2604,53 +2333,67 @@ details[open] summary::after {
             class="age-gate-logo"
         >
 
-        <h2 id="ageGateTitle">
-            Willkommen bei JumaaBonus
-        </h2>
+        <div class="age-brand-text">
 
-        <p>
+            <span class="logo-jumaa">
+                jumaa
+            </span>
 
-            Diese Website enthält Inhalte und Angebote
-            rund um Glücksspiel und richtet sich
-            ausschließlich an Personen ab
-            <strong>18 Jahren</strong>.
-
-            <br><br>
-
-            Mit dem Betreten bestätigst du,
-            dass du mindestens 18 Jahre alt bist
-            und Glücksspiel an deinem Aufenthaltsort
-            erlaubt ist.
-
-        </p>
-
-        <div class="age-actions">
-
-            <button
-                class="age-enter"
-                id="ageEnter"
-            >
-                ICH BIN 18+ · SEITE BETRETEN
-            </button>
-
-            <button
-                class="age-leave"
-                id="ageLeave"
-            >
-                SEITE VERLASSEN
-            </button>
+            <span class="logo-bonus">
+                bonus.com
+            </span>
 
         </div>
 
-        <p class="age-note">
+    </div>
 
-            Glücksspiel kann süchtig machen.
-            Spiele verantwortungsvoll und nur mit Geld,
-            dessen Verlust du verkraften kannst.
+    <h2>
+        Willkommen bei JumaaBonus
+    </h2>
 
-        </p>
+    <p>
+
+        Diese Website enthält Inhalte und Angebote
+        rund um Glücksspiel und richtet sich
+        ausschließlich an Personen ab
+        <strong>18 Jahren</strong>.
+
+        <br><br>
+
+        Mit dem Betreten bestätigst du,
+        dass du mindestens 18 Jahre alt bist
+        und Glücksspiel an deinem Aufenthaltsort
+        erlaubt ist.
+
+    </p>
+
+    <div class="age-actions">
+
+        <button
+            class="age-enter"
+            id="ageEnter"
+        >
+            ICH BIN 18+ · SEITE BETRETEN
+        </button>
+
+        <button
+            class="age-leave"
+            id="ageLeave"
+        >
+            SEITE VERLASSEN
+        </button>
 
     </div>
+
+    <p class="age-note">
+
+        Glücksspiel kann süchtig machen.
+        Spiele verantwortungsvoll und nur mit Geld,
+        dessen Verlust du verkraften kannst.
+
+    </p>
+
+</div>
 
 </div>
 
@@ -2662,13 +2405,28 @@ details[open] summary::after {
 
 <nav class="navbar">
 
-    <a href="#top" class="logo">
+    <a
+        href="#top"
+        class="logo"
+    >
 
         <img
             src="images/jumaabonus-logo.png"
             alt="JumaaBonus Logo"
             class="logo-image"
         >
+
+        <span class="logo-text">
+
+            <span class="logo-jumaa">
+                jumaa
+            </span>
+
+            <span class="logo-bonus">
+                bonus.com
+            </span>
+
+        </span>
 
     </a>
 
@@ -2700,15 +2458,7 @@ details[open] summary::after {
             rel="noopener noreferrer"
             class="social-button twitch-header"
         >
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M4 2h17v12l-5 5h-4l-3 3v-3H4V2zm2 2v13h5v2l2-2h3l3-3V4H6zm4 3h2v6h-2V7zm5 0h2v6h-2V7z"/>
-
-            </svg>
-
             TWITCH
-
         </a>
 
         <a
@@ -2744,9 +2494,7 @@ details[open] summary::after {
 
 </header>
 
-<!-- ====================================================
-     MOBILE MENU
-==================================================== -->
+<!-- MOBILE MENU -->
 
 <div
     class="mobile-menu"
@@ -2774,7 +2522,6 @@ details[open] summary::after {
     <a
         href="https://www.twitch.tv/jumaabonus"
         target="_blank"
-        rel="noopener noreferrer"
     >
         Twitch
     </a>
@@ -2782,7 +2529,6 @@ details[open] summary::after {
     <a
         href="https://discord.gg/NKxX9DB3ay"
         target="_blank"
-        rel="noopener noreferrer"
     >
         Discord
     </a>
@@ -2932,7 +2678,7 @@ details[open] summary::after {
 </section>
 
 <!-- ====================================================
-     TRUST BAR
+     TRUST
 ==================================================== -->
 
 <section class="trust-bar">
@@ -3280,7 +3026,6 @@ details[open] summary::after {
                 <a
                     href="https://discord.gg/NKxX9DB3ay"
                     target="_blank"
-                    rel="noopener noreferrer"
                     class="community-link discord-link"
                 >
                     BEITRETEN →
@@ -3319,7 +3064,6 @@ details[open] summary::after {
                 <a
                     href="https://www.twitch.tv/jumaabonus"
                     target="_blank"
-                    rel="noopener noreferrer"
                     class="community-link twitch-link"
                 >
                     TWITCH →
@@ -3411,14 +3155,7 @@ details[open] summary::after {
                 <br><br>
 
                 Wir möchten die wichtigsten Inhalte möglichst
-                übersichtlich an einem Ort bündeln, damit du nicht
-                zwischen verschiedenen Seiten suchen musst.
-
-                <br><br>
-
-                Sobald neue Partner, Aktionen oder Inhalte
-                hinzukommen, werden sie direkt auf unserer
-                Website oder in der Community veröffentlicht.
+                übersichtlich an einem Ort bündeln.
 
             </div>
 
@@ -3438,17 +3175,13 @@ details[open] summary::after {
                 <br><br>
 
                 Über den jeweiligen Button gelangst du auf die
-                Website des entsprechenden Partners und kannst
-                dir dort das jeweilige Angebot ansehen.
+                Website des entsprechenden Partners.
 
                 <br><br>
 
                 Einige dieser Links können Affiliate-Links sein.
-                Das bedeutet, dass JumaaBonus möglicherweise
-                eine Provision erhält, wenn du über unseren Link
-                ein Angebot nutzt.
-
-                Für dich entstehen dadurch keine zusätzlichen Kosten.
+                JumaaBonus kann dadurch eine Provision erhalten,
+                ohne dass dir zusätzliche Kosten entstehen.
 
             </div>
 
@@ -3468,16 +3201,9 @@ details[open] summary::after {
 
                 <br><br>
 
-                Statt einfach nur einzelne Links zu teilen,
-                möchten wir langfristig eine aktive Community
-                aufbauen, in der Streams, neue Partnerschaften,
-                Aktionen und weitere Inhalte gemeinsam verfolgt
-                werden können.
-
-                <br><br>
-
-                Die Website dient dabei als zentrale Übersicht
-                für alles, was rund um JumaaBonus passiert.
+                Langfristig möchten wir eine aktive Community
+                rund um Streams, Partnerschaften und
+                Casino-Entertainment aufbauen.
 
             </div>
 
@@ -3496,14 +3222,8 @@ details[open] summary::after {
 
                 <br><br>
 
-                Du kannst Twitch direkt über den Button
-                oben rechts auf der Website oder über
-                den Community-Bereich öffnen.
-
-                <br><br>
-
-                Dort findest du unsere Streams und weitere
-                Live-Inhalte von JumaaBonus.
+                Twitch erreichst du direkt über die Buttons
+                auf unserer Website.
 
             </div>
 
@@ -3525,12 +3245,6 @@ details[open] summary::after {
                 Dort teilen wir neue Deals, Stream-Infos,
                 Ankündigungen und weitere Updates.
 
-                <br><br>
-
-                Außerdem kannst du dich dort mit anderen
-                Mitgliedern austauschen und bleibst über
-                neue Inhalte auf dem Laufenden.
-
             </div>
 
         </details>
@@ -3549,14 +3263,8 @@ details[open] summary::after {
 
                 <br><br>
 
-                Neue Partner, Deals und weitere Inhalte
-                werden ergänzt, sobald passende
-                Möglichkeiten verfügbar sind.
-
-                <br><br>
-
-                Dadurch soll unsere Auswahl Schritt für
-                Schritt größer und abwechslungsreicher werden.
+                Neue Partner und Deals werden ergänzt,
+                sobald passende Möglichkeiten verfügbar sind.
 
             </div>
 
@@ -3570,15 +3278,9 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Nein. Die Nutzung unserer Website,
-                unseres Twitch-Kanals und der
+                Nein. Die Nutzung der JumaaBonus-Website,
+                unseres Twitch-Kanals und unserer
                 Discord-Community ist grundsätzlich kostenlos.
-
-                <br><br>
-
-                Bei externen Casino-Angeboten oder Partnerseiten
-                gelten selbstverständlich die jeweiligen
-                Bedingungen des entsprechenden Anbieters.
 
             </div>
 
@@ -3592,19 +3294,14 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Ja. Inhalte rund um Glücksspiel und
-                Casino-Angebote richten sich ausschließlich
+                Ja. Casino- und Glücksspielinhalte auf
+                JumaaBonus richten sich ausschließlich
                 an volljährige Personen.
 
                 <br><br>
 
                 Glücksspiel sollte immer verantwortungsvoll
-                betrachtet werden.
-
-                Spiele nur mit Geld, dessen Verlust du
-                verkraften kannst, und informiere dich über
-                die gesetzlichen Regelungen an deinem
-                Aufenthaltsort.
+                genutzt werden.
 
             </div>
 
@@ -3657,13 +3354,28 @@ details[open] summary::after {
 
         <div>
 
-            <a href="#top">
+            <a
+                href="#top"
+                class="footer-brand"
+            >
 
                 <img
                     src="images/jumaabonus-logo.png"
                     alt="JumaaBonus Logo"
                     class="footer-logo-image"
                 >
+
+                <span class="footer-logo-text">
+
+                    <span class="logo-jumaa">
+                        jumaa
+                    </span>
+
+                    <span class="logo-bonus">
+                        bonus.com
+                    </span>
+
+                </span>
 
             </a>
 
@@ -3715,7 +3427,6 @@ details[open] summary::after {
                 <a
                     href="https://www.twitch.tv/jumaabonus"
                     target="_blank"
-                    rel="noopener noreferrer"
                 >
                     Twitch
                 </a>
@@ -3723,7 +3434,6 @@ details[open] summary::after {
                 <a
                     href="https://discord.gg/NKxX9DB3ay"
                     target="_blank"
-                    rel="noopener noreferrer"
                 >
                     Discord
                 </a>
@@ -3750,10 +3460,6 @@ details[open] summary::after {
 
 </footer>
 
-<!-- ====================================================
-     JAVASCRIPT
-==================================================== -->
-
 <script>
 
 /* ======================================================
@@ -3775,9 +3481,6 @@ const AGE_STORAGE_KEY =
 const AGE_DURATION =
     30 * 24 * 60 * 60 * 1000;
 
-
-/* PRÜFEN OB BEREITS BESTÄTIGT */
-
 function checkAgeVerification() {
 
     const stored =
@@ -3795,17 +3498,12 @@ function checkAgeVerification() {
             10
         );
 
-    if (
-        isNaN(verifiedAt)
-    ) {
+    if (isNaN(verifiedAt)) {
         return false;
     }
 
-    const now =
-        Date.now();
-
     if (
-        now - verifiedAt
+        Date.now() - verifiedAt
         <
         AGE_DURATION
     ) {
@@ -3819,38 +3517,22 @@ function checkAgeVerification() {
     return false;
 }
 
-
-/* AGE GATE SCHLIESSEN */
-
 function closeAgeGate() {
 
-    ageGate
-    .classList
-    .add(
+    ageGate.classList.add(
         "hidden"
     );
 
-    document.body
-    .classList
-    .remove(
+    document.body.classList.remove(
         "age-locked"
     );
-
 }
-
-
-/* BEIM LADEN */
 
 if (
     checkAgeVerification()
 ) {
-
     closeAgeGate();
-
 }
-
-
-/* 18+ BESTÄTIGEN */
 
 ageEnter.addEventListener(
     "click",
@@ -3866,9 +3548,6 @@ ageEnter.addEventListener(
     }
 );
 
-
-/* SEITE VERLASSEN */
-
 ageLeave.addEventListener(
     "click",
     function() {
@@ -3879,37 +3558,34 @@ ageLeave.addEventListener(
     }
 );
 
-
 /* ======================================================
    MOBILE MENU
 ====================================================== */
 
 const menuButton =
-    document.getElementById("menuButton");
+    document.getElementById(
+        "menuButton"
+    );
 
 const mobileMenu =
-    document.getElementById("mobileMenu");
-
+    document.getElementById(
+        "mobileMenu"
+    );
 
 menuButton.addEventListener(
     "click",
     function() {
 
-        mobileMenu
-        .classList
-        .toggle(
+        mobileMenu.classList.toggle(
             "open"
         );
 
-        document.body
-        .classList
-        .toggle(
+        document.body.classList.toggle(
             "menu-open"
         );
 
     }
 );
-
 
 document
 .querySelectorAll(
@@ -3922,15 +3598,11 @@ document
             "click",
             function() {
 
-                mobileMenu
-                .classList
-                .remove(
+                mobileMenu.classList.remove(
                     "open"
                 );
 
-                document.body
-                .classList
-                .remove(
+                document.body.classList.remove(
                     "menu-open"
                 );
 
@@ -3939,7 +3611,6 @@ document
 
     }
 );
-
 
 /* ======================================================
    SMOOTH SCROLL
@@ -3957,8 +3628,7 @@ document
             function(e) {
 
                 const href =
-                    this
-                    .getAttribute(
+                    this.getAttribute(
                         "href"
                     );
 
@@ -3971,14 +3641,11 @@ document
                 }
 
                 const target =
-                    document
-                    .querySelector(
+                    document.querySelector(
                         href
                     );
 
-                if (
-                    target
-                ) {
+                if (target) {
 
                     e.preventDefault();
 
@@ -4004,21 +3671,16 @@ document
     }
 );
 
-
 /* ======================================================
-   3D BITKINGZ CARD
+   BITKINGZ 3D
 ====================================================== */
 
 const showcase =
-    document
-    .getElementById(
+    document.getElementById(
         "dealShowcase"
     );
 
-
-if (
-    showcase
-) {
+if (showcase) {
 
     showcase.addEventListener(
         "mousemove",
@@ -4033,8 +3695,7 @@ if (
             }
 
             const rect =
-                showcase
-                .getBoundingClientRect();
+                showcase.getBoundingClientRect();
 
             const x =
                 e.clientX
@@ -4047,22 +3708,14 @@ if (
                 rect.top;
 
             const centerX =
-                rect.width
-                /
-                2;
+                rect.width / 2;
 
             const centerY =
-                rect.height
-                /
-                2;
+                rect.height / 2;
 
             const rotateX =
                 (
-                    (
-                        y
-                        -
-                        centerY
-                    )
+                    (y - centerY)
                     /
                     centerY
                 )
@@ -4071,33 +3724,24 @@ if (
 
             const rotateY =
                 (
-                    (
-                        x
-                        -
-                        centerX
-                    )
+                    (x - centerX)
                     /
                     centerX
                 )
                 *
                 4;
 
-            showcase
-            .style
-            .transform =
+            showcase.style.transform =
                 `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
         }
     );
 
-
     showcase.addEventListener(
         "mouseleave",
         function() {
 
-            showcase
-            .style
-            .transform =
+            showcase.style.transform =
                 "rotateX(0deg) rotateY(0deg)";
 
         }
@@ -4105,17 +3749,14 @@ if (
 
 }
 
-
 /* ======================================================
-   SCROLL REVEAL
+   REVEAL
 ====================================================== */
 
 const revealElements =
-    document
-    .querySelectorAll(
+    document.querySelectorAll(
         ".reveal"
     );
-
 
 const revealObserver =
     new IntersectionObserver(
@@ -4128,15 +3769,11 @@ const revealObserver =
                         entry.isIntersecting
                     ) {
 
-                        entry
-                        .target
-                        .classList
-                        .add(
+                        entry.target.classList.add(
                             "visible"
                         );
 
-                        revealObserver
-                        .unobserve(
+                        revealObserver.unobserve(
                             entry.target
                         );
 
@@ -4151,13 +3788,10 @@ const revealObserver =
         }
     );
 
-
-revealElements
-.forEach(
+revealElements.forEach(
     function(element) {
 
-        revealObserver
-        .observe(
+        revealObserver.observe(
             element
         );
 
