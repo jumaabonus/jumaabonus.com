@@ -25,45 +25,28 @@
 
 <style>
 
-/* ======================================================
-   ROOT
-====================================================== */
-
 :root {
-
     --orange: #ff6a00;
     --orange-light: #ff9a45;
     --orange-soft: rgba(255,106,0,0.12);
-
     --red: #e50914;
-
     --purple: #9146ff;
     --purple-light: #c19cff;
     --purple-soft: rgba(145,70,255,0.10);
-
     --green: #50ff7a;
-
     --bg: #050505;
     --bg2: #090909;
     --bg3: #0d0d0f;
     --bg4: #121214;
-
     --card: #111113;
     --card-light: #171719;
-
     --text: #f7f7f7;
     --muted: #a1a1a6;
     --muted2: #6e6e73;
-
     --border: rgba(255,255,255,0.085);
     --border-hover: rgba(255,106,0,0.32);
-
     --max: 1180px;
 }
-
-/* ======================================================
-   RESET
-====================================================== */
 
 * {
     margin: 0;
@@ -76,12 +59,7 @@ html {
 }
 
 body {
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
 
     background:
@@ -103,7 +81,6 @@ body {
         );
 
     min-height: 100vh;
-
     overflow-x: hidden;
 }
 
@@ -129,10 +106,6 @@ img {
     margin: auto;
 }
 
-/* ======================================================
-   SCROLLBAR
-====================================================== */
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -142,7 +115,6 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-
     background:
         linear-gradient(
             var(--orange),
@@ -150,23 +122,16 @@ img {
         );
 
     border-radius: 999px;
-
     border: 2px solid #070707;
 }
 
-/* ======================================================
-   HEADER
-====================================================== */
+/* HEADER */
 
 .header {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
 
     border-bottom:
@@ -183,7 +148,6 @@ img {
 }
 
 .navbar {
-
     width:
         min(
             var(--max),
@@ -191,32 +155,20 @@ img {
         );
 
     height: 76px;
-
     margin: auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 30px;
 }
 
-/* LOGO */
-
 .logo {
-
     display: inline-flex;
-
     align-items: center;
-
     flex-shrink: 0;
-
     font-size: 24px;
-
     font-weight: 950;
-
     letter-spacing: -1.2px;
 }
 
@@ -225,48 +177,31 @@ img {
 }
 
 .logo-bonus {
-
     color: var(--orange);
-
     margin-left: 2px;
 }
 
-/* NAV */
-
 .nav-links {
-
     display: flex;
-
     align-items: center;
-
     gap: 30px;
 }
 
 .nav-links a {
-
     position: relative;
-
     color: #aaa;
-
     font-size: 12px;
-
     font-weight: 800;
-
     transition: 0.25s;
 }
 
 .nav-links a::after {
-
     content: "";
-
     position: absolute;
-
     left: 0;
     bottom: -9px;
-
     width: 0;
     height: 2px;
-
     border-radius: 999px;
 
     background:
@@ -287,63 +222,37 @@ img {
     width: 100%;
 }
 
-/* ======================================================
-   HEADER BUTTONS
-====================================================== */
-
 .header-actions {
-
     display: flex;
-
     align-items: center;
-
     gap: 9px;
-
     flex-shrink: 0;
 }
 
 .social-button {
-
     height: 40px;
-
-    padding:
-        0 14px;
-
+    padding: 0 14px;
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 8px;
-
     border-radius: 11px;
-
     font-size: 10px;
-
     font-weight: 900;
-
     transition: 0.25s;
 }
 
 .social-button svg {
-
     width: 16px;
     height: 16px;
-
     fill: currentColor;
 }
 
 .social-button:hover {
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 }
 
-/* TWITCH */
-
 .twitch-header {
-
     color: #d5beff;
 
     border:
@@ -358,20 +267,14 @@ img {
 }
 
 .twitch-header:hover {
-
     color: white;
-
-    background:
-        rgba(145,70,255,0.28);
+    background: rgba(145,70,255,0.28);
 
     box-shadow:
         0 10px 32px rgba(145,70,255,0.18);
 }
 
-/* DISCORD */
-
 .discord-header {
-
     color: white;
 
     background:
@@ -386,22 +289,15 @@ img {
 }
 
 .discord-header:hover {
-
     box-shadow:
         0 14px 38px rgba(255,106,0,0.30);
 }
 
-/* MENU */
-
 .menu-button {
-
     display: none;
-
     width: 40px;
     height: 40px;
-
     align-items: center;
-
     justify-content: center;
 
     border:
@@ -413,42 +309,27 @@ img {
         rgba(255,255,255,0.04);
 
     color: white;
-
     cursor: pointer;
 }
 
 .menu-button svg {
-
     width: 20px;
     height: 20px;
-
     stroke: currentColor;
 }
 
-/* ======================================================
-   MOBILE MENU
-====================================================== */
+/* MOBILE MENU */
 
 .mobile-menu {
-
     position: fixed;
-
     top: 76px;
     left: 0;
-
     width: 100%;
-
     padding: 20px;
-
     z-index: 999;
-
     opacity: 0;
-
     pointer-events: none;
-
-    transform:
-        translateY(-10px);
-
+    transform: translateY(-10px);
     transition: 0.25s;
 
     background:
@@ -459,32 +340,19 @@ img {
 }
 
 .mobile-menu.open {
-
     opacity: 1;
-
     pointer-events: auto;
-
-    transform:
-        translateY(0);
+    transform: translateY(0);
 }
 
 .mobile-menu-inner {
-
-    width:
-        min(
-            var(--max),
-            100%
-        );
-
+    width: min(var(--max), 100%);
     margin: auto;
-
     display: grid;
-
     gap: 10px;
 }
 
 .mobile-menu a {
-
     padding: 16px;
 
     border:
@@ -500,32 +368,22 @@ img {
         );
 
     color: #bbb;
-
     font-size: 13px;
-
     font-weight: 800;
 }
 
-/* ======================================================
-   BANNER
-====================================================== */
+/* BANNER */
 
 .top-banner {
-
     padding-top: 110px;
-
     position: relative;
 }
 
 .top-banner::before {
-
     content: "";
-
     position: absolute;
-
     width: 600px;
     height: 400px;
-
     left: 5%;
     top: 30px;
 
@@ -533,19 +391,13 @@ img {
         rgba(255,106,0,0.08);
 
     border-radius: 50%;
-
-    filter:
-        blur(100px);
-
+    filter: blur(100px);
     pointer-events: none;
 }
 
 .banner-frame {
-
     position: relative;
-
     overflow: hidden;
-
     border-radius: 28px;
 
     border:
@@ -559,13 +411,9 @@ img {
 }
 
 .banner-frame::after {
-
     content: "";
-
     position: absolute;
-
     inset: 0;
-
     pointer-events: none;
 
     background:
@@ -579,33 +427,21 @@ img {
 }
 
 .banner-frame img {
-
     display: block;
-
     width: 100%;
-
     height: auto;
-
-    transition:
-        transform 0.6s ease;
+    transition: transform 0.6s ease;
 }
 
 .banner-frame:hover img {
-
-    transform:
-        scale(1.015);
+    transform: scale(1.015);
 }
 
-/* ======================================================
-   HERO
-====================================================== */
+/* HERO */
 
 .hero {
-
     position: relative;
-
-    padding:
-        80px 0 120px;
+    padding: 80px 0 120px;
 
     background:
         radial-gradient(
@@ -616,27 +452,17 @@ img {
 }
 
 .hero-grid {
-
     display: grid;
-
-    grid-template-columns:
-        1.03fr 0.97fr;
-
+    grid-template-columns: 1.03fr 0.97fr;
     align-items: center;
-
     gap: 75px;
 }
 
 .eyebrow {
-
     display: inline-flex;
-
     align-items: center;
-
     gap: 9px;
-
-    padding:
-        8px 13px;
+    padding: 8px 13px;
 
     border:
         1px solid rgba(255,255,255,0.10);
@@ -647,25 +473,18 @@ img {
         rgba(255,255,255,0.035);
 
     color: #bbb;
-
     font-size: 10px;
-
     font-weight: 900;
-
-    letter-spacing:
-        1.5px;
+    letter-spacing: 1.5px;
 
     box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 .live-dot {
-
     width: 7px;
     height: 7px;
-
     border-radius: 50%;
-
     background: var(--green);
 
     box-shadow:
@@ -673,9 +492,7 @@ img {
 }
 
 .hero h1 {
-
     max-width: 740px;
-
     margin-top: 23px;
 
     font-size:
@@ -686,14 +503,11 @@ img {
         );
 
     line-height: 0.97;
-
     letter-spacing: -4px;
-
     font-weight: 950;
 }
 
 .hero-gradient {
-
     display: block;
 
     background:
@@ -705,8 +519,7 @@ img {
             #ee2a16
         );
 
-    background-size:
-        200% auto;
+    background-size: 200% auto;
 
     -webkit-background-clip:
         text;
@@ -736,53 +549,33 @@ img {
 }
 
 .hero-description {
-
     max-width: 610px;
-
     margin-top: 27px;
-
     color: var(--muted);
-
     font-size: 15px;
-
     line-height: 1.8;
 }
 
 .hero-actions {
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 12px;
-
     margin-top: 34px;
 }
 
 .btn {
-
     min-height: 48px;
-
-    padding:
-        0 22px;
-
+    padding: 0 22px;
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 12px;
-
     font-size: 12px;
-
     font-weight: 900;
-
     transition: 0.25s;
 }
 
 .btn-primary {
-
     background:
         linear-gradient(
             135deg,
@@ -795,16 +588,13 @@ img {
 }
 
 .btn-primary:hover {
-
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
         0 18px 45px rgba(255,106,0,0.32);
 }
 
 .btn-secondary {
-
     border:
         1px solid rgba(255,255,255,0.11);
 
@@ -819,36 +609,22 @@ img {
 }
 
 .btn-secondary:hover {
-
-    transform:
-        translateY(-3px);
-
-    border-color:
-        rgba(255,255,255,0.18);
-
-    background:
-        #1c1c1f;
+    transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.18);
+    background: #1c1c1f;
 }
 
-/* ======================================================
-   BITKINGZ CARD
-====================================================== */
+/* BITKINGZ CARD */
 
 .deal-showcase-wrap {
-
     perspective: 1200px;
 }
 
 .deal-showcase {
-
     position: relative;
-
     min-height: 430px;
-
     padding: 30px;
-
     overflow: hidden;
-
     border-radius: 28px;
 
     border:
@@ -883,74 +659,48 @@ img {
 }
 
 .deal-showcase::before {
-
     content: "";
-
     position: absolute;
-
     width: 250px;
     height: 250px;
-
     right: -120px;
     bottom: -100px;
-
     border-radius: 50%;
 
     background:
         rgba(255,106,0,0.10);
 
-    filter:
-        blur(45px);
+    filter: blur(45px);
 }
 
 .deal-showcase-top {
-
     position: relative;
-
     z-index: 2;
-
     display: flex;
-
     align-items: center;
-
-    justify-content:
-        space-between;
+    justify-content: space-between;
 }
 
 .top-deal-label {
-
     color: var(--orange);
-
     font-size: 10px;
-
     font-weight: 900;
-
-    letter-spacing:
-        1.6px;
+    letter-spacing: 1.6px;
 }
 
 .status-live {
-
     display: inline-flex;
-
     align-items: center;
-
     gap: 6px;
-
     color: #71ff92;
-
     font-size: 10px;
-
     font-weight: 900;
 }
 
 .status-live span {
-
     width: 6px;
     height: 6px;
-
     border-radius: 50%;
-
     background: #50ff7a;
 
     box-shadow:
@@ -958,25 +708,15 @@ img {
 }
 
 .bk-logo {
-
     position: relative;
-
     z-index: 2;
-
     width: 190px;
     height: 120px;
-
-    margin:
-        55px auto 20px;
-
+    margin: 55px auto 20px;
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     overflow: hidden;
-
     border-radius: 24px;
 
     background:
@@ -997,59 +737,37 @@ img {
 }
 
 .bk-logo img {
-
     width: 100%;
     height: 100%;
-
     object-fit: contain;
-
     display: block;
 }
 
 .deal-showcase h3 {
-
     position: relative;
-
     z-index: 2;
-
     text-align: center;
-
     font-size: 31px;
-
     font-weight: 950;
 }
 
 .deal-showcase-sub {
-
     position: relative;
-
     z-index: 2;
-
     margin-top: 7px;
-
     text-align: center;
-
     color: var(--muted);
-
     font-size: 12px;
 }
 
 .deal-showcase-button {
-
     position: relative;
-
     z-index: 2;
-
     margin-top: 29px;
-
     min-height: 48px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 12px;
 
     background:
@@ -1063,27 +781,20 @@ img {
         0 12px 30px rgba(255,106,0,0.17);
 
     font-size: 11px;
-
     font-weight: 900;
-
     transition: 0.25s;
 }
 
 .deal-showcase-button:hover {
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
     box-shadow:
         0 17px 40px rgba(255,106,0,0.28);
 }
 
-/* ======================================================
-   TRUST BAR
-====================================================== */
+/* TRUST BAR */
 
 .trust-bar {
-
     position: relative;
 
     border-top:
@@ -1102,27 +813,17 @@ img {
 }
 
 .trust-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .trust-item {
-
     min-height: 96px;
-
     padding: 20px;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
 
     border-right:
@@ -1130,60 +831,40 @@ img {
 }
 
 .trust-item:last-child {
-
     border-right: none;
 }
 
 .trust-item strong {
-
     font-size: 12px;
-
     font-weight: 900;
 }
 
 .trust-item span {
-
     margin-top: 7px;
-
     color: var(--muted2);
-
     font-size: 9px;
-
-    letter-spacing:
-        1.1px;
+    letter-spacing: 1.1px;
 }
 
-/* ======================================================
-   GENERAL SECTIONS
-====================================================== */
+/* SECTIONS */
 
 .section {
-
     position: relative;
-
-    padding:
-        115px 0;
+    padding: 115px 0;
 }
 
 .section-heading {
-
     margin-bottom: 48px;
 }
 
 .section-kicker {
-
     color: var(--orange);
-
     font-size: 9px;
-
     font-weight: 900;
-
-    letter-spacing:
-        2px;
+    letter-spacing: 2px;
 }
 
 .section-title {
-
     margin-top: 10px;
 
     font-size:
@@ -1200,24 +881,16 @@ img {
 }
 
 .section-intro {
-
     max-width: 720px;
-
     margin-top: 17px;
-
     color: var(--muted);
-
     font-size: 14px;
-
     line-height: 1.8;
 }
 
-/* ======================================================
-   DEAL SECTION BACKGROUND
-====================================================== */
+/* DEALS */
 
 #deals {
-
     background:
         radial-gradient(
             circle at 85% 20%,
@@ -1234,30 +907,17 @@ img {
         1px solid rgba(255,255,255,0.05);
 }
 
-/* ======================================================
-   DEAL CARDS
-====================================================== */
-
 .deals-grid {
-
     display: grid;
-
-    grid-template-columns:
-        1.4fr 1fr 1fr;
-
+    grid-template-columns: 1.4fr 1fr 1fr;
     gap: 18px;
 }
 
 .deal-card {
-
     position: relative;
-
     min-height: 350px;
-
     padding: 26px;
-
     overflow: hidden;
-
     border-radius: 21px;
 
     border:
@@ -1278,9 +938,7 @@ img {
 }
 
 .deal-card:hover {
-
-    transform:
-        translateY(-6px);
+    transform: translateY(-6px);
 
     border-color:
         var(--border-hover);
@@ -1290,7 +948,6 @@ img {
 }
 
 .deal-card.featured {
-
     background:
         radial-gradient(
             circle at 85% 15%,
@@ -1305,12 +962,8 @@ img {
 }
 
 .deal-badge {
-
     display: inline-flex;
-
-    padding:
-        6px 9px;
-
+    padding: 6px 9px;
     border-radius: 8px;
 
     background:
@@ -1320,27 +973,18 @@ img {
         1px solid rgba(255,106,0,0.18);
 
     color: var(--orange);
-
     font-size: 8px;
-
     font-weight: 900;
 }
 
 .deal-logo {
-
     width: 100px;
     height: 70px;
-
     margin-top: 48px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     overflow: hidden;
-
     border-radius: 14px;
 
     background:
@@ -1358,78 +1002,52 @@ img {
 }
 
 .deal-logo img {
-
     width: 100%;
     height: 100%;
-
     object-fit: contain;
-
     display: block;
 }
 
 .deal-card h3 {
-
     margin-top: 20px;
-
     font-size: 24px;
-
     font-weight: 950;
 }
 
 .deal-card p {
-
     max-width: 350px;
-
     margin-top: 9px;
-
     color: var(--muted);
-
     font-size: 12px;
-
     line-height: 1.7;
 }
 
 .deal-card-link {
-
     position: absolute;
-
     left: 26px;
     bottom: 26px;
-
     color: var(--orange);
-
     font-size: 10px;
-
     font-weight: 900;
-
     transition: 0.2s;
 }
 
 .deal-card-link:hover {
-
     color: var(--orange-light);
 }
 
 .coming-card {
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 }
 
 .coming-icon {
-
     width: 66px;
     height: 66px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 18px;
 
     border:
@@ -1439,9 +1057,7 @@ img {
         rgba(255,255,255,0.045);
 
     color: #626267;
-
     font-size: 25px;
-
     font-weight: 900;
 }
 
@@ -1453,12 +1069,9 @@ img {
     color: #66666b;
 }
 
-/* ======================================================
-   BENEFITS BACKGROUND
-====================================================== */
+/* VORTEILE */
 
 #vorteile {
-
     background:
         radial-gradient(
             circle at 12% 45%,
@@ -1473,30 +1086,17 @@ img {
         #080809;
 }
 
-/* ======================================================
-   BENEFITS
-====================================================== */
-
 .benefits-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap: 18px;
 }
 
 .benefit-card {
-
     position: relative;
-
     min-height: 335px;
-
     padding: 31px;
-
     overflow: hidden;
-
     border-radius: 21px;
 
     border:
@@ -1517,17 +1117,12 @@ img {
 }
 
 .benefit-card::after {
-
     content: "";
-
     position: absolute;
-
     width: 150px;
     height: 150px;
-
     right: -70px;
     bottom: -70px;
-
     border-radius: 50%;
 
     background:
@@ -1538,9 +1133,7 @@ img {
 }
 
 .benefit-card:hover {
-
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
     border-color:
         rgba(255,106,0,0.30);
@@ -1550,16 +1143,11 @@ img {
 }
 
 .benefit-icon {
-
     width: 48px;
     height: 48px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 13px;
 
     background:
@@ -1573,36 +1161,25 @@ img {
         1px solid rgba(255,106,0,0.20);
 
     color: var(--orange);
-
     font-size: 18px;
 }
 
 .benefit-card h3 {
-
     margin-top: 26px;
-
     font-size: 19px;
-
     font-weight: 900;
 }
 
 .benefit-card p {
-
     margin-top: 13px;
-
     color: var(--muted);
-
     font-size: 12px;
-
     line-height: 1.85;
 }
 
-/* ======================================================
-   COMMUNITY SECTION
-====================================================== */
+/* COMMUNITY */
 
 #community {
-
     background:
         radial-gradient(
             circle at 80% 35%,
@@ -1628,14 +1205,9 @@ img {
 }
 
 .community-panel {
-
     position: relative;
-
-    padding:
-        65px 52px;
-
+    padding: 65px 52px;
     overflow: hidden;
-
     border-radius: 29px;
 
     border:
@@ -1664,7 +1236,6 @@ img {
 }
 
 .community-panel h2 {
-
     margin-top: 10px;
 
     font-size:
@@ -1674,49 +1245,31 @@ img {
             54px
         );
 
-    letter-spacing:
-        -2px;
+    letter-spacing: -2px;
 }
 
 .community-description {
-
     max-width: 680px;
-
     margin-top: 15px;
-
     color: var(--muted);
-
     font-size: 13px;
-
     line-height: 1.8;
 }
 
 .community-grid {
-
     display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
-
     margin-top: 35px;
 }
 
 .community-card {
-
     min-height: 135px;
-
     padding: 22px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 18px;
-
     border-radius: 18px;
 
     border:
@@ -1734,61 +1287,45 @@ img {
 }
 
 .community-card:hover {
-
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
 
     background:
         rgba(255,255,255,0.065);
 }
 
 .community-card:first-child:hover {
-
     border-color:
         rgba(255,106,0,0.32);
 }
 
 .community-card:last-child:hover {
-
     border-color:
         rgba(145,70,255,0.42);
 }
 
 .community-platform-info {
-
     display: flex;
-
     align-items: center;
-
     gap: 14px;
 }
 
 .community-platform-icon {
-
     width: 52px;
     height: 52px;
-
     flex-shrink: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 14px;
 }
 
 .community-platform-icon svg {
-
     width: 25px;
     height: 25px;
-
     fill: white;
 }
 
 .discord-icon {
-
     background:
         linear-gradient(
             135deg,
@@ -1801,7 +1338,6 @@ img {
 }
 
 .twitch-icon {
-
     background:
         linear-gradient(
             135deg,
@@ -1814,56 +1350,35 @@ img {
 }
 
 .community-platform-info h3 {
-
     font-size: 14px;
-
     font-weight: 900;
 }
 
 .community-platform-info span {
-
     display: block;
-
     margin-top: 5px;
-
     color: #858589;
-
     font-size: 10px;
 }
 
 .community-link {
-
     min-height: 40px;
-
-    padding:
-        0 14px;
-
+    padding: 0 14px;
     flex-shrink: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 10px;
-
     font-size: 9px;
-
     font-weight: 900;
-
-    transition:
-        0.25s;
+    transition: 0.25s;
 }
 
 .community-link:hover {
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .discord-link {
-
     background:
         linear-gradient(
             135deg,
@@ -1873,7 +1388,6 @@ img {
 }
 
 .twitch-link {
-
     color: #decaff;
 
     border:
@@ -1884,19 +1398,13 @@ img {
 }
 
 .twitch-link:hover {
-
     color: white;
-
-    background:
-        var(--purple);
+    background: var(--purple);
 }
 
-/* ======================================================
-   FAQ BACKGROUND
-====================================================== */
+/* FAQ */
 
 #faq {
-
     background:
         radial-gradient(
             circle at 15% 20%,
@@ -1910,21 +1418,13 @@ img {
         );
 }
 
-/* ======================================================
-   FAQ
-====================================================== */
-
 .faq-grid {
-
     display: grid;
-
     gap: 12px;
 }
 
 details {
-
     overflow: hidden;
-
     border-radius: 16px;
 
     border:
@@ -1947,13 +1447,11 @@ details {
 }
 
 details:hover {
-
     border-color:
         rgba(255,106,0,0.20);
 }
 
 details[open] {
-
     border-color:
         rgba(255,106,0,0.30);
 
@@ -1971,49 +1469,30 @@ details[open] {
 }
 
 summary {
-
     list-style: none;
-
     cursor: pointer;
-
-    padding:
-        22px 24px;
-
+    padding: 22px 24px;
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 20px;
-
     font-size: 13px;
-
     font-weight: 850;
 }
 
 summary::-webkit-details-marker {
-
     display: none;
 }
 
 summary::after {
-
     content: "+";
-
     flex-shrink: 0;
-
     width: 32px;
     height: 32px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 9px;
-
     color: var(--orange);
 
     background:
@@ -2023,39 +1502,26 @@ summary::after {
         1px solid rgba(255,106,0,0.12);
 
     font-size: 20px;
-
     font-weight: 400;
 }
 
 details[open] summary::after {
-
     content: "−";
 }
 
 .faq-answer {
-
-    padding:
-        0 24px 25px;
-
+    padding: 0 24px 25px;
     max-width: 900px;
-
     color: var(--muted);
-
     font-size: 12px;
-
     line-height: 1.9;
 }
 
-/* ======================================================
-   RESPONSIBLE
-====================================================== */
+/* RESPONSIBLE */
 
 .responsible-box {
-
     margin-top: 34px;
-
     padding: 25px;
-
     border-radius: 16px;
 
     border:
@@ -2069,30 +1535,23 @@ details[open] summary::after {
         );
 
     color: #77777b;
-
     font-size: 10px;
-
     line-height: 1.8;
 }
 
 .responsible-box strong {
-
     color: #b0b0b5;
 }
 
-/* ======================================================
-   FOOTER
-====================================================== */
+/* FOOTER */
 
 .footer {
-
     position: relative;
 
     border-top:
         1px solid rgba(255,255,255,0.08);
 
-    padding:
-        55px 0 30px;
+    padding: 55px 0 30px;
 
     background:
         radial-gradient(
@@ -2108,97 +1567,62 @@ details[open] summary::after {
 }
 
 .footer-grid {
-
     display: grid;
-
-    grid-template-columns:
-        1.4fr 1fr 1fr;
-
+    grid-template-columns: 1.4fr 1fr 1fr;
     gap: 40px;
 }
 
 .footer-description {
-
     max-width: 330px;
-
     margin-top: 14px;
-
     color: #6d6d72;
-
     font-size: 11px;
-
     line-height: 1.7;
 }
 
 .footer-column-title {
-
     margin-bottom: 15px;
-
     color: #77777c;
-
     font-size: 9px;
-
     font-weight: 900;
-
-    letter-spacing:
-        1px;
+    letter-spacing: 1px;
 }
 
 .footer-links {
-
     display: grid;
-
     gap: 10px;
 }
 
 .footer-links a {
-
     width: fit-content;
-
     color: #aaa;
-
     font-size: 11px;
-
-    transition:
-        0.2s;
+    transition: 0.2s;
 }
 
 .footer-links a:hover {
-
     color: var(--orange-light);
 }
 
 .footer-bottom {
-
     margin-top: 45px;
-
     padding-top: 20px;
-
     display: flex;
-
-    justify-content:
-        space-between;
-
+    justify-content: space-between;
     gap: 20px;
 
     border-top:
         1px solid rgba(255,255,255,0.07);
 
     color: #59595e;
-
     font-size: 9px;
 }
 
-/* ======================================================
-   REVEAL ANIMATION
-====================================================== */
+/* REVEAL */
 
 .reveal {
-
     opacity: 0;
-
-    transform:
-        translateY(25px);
+    transform: translateY(25px);
 
     transition:
         opacity 0.65s ease,
@@ -2206,16 +1630,11 @@ details[open] summary::after {
 }
 
 .reveal.visible {
-
     opacity: 1;
-
-    transform:
-        translateY(0);
+    transform: translateY(0);
 }
 
-/* ======================================================
-   TABLET
-====================================================== */
+/* TABLET */
 
 @media (max-width: 1000px) {
 
@@ -2228,56 +1647,39 @@ details[open] summary::after {
     }
 
     .hero-grid {
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns: 1fr;
         gap: 55px;
     }
 
     .deal-showcase-wrap {
-
         max-width: 650px;
-
         width: 100%;
-
         margin: auto;
     }
 
     .deals-grid {
-
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .deal-card.featured {
-
-        grid-column:
-            span 2;
+        grid-column: span 2;
     }
 
     .benefits-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .community-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
 }
 
-/* ======================================================
-   MOBILE
-====================================================== */
+/* MOBILE */
 
 @media (max-width: 680px) {
 
     .container {
-
         width:
             min(
                 var(--max),
@@ -2286,7 +1688,6 @@ details[open] summary::after {
     }
 
     .navbar {
-
         width:
             min(
                 var(--max),
@@ -2295,83 +1696,58 @@ details[open] summary::after {
     }
 
     .logo {
-
         font-size: 19px;
     }
 
     .header-actions {
-
         display: none;
     }
 
     .top-banner {
-
-        padding-top:
-            96px;
+        padding-top: 96px;
     }
 
     .banner-frame {
-
-        border-radius:
-            16px;
+        border-radius: 16px;
     }
 
     .banner-frame img {
-
-        min-height:
-            145px;
-
-        object-fit:
-            cover;
+        min-height: 145px;
+        object-fit: cover;
     }
 
     .hero {
-
-        padding:
-            52px 0 80px;
+        padding: 52px 0 80px;
     }
 
     .hero h1 {
-
         font-size: 45px;
-
-        letter-spacing:
-            -2.5px;
+        letter-spacing: -2.5px;
     }
 
     .hero-description {
-
         font-size: 13px;
     }
 
     .hero-actions {
-
         display: grid;
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .btn {
-
         width: 100%;
     }
 
     .bk-logo {
-
         width: 165px;
-
         height: 105px;
     }
 
     .trust-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .trust-item {
-
         border-right: none;
 
         border-bottom:
@@ -2379,65 +1755,43 @@ details[open] summary::after {
     }
 
     .trust-item:last-child {
-
         border-bottom: none;
     }
 
     .section {
-
-        padding:
-            82px 0;
+        padding: 82px 0;
     }
 
     .deals-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .deal-card.featured {
-
-        grid-column:
-            span 1;
+        grid-column: span 1;
     }
 
     .community-panel {
-
-        padding:
-            43px 24px;
+        padding: 43px 24px;
     }
 
     .community-card {
-
-        flex-direction:
-            column;
-
-        align-items:
-            flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .community-link {
-
         width: 100%;
     }
 
     .footer-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .footer-bottom {
-
-        flex-direction:
-            column;
+        flex-direction: column;
     }
 
 }
-
-/* ======================================================
-   REDUCED MOTION
-====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2452,13 +1806,7 @@ details[open] summary::after {
 
 </head>
 
-
 <body>
-
-
-<!-- ====================================================
-     HEADER
-==================================================== -->
 
 <header class="header">
 
@@ -2475,7 +1823,6 @@ details[open] summary::after {
         </span>
 
     </a>
-
 
     <div class="nav-links">
 
@@ -2497,10 +1844,7 @@ details[open] summary::after {
 
     </div>
 
-
     <div class="header-actions">
-
-        <!-- TWITCH -->
 
         <a
             href="https://www.twitch.tv/jumaabonus"
@@ -2519,9 +1863,6 @@ details[open] summary::after {
 
         </a>
 
-
-        <!-- DISCORD -->
-
         <a
             href="https://discord.gg/NKxX9DB3ay"
             target="_blank"
@@ -2532,7 +1873,6 @@ details[open] summary::after {
         </a>
 
     </div>
-
 
     <button
         class="menu-button"
@@ -2555,11 +1895,6 @@ details[open] summary::after {
 </nav>
 
 </header>
-
-
-<!-- ====================================================
-     MOBILE MENU
-==================================================== -->
 
 <div
     class="mobile-menu"
@@ -2604,13 +1939,7 @@ details[open] summary::after {
 
 </div>
 
-
 <main id="top">
-
-
-<!-- ====================================================
-     BANNER
-==================================================== -->
 
 <section class="top-banner">
 
@@ -2629,15 +1958,9 @@ details[open] summary::after {
 
 </section>
 
-
-<!-- ====================================================
-     HERO
-==================================================== -->
-
 <section class="hero">
 
 <div class="container hero-grid">
-
 
     <div class="reveal">
 
@@ -2649,7 +1972,6 @@ details[open] summary::after {
 
         </div>
 
-
         <h1>
 
             Entdecke deine
@@ -2659,7 +1981,6 @@ details[open] summary::after {
             </span>
 
         </h1>
-
 
         <p class="hero-description">
 
@@ -2673,7 +1994,6 @@ details[open] summary::after {
 
         </p>
 
-
         <div class="hero-actions">
 
             <a
@@ -2682,7 +2002,6 @@ details[open] summary::after {
             >
                 Deals entdecken →
             </a>
-
 
             <a
                 href="#community"
@@ -2694,9 +2013,6 @@ details[open] summary::after {
         </div>
 
     </div>
-
-
-    <!-- BITKINGZ -->
 
     <div class="deal-showcase-wrap reveal">
 
@@ -2721,7 +2037,6 @@ details[open] summary::after {
 
             </div>
 
-
             <div class="bk-logo">
 
                 <img
@@ -2731,19 +2046,16 @@ details[open] summary::after {
 
             </div>
 
-
             <h3>
                 BitKingz
             </h3>
-
 
             <p class="deal-showcase-sub">
                 Aktuelles Partner-Angebot
             </p>
 
-
             <a
-                href="https://www.bitkingzmedia.com/aohkhftix"
+                href="https://www.bitkingzmedia.com/aevsnqrhw"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="deal-showcase-button"
@@ -2759,15 +2071,9 @@ details[open] summary::after {
 
 </section>
 
-
-<!-- ====================================================
-     TRUST BAR
-==================================================== -->
-
 <section class="trust-bar">
 
 <div class="container trust-grid">
-
 
     <div class="trust-item">
 
@@ -2781,7 +2087,6 @@ details[open] summary::after {
 
     </div>
 
-
     <div class="trust-item">
 
         <strong>
@@ -2793,7 +2098,6 @@ details[open] summary::after {
         </span>
 
     </div>
-
 
     <div class="trust-item">
 
@@ -2807,15 +2111,9 @@ details[open] summary::after {
 
     </div>
 
-
 </div>
 
 </section>
-
-
-<!-- ====================================================
-     DEALS
-==================================================== -->
 
 <section
     class="section"
@@ -2824,18 +2122,15 @@ details[open] summary::after {
 
 <div class="container">
 
-
     <div class="section-heading reveal">
 
         <div class="section-kicker">
             AUSGEWÄHLTE ANGEBOTE
         </div>
 
-
         <h2 class="section-title">
             Aktuelle Deals
         </h2>
-
 
         <p class="section-intro">
 
@@ -2849,18 +2144,13 @@ details[open] summary::after {
 
     </div>
 
-
     <div class="deals-grid">
-
-
-        <!-- BITKINGZ -->
 
         <article class="deal-card featured reveal">
 
             <div class="deal-badge">
                 ★ TOP DEAL
             </div>
-
 
             <div class="deal-logo">
 
@@ -2871,11 +2161,9 @@ details[open] summary::after {
 
             </div>
 
-
             <h3>
                 BitKingz
             </h3>
-
 
             <p>
 
@@ -2885,9 +2173,8 @@ details[open] summary::after {
 
             </p>
 
-
             <a
-                href="https://www.bitkingzmedia.com/aohkhftix"
+                href="https://www.bitkingzmedia.com/aevsnqrhw"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="deal-card-link"
@@ -2897,20 +2184,15 @@ details[open] summary::after {
 
         </article>
 
-
-        <!-- PARTNER 2 -->
-
         <article class="deal-card coming-card reveal">
 
             <div class="coming-icon">
                 +
             </div>
 
-
             <h3>
                 Neuer Partner
             </h3>
-
 
             <p>
                 Weitere Deals folgen in Kürze.
@@ -2918,38 +2200,27 @@ details[open] summary::after {
 
         </article>
 
-
-        <!-- PARTNER 3 -->
-
         <article class="deal-card coming-card reveal">
 
             <div class="coming-icon">
                 +
             </div>
 
-
             <h3>
                 Neuer Partner
             </h3>
-
 
             <p>
                 Weitere Deals folgen in Kürze.
             </p>
 
         </article>
-
 
     </div>
 
 </div>
 
 </section>
-
-
-<!-- ====================================================
-     VORTEILE
-==================================================== -->
 
 <section
     class="section"
@@ -2958,18 +2229,15 @@ details[open] summary::after {
 
 <div class="container">
 
-
     <div class="section-heading reveal">
 
         <div class="section-kicker">
             WARUM JUMAA BONUS
         </div>
 
-
         <h2 class="section-title">
             Mehr als nur Deals.
         </h2>
-
 
         <p class="section-intro">
 
@@ -2985,9 +2253,7 @@ details[open] summary::after {
 
     </div>
 
-
     <div class="benefits-grid">
-
 
         <article class="benefit-card reveal">
 
@@ -2995,11 +2261,9 @@ details[open] summary::after {
                 ☰
             </div>
 
-
             <h3>
                 Übersichtliche Deals
             </h3>
-
 
             <p>
 
@@ -3020,18 +2284,15 @@ details[open] summary::after {
 
         </article>
 
-
         <article class="benefit-card reveal">
 
             <div class="benefit-icon">
                 ▶
             </div>
 
-
             <h3>
                 Twitch & Entertainment
             </h3>
-
 
             <p>
 
@@ -3050,18 +2311,15 @@ details[open] summary::after {
 
         </article>
 
-
         <article class="benefit-card reveal">
 
             <div class="benefit-icon">
                 ★
             </div>
 
-
             <h3>
                 Community & Updates
             </h3>
-
 
             <p>
 
@@ -3081,17 +2339,11 @@ details[open] summary::after {
 
         </article>
 
-
     </div>
 
 </div>
 
 </section>
-
-
-<!-- ====================================================
-     COMMUNITY
-==================================================== -->
 
 <section
     class="section"
@@ -3100,18 +2352,15 @@ details[open] summary::after {
 
 <div class="container">
 
-
     <div class="community-panel reveal">
 
         <div class="section-kicker">
             JUMAA BONUS COMMUNITY
         </div>
 
-
         <h2>
             Sei direkt dabei.
         </h2>
-
 
         <p class="community-description">
 
@@ -3122,11 +2371,7 @@ details[open] summary::after {
 
         </p>
 
-
         <div class="community-grid">
-
-
-            <!-- DISCORD -->
 
             <div class="community-card">
 
@@ -3142,7 +2387,6 @@ details[open] summary::after {
 
                     </div>
 
-
                     <div>
 
                         <h3>
@@ -3157,7 +2401,6 @@ details[open] summary::after {
 
                 </div>
 
-
                 <a
                     href="https://discord.gg/NKxX9DB3ay"
                     target="_blank"
@@ -3168,9 +2411,6 @@ details[open] summary::after {
                 </a>
 
             </div>
-
-
-            <!-- TWITCH -->
 
             <div class="community-card">
 
@@ -3186,7 +2426,6 @@ details[open] summary::after {
 
                     </div>
 
-
                     <div>
 
                         <h3>
@@ -3201,7 +2440,6 @@ details[open] summary::after {
 
                 </div>
 
-
                 <a
                     href="https://www.twitch.tv/jumaabonus"
                     target="_blank"
@@ -3213,7 +2451,6 @@ details[open] summary::after {
 
             </div>
 
-
         </div>
 
     </div>
@@ -3222,11 +2459,6 @@ details[open] summary::after {
 
 </section>
 
-
-<!-- ====================================================
-     FAQ
-==================================================== -->
-
 <section
     class="section"
     id="faq"
@@ -3234,18 +2466,15 @@ details[open] summary::after {
 
 <div class="container">
 
-
     <div class="section-heading reveal">
 
         <div class="section-kicker">
             FRAGEN & ANTWORTEN
         </div>
 
-
         <h2 class="section-title">
             Häufige Fragen
         </h2>
-
 
         <p class="section-intro">
 
@@ -3257,9 +2486,7 @@ details[open] summary::after {
 
     </div>
 
-
     <div class="faq-grid reveal">
-
 
         <details>
 
@@ -3289,7 +2516,6 @@ details[open] summary::after {
 
         </details>
 
-
         <details>
 
             <summary>
@@ -3317,7 +2543,6 @@ details[open] summary::after {
             </div>
 
         </details>
-
 
         <details>
 
@@ -3349,7 +2574,6 @@ details[open] summary::after {
 
         </details>
 
-
         <details>
 
             <summary>
@@ -3379,7 +2603,6 @@ details[open] summary::after {
 
         </details>
 
-
         <details>
 
             <summary>
@@ -3406,7 +2629,6 @@ details[open] summary::after {
 
         </details>
 
-
         <details>
 
             <summary>
@@ -3432,7 +2654,6 @@ details[open] summary::after {
             </div>
 
         </details>
-
 
         <details>
 
@@ -3461,7 +2682,6 @@ details[open] summary::after {
 
         </details>
 
-
         <details>
 
             <summary>
@@ -3483,7 +2703,6 @@ details[open] summary::after {
             </div>
 
         </details>
-
 
         <details>
 
@@ -3511,9 +2730,7 @@ details[open] summary::after {
 
         </details>
 
-
     </div>
-
 
     <div class="responsible-box reveal">
 
@@ -3542,26 +2759,17 @@ details[open] summary::after {
 
     </div>
 
-
 </div>
 
 </section>
 
-
 </main>
-
-
-<!-- ====================================================
-     FOOTER
-==================================================== -->
 
 <footer class="footer">
 
 <div class="container">
 
-
     <div class="footer-grid">
-
 
         <div>
 
@@ -3577,7 +2785,6 @@ details[open] summary::after {
 
             </a>
 
-
             <p class="footer-description">
 
                 Deals, Streams und Community –
@@ -3587,13 +2794,11 @@ details[open] summary::after {
 
         </div>
 
-
         <div>
 
             <div class="footer-column-title">
                 NAVIGATION
             </div>
-
 
             <div class="footer-links">
 
@@ -3617,13 +2822,11 @@ details[open] summary::after {
 
         </div>
 
-
         <div>
 
             <div class="footer-column-title">
                 COMMUNITY
             </div>
-
 
             <div class="footer-links">
 
@@ -3647,9 +2850,7 @@ details[open] summary::after {
 
         </div>
 
-
     </div>
-
 
     <div class="footer-bottom">
 
@@ -3663,15 +2864,9 @@ details[open] summary::after {
 
     </div>
 
-
 </div>
 
 </footer>
-
-
-<!-- ====================================================
-     JAVASCRIPT
-==================================================== -->
 
 <script>
 
@@ -3683,7 +2878,6 @@ const menuButton =
 const mobileMenu =
     document.getElementById("mobileMenu");
 
-
 menuButton.addEventListener(
     "click",
     function() {
@@ -3694,7 +2888,6 @@ menuButton.addEventListener(
 
     }
 );
-
 
 document
 .querySelectorAll(".mobile-menu a")
@@ -3712,7 +2905,6 @@ document
     );
 
 });
-
 
 /* SMOOTH SCROLL */
 
@@ -3757,7 +2949,6 @@ document
 
 });
 
-
 /* 3D BITKINGZ CARD */
 
 const showcase =
@@ -3765,84 +2956,42 @@ const showcase =
         "dealShowcase"
     );
 
-
 if (showcase) {
 
     showcase.addEventListener(
         "mousemove",
         function(e) {
 
-            if (
-                window.innerWidth
-                <
-                900
-            ) {
+            if (window.innerWidth < 900) {
                 return;
             }
-
 
             const rect =
                 showcase.getBoundingClientRect();
 
-
             const x =
-                e.clientX
-                -
-                rect.left;
-
+                e.clientX - rect.left;
 
             const y =
-                e.clientY
-                -
-                rect.top;
-
+                e.clientY - rect.top;
 
             const centerX =
-                rect.width
-                /
-                2;
-
+                rect.width / 2;
 
             const centerY =
-                rect.height
-                /
-                2;
-
+                rect.height / 2;
 
             const rotateX =
-                (
-                    (
-                        y
-                        -
-                        centerY
-                    )
-                    /
-                    centerY
-                )
-                *
-                -4;
-
+                ((y - centerY) / centerY) * -4;
 
             const rotateY =
-                (
-                    (
-                        x
-                        -
-                        centerX
-                    )
-                    /
-                    centerX
-                )
-                *
-                4;
-
+                ((x - centerX) / centerX) * 4;
 
             showcase.style.transform =
                 `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
         }
     );
-
 
     showcase.addEventListener(
         "mouseleave",
@@ -3856,14 +3005,12 @@ if (showcase) {
 
 }
 
-
 /* SCROLL REVEAL */
 
 const revealElements =
     document.querySelectorAll(
         ".reveal"
     );
-
 
 const revealObserver =
     new IntersectionObserver(
@@ -3882,7 +3029,6 @@ const revealObserver =
                             "visible"
                         );
 
-
                         revealObserver
                         .unobserve(
                             entry.target
@@ -3899,7 +3045,6 @@ const revealObserver =
         }
     );
 
-
 revealElements
 .forEach(
     function(element) {
@@ -3913,7 +3058,6 @@ revealElements
 );
 
 </script>
-
 
 </body>
 
