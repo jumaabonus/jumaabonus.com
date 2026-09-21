@@ -37,6 +37,9 @@
     --purple: #9146ff;
     --green: #50ff7a;
 
+    --slot-yellow: #fff200;
+    --slot-purple: #4c073f;
+
     --bg: #050505;
     --card: #111113;
 
@@ -110,13 +113,12 @@ img {
 }
 
 /* ======================================================
-   18+ AGE GATE
+   AGE GATE
 ====================================================== */
 
 .age-gate {
     position: fixed;
     inset: 0;
-
     z-index: 99999;
 
     display: flex;
@@ -235,9 +237,7 @@ img {
 
 .age-card h2 {
     margin-top: 22px;
-
     font-size: 29px;
-
     letter-spacing: -1.2px;
 }
 
@@ -321,12 +321,10 @@ img {
 
 .header {
     position: fixed;
-
     top: 0;
     left: 0;
 
     width: 100%;
-
     z-index: 1000;
 
     border-bottom:
@@ -341,27 +339,20 @@ img {
 
 .navbar {
     width: min(var(--max), calc(100% - 40px));
-
     height: 76px;
 
     margin: auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 30px;
 }
 
-/* LOGO */
-
 .logo {
     display: inline-flex;
-
     align-items: center;
-
     gap: 12px;
 
     flex-shrink: 0;
@@ -389,11 +380,9 @@ img {
 
 .logo-text {
     display: inline-flex;
-
     align-items: baseline;
 
     font-size: 27px;
-
     font-weight: 950;
 
     letter-spacing: -1.2px;
@@ -401,13 +390,9 @@ img {
     white-space: nowrap;
 }
 
-/* NAV */
-
 .nav-links {
     display: flex;
-
     align-items: center;
-
     gap: 30px;
 }
 
@@ -417,7 +402,6 @@ img {
     color: #aaa;
 
     font-size: 12px;
-
     font-weight: 800;
 
     transition: 0.25s;
@@ -427,7 +411,6 @@ img {
     content: "";
 
     position: absolute;
-
     left: 0;
     bottom: -9px;
 
@@ -456,9 +439,7 @@ img {
 
 .header-actions {
     display: flex;
-
     align-items: center;
-
     gap: 9px;
 }
 
@@ -468,9 +449,7 @@ img {
     padding: 0 14px;
 
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
 
     gap: 7px;
@@ -478,7 +457,6 @@ img {
     border-radius: 11px;
 
     font-size: 10px;
-
     font-weight: 900;
 
     transition: 0.25s;
@@ -523,7 +501,6 @@ img {
     height: 40px;
 
     align-items: center;
-
     justify-content: center;
 
     border:
@@ -587,7 +564,6 @@ img {
 
 .mobile-menu-inner {
     display: grid;
-
     gap: 10px;
 }
 
@@ -605,7 +581,6 @@ img {
     color: #bbb;
 
     font-size: 13px;
-
     font-weight: 800;
 }
 
@@ -692,7 +667,6 @@ img {
     color: #bbb;
 
     font-size: 10px;
-
     font-weight: 900;
 
     letter-spacing:
@@ -743,7 +717,6 @@ img {
     background-size: 200% auto;
 
     -webkit-background-clip: text;
-
     background-clip: text;
 
     color: transparent;
@@ -755,13 +728,11 @@ img {
 @keyframes gradientMove {
 
     0% {
-        background-position:
-            0% center;
+        background-position: 0% center;
     }
 
     100% {
-        background-position:
-            200% center;
+        background-position: 200% center;
     }
 
 }
@@ -803,7 +774,6 @@ img {
     border-radius: 12px;
 
     font-size: 12px;
-
     font-weight: 900;
 
     transition: 0.25s;
@@ -833,7 +803,7 @@ img {
 }
 
 /* ======================================================
-   BITKINGZ
+   TOP DEAL - SLOTTORO
 ====================================================== */
 
 .deal-showcase-wrap {
@@ -848,22 +818,28 @@ img {
     border-radius: 28px;
 
     border:
-        1px solid rgba(255,150,50,0.18);
+        1px solid rgba(255,242,0,0.24);
 
     background:
         radial-gradient(
             circle at 82% 12%,
-            rgba(255,106,0,0.26),
+            rgba(255,242,0,0.13),
             transparent 30%
+        ),
+        radial-gradient(
+            circle at 18% 90%,
+            rgba(76,7,63,0.35),
+            transparent 36%
         ),
         linear-gradient(
             145deg,
-            #1b1b1d,
-            #0e0e10
+            #1c111d,
+            #0d0c0e
         );
 
     box-shadow:
-        0 45px 100px rgba(0,0,0,0.60);
+        0 45px 100px rgba(0,0,0,0.60),
+        0 0 45px rgba(255,242,0,0.06);
 
     transform-style: preserve-3d;
 
@@ -880,7 +856,7 @@ img {
 }
 
 .top-deal-label {
-    color: var(--orange);
+    color: var(--slot-yellow);
 
     font-size: 10px;
 
@@ -916,12 +892,12 @@ img {
         0 0 10px #50ff7a;
 }
 
-.bk-logo {
-    width: 190px;
-    height: 120px;
+.slot-logo {
+    width: 235px;
+    height: 145px;
 
     margin:
-        55px auto 20px;
+        48px auto 22px;
 
     display: flex;
 
@@ -934,14 +910,16 @@ img {
     border-radius: 24px;
 
     background:
-        linear-gradient(
-            145deg,
-            #454a59,
-            #303440
-        );
+        #47033c;
+
+    border:
+        1px solid rgba(255,242,0,0.18);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
 }
 
-.bk-logo img {
+.slot-logo img {
     width: 100%;
     height: 100%;
 
@@ -979,22 +957,30 @@ img {
 
     border-radius: 12px;
 
+    color: #101010;
+
     background:
         linear-gradient(
             135deg,
-            #ff7800,
-            #e92b12
+            #fff200,
+            #ffd900
         );
+
+    box-shadow:
+        0 12px 30px rgba(255,242,0,0.15);
 
     font-size: 11px;
 
-    font-weight: 900;
+    font-weight: 950;
 
     transition: 0.25s;
 }
 
 .deal-showcase-button:hover {
     transform: translateY(-2px);
+
+    box-shadow:
+        0 17px 40px rgba(255,242,0,0.22);
 }
 
 /* ======================================================
@@ -1132,7 +1118,7 @@ img {
     display: grid;
 
     grid-template-columns:
-        1.4fr 1fr 1fr;
+        1.25fr 1fr 1fr;
 
     gap: 18px;
 }
@@ -1140,9 +1126,11 @@ img {
 .deal-card {
     position: relative;
 
-    min-height: 350px;
+    min-height: 365px;
 
     padding: 26px;
+
+    overflow: hidden;
 
     border-radius: 21px;
 
@@ -1165,13 +1153,38 @@ img {
 
     border-color:
         var(--border-hover);
+
+    box-shadow:
+        0 28px 70px rgba(0,0,0,0.32);
 }
 
-.deal-card.featured {
+.deal-card.featured-slottoro {
+    border-color:
+        rgba(255,242,0,0.18);
+
+    background:
+        radial-gradient(
+            circle at 88% 15%,
+            rgba(255,242,0,0.10),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 15% 100%,
+            rgba(76,7,63,0.26),
+            transparent 34%
+        ),
+        linear-gradient(
+            145deg,
+            #1c131d,
+            #111113
+        );
+}
+
+.deal-card.bitkingz-card {
     background:
         radial-gradient(
             circle at 85% 15%,
-            rgba(255,106,0,0.19),
+            rgba(255,106,0,0.15),
             transparent 38%
         ),
         linear-gradient(
@@ -1199,15 +1212,31 @@ img {
     font-weight: 900;
 }
 
-.deal-logo {
-    width: 100px;
-    height: 70px;
+.slottoro-badge {
+    color: var(--slot-yellow);
 
-    margin-top: 48px;
+    background:
+        rgba(255,242,0,0.08);
+
+    border:
+        1px solid rgba(255,242,0,0.14);
+}
+
+.deal-logo {
+    width: 115px;
+    height: 78px;
+
+    margin-top: 43px;
 
     overflow: hidden;
 
     border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 
     background:
         linear-gradient(
@@ -1215,6 +1244,16 @@ img {
             #454a59,
             #303440
         );
+}
+
+.deal-logo.slottoro-card-logo {
+    width: 145px;
+
+    background:
+        #47033c;
+
+    border:
+        1px solid rgba(255,242,0,0.14);
 }
 
 .deal-logo img {
@@ -1253,6 +1292,10 @@ img {
     font-size: 10px;
 
     font-weight: 900;
+}
+
+.slottoro-link {
+    color: var(--slot-yellow);
 }
 
 .coming-card {
@@ -1501,8 +1544,6 @@ img {
 
     border-radius: 14px;
 }
-
-/* HIER SIND DIE SYMBOLE WIEDER KORREKT */
 
 .community-platform-icon svg {
     width: 25px;
@@ -1878,7 +1919,7 @@ details[open] summary::after {
             1fr 1fr;
     }
 
-    .deal-card.featured {
+    .featured-slottoro {
         grid-column:
             span 2;
     }
@@ -1976,6 +2017,11 @@ details[open] summary::after {
         width: 100%;
     }
 
+    .slot-logo {
+        width: 210px;
+        height: 130px;
+    }
+
     .trust-grid {
         grid-template-columns:
             1fr;
@@ -1998,7 +2044,7 @@ details[open] summary::after {
             1fr;
     }
 
-    .deal-card.featured {
+    .featured-slottoro {
         grid-column:
             span 1;
     }
@@ -2244,7 +2290,9 @@ details[open] summary::after {
 
 </header>
 
-<!-- MOBILE MENU -->
+<!-- ======================================================
+     MOBILE MENU
+====================================================== -->
 
 <div
     class="mobile-menu"
@@ -2372,6 +2420,8 @@ details[open] summary::after {
 
     </div>
 
+    <!-- SLOTTORO TOP DEAL -->
+
     <div class="deal-showcase-wrap reveal">
 
         <div
@@ -2382,7 +2432,7 @@ details[open] summary::after {
             <div class="deal-showcase-top">
 
                 <span class="top-deal-label">
-                    TOP DEAL
+                    ★ TOP DEAL
                 </span>
 
                 <span class="status-live">
@@ -2395,30 +2445,30 @@ details[open] summary::after {
 
             </div>
 
-            <div class="bk-logo">
+            <div class="slot-logo">
 
                 <img
-                    src="images/bitkingz-logo.png"
-                    alt="BitKingz Logo"
+                    src="images/slottoro-logo.png"
+                    alt="Slottoro Casino Logo"
                 >
 
             </div>
 
             <h3>
-                BitKingz
+                Slottoro Casino
             </h3>
 
             <p class="deal-showcase-sub">
-                Aktuelles Partner-Angebot
+                Neuer JumaaBonus Partner
             </p>
 
             <a
-                href="https://www.bitkingzmedia.com/aevsnqrhw"
+                href="https://promo-click.com/l/6ab147c99ecd8c60ff04daf2?sub_id={sub_id_1}&amp;click_id={click_id}"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer sponsored"
                 class="deal-showcase-button"
             >
-                DEAL ANSEHEN →
+                SLOTTORO ANSEHEN →
             </a>
 
         </div>
@@ -2510,10 +2560,53 @@ details[open] summary::after {
 
     <div class="deals-grid">
 
-        <article class="deal-card featured reveal">
+        <!-- 1. SLOTTORO -->
+
+        <article class="deal-card featured-slottoro reveal">
+
+            <div class="deal-badge slottoro-badge">
+                ★ TOP DEAL
+            </div>
+
+            <div class="deal-logo slottoro-card-logo">
+
+                <img
+                    src="images/slottoro-logo.png"
+                    alt="Slottoro Casino Logo"
+                >
+
+            </div>
+
+            <h3>
+                Slottoro Casino
+            </h3>
+
+            <p>
+
+                Slottoro ist unser aktueller Top Partner.
+                Über unseren Partner-Link gelangst du direkt
+                zur Slottoro-Seite und kannst dir das aktuelle
+                Angebot ansehen.
+
+            </p>
+
+            <a
+                href="https://promo-click.com/l/6ab147c99ecd8c60ff04daf2?sub_id={sub_id_1}&amp;click_id={click_id}"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                class="deal-card-link slottoro-link"
+            >
+                SLOTTORO ANSEHEN →
+            </a>
+
+        </article>
+
+        <!-- 2. BITKINGZ -->
+
+        <article class="deal-card bitkingz-card reveal">
 
             <div class="deal-badge">
-                ★ TOP DEAL
+                PARTNER
             </div>
 
             <div class="deal-logo">
@@ -2540,29 +2633,15 @@ details[open] summary::after {
             <a
                 href="https://www.bitkingzmedia.com/aevsnqrhw"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer sponsored"
                 class="deal-card-link"
             >
-                DEAL ANSEHEN →
+                BITKINGZ ANSEHEN →
             </a>
 
         </article>
 
-        <article class="deal-card coming-card reveal">
-
-            <div class="coming-icon">
-                +
-            </div>
-
-            <h3>
-                Neuer Partner
-            </h3>
-
-            <p>
-                Weitere Deals folgen in Kürze.
-            </p>
-
-        </article>
+        <!-- 3. PLACEHOLDER -->
 
         <article class="deal-card coming-card reveal">
 
@@ -2913,6 +2992,26 @@ details[open] summary::after {
         <details>
 
             <summary>
+                Welche Partner hat JumaaBonus aktuell?
+            </summary>
+
+            <div class="faq-answer">
+
+                Aktuell findest du unter anderem
+                Slottoro Casino und BitKingz
+                als Partner auf unserer Website.
+
+                <br><br>
+
+                Weitere Partnerschaften sollen zukünftig folgen.
+
+            </div>
+
+        </details>
+
+        <details>
+
+            <summary>
                 Wo finde ich eure Streams?
             </summary>
 
@@ -3007,7 +3106,7 @@ details[open] summary::after {
 
         <br><br>
 
-        Einige Links auf dieser Website können Affiliate-Links sein.
+        Einige Links auf dieser Website sind Affiliate-Links.
         Dadurch kann JumaaBonus eine Provision erhalten,
         ohne dass dir dadurch zusätzliche Kosten entstehen.
 
@@ -3351,7 +3450,7 @@ document
 );
 
 /* ======================================================
-   BITKINGZ 3D
+   TOP DEAL 3D
 ====================================================== */
 
 const showcase =
