@@ -15,6 +15,25 @@
 
 <meta name="theme-color" content="#090909">
 
+<!-- FAVICON -->
+<link
+    rel="icon"
+    type="image/png"
+    href="images/jumaabonus-logo.png"
+>
+
+<link
+    rel="shortcut icon"
+    type="image/png"
+    href="images/jumaabonus-logo.png"
+>
+
+<link
+    rel="apple-touch-icon"
+    href="images/jumaabonus-logo.png"
+>
+
+<!-- SOCIAL PREVIEW -->
 <meta property="og:title" content="JumaaBonus | Casino Deals">
 <meta
     property="og:description"
@@ -30,7 +49,6 @@
     --orange-light: #ff9a45;
     --red: #e50914;
     --purple: #9146ff;
-    --purple-light: #c19cff;
     --green: #50ff7a;
     --bg: #050505;
     --card: #111113;
@@ -102,7 +120,7 @@ img {
 }
 
 /* ======================================================
-   18+ AGE GATE
+   AGE GATE
 ====================================================== */
 
 .age-gate {
@@ -116,13 +134,10 @@ img {
 
     padding: 25px;
 
-    background: rgba(0,0,0,0.82);
+    background: rgba(0,0,0,0.84);
 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-
-    opacity: 1;
-    visibility: visible;
 
     transition:
         opacity 0.35s ease,
@@ -136,12 +151,8 @@ img {
 }
 
 .age-card {
-    position: relative;
-
     width: min(520px, 100%);
     padding: 42px;
-
-    overflow: hidden;
 
     text-align: center;
 
@@ -184,8 +195,6 @@ img {
 
     border-radius: 50%;
 
-    color: white;
-
     font-size: 31px;
     font-weight: 950;
 
@@ -203,17 +212,12 @@ img {
 .age-brand {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 13px;
-
-    margin-top: 2px;
+    gap: 12px;
 }
 
-.age-gate-logo {
-    width: 72px;
-    height: 72px;
-
-    display: block;
+.age-logo {
+    width: 70px;
+    height: 70px;
 
     object-fit: contain;
 
@@ -226,17 +230,13 @@ img {
 }
 
 .age-brand-text {
-    display: inline-flex;
-    align-items: baseline;
-
     font-size: 23px;
     font-weight: 950;
-
     letter-spacing: -1px;
 }
 
 .logo-jumaa {
-    color: white;
+    color: #fff;
 }
 
 .logo-bonus {
@@ -245,9 +245,7 @@ img {
 
 .age-card h2 {
     margin-top: 22px;
-
     font-size: 29px;
-
     letter-spacing: -1.2px;
 }
 
@@ -257,19 +255,12 @@ img {
     color: var(--muted);
 
     font-size: 13px;
-
     line-height: 1.8;
-}
-
-.age-card strong {
-    color: white;
 }
 
 .age-actions {
     display: grid;
-
     gap: 11px;
-
     margin-top: 30px;
 }
 
@@ -277,18 +268,13 @@ img {
     min-height: 52px;
 
     border: none;
-
     border-radius: 13px;
 
     color: white;
-
     cursor: pointer;
 
     font-size: 11px;
-
     font-weight: 950;
-
-    letter-spacing: 0.5px;
 
     background:
         linear-gradient(
@@ -305,9 +291,6 @@ img {
 
 .age-enter:hover {
     transform: translateY(-2px);
-
-    box-shadow:
-        0 18px 45px rgba(255,106,0,0.32);
 }
 
 .age-leave {
@@ -326,51 +309,13 @@ img {
         rgba(255,255,255,0.035);
 
     font-size: 10px;
-
     font-weight: 850;
-
-    transition: 0.25s;
-}
-
-.age-leave:hover {
-    color: white;
-
-    background:
-        rgba(255,255,255,0.07);
 }
 
 .age-note {
     margin-top: 19px !important;
-
     color: #666 !important;
-
     font-size: 9px !important;
-
-    line-height: 1.6 !important;
-}
-
-/* ======================================================
-   SCROLLBAR
-====================================================== */
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #070707;
-}
-
-::-webkit-scrollbar-thumb {
-    background:
-        linear-gradient(
-            var(--orange),
-            var(--red)
-        );
-
-    border-radius: 999px;
-
-    border: 2px solid #070707;
 }
 
 /* ======================================================
@@ -379,64 +324,44 @@ img {
 
 .header {
     position: fixed;
-
     top: 0;
     left: 0;
 
     width: 100%;
-
     z-index: 1000;
 
     border-bottom:
         1px solid rgba(255,255,255,0.07);
 
     background:
-        rgba(7,7,8,0.80);
+        rgba(7,7,8,0.82);
 
-    backdrop-filter:
-        blur(22px);
-
-    -webkit-backdrop-filter:
-        blur(22px);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
 }
 
 .navbar {
-    width:
-        min(
-            var(--max),
-            calc(100% - 40px)
-        );
-
+    width: min(var(--max), calc(100% - 40px));
     height: 76px;
 
     margin: auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 30px;
 }
 
-/* ======================================================
-   LOGO + TEXT
-====================================================== */
-
 .logo {
     display: inline-flex;
-
     align-items: center;
-
     gap: 12px;
 
     flex-shrink: 0;
 }
 
 .logo-image {
-    display: block;
-
     width: 58px;
     height: 58px;
 
@@ -444,50 +369,33 @@ img {
 
     border-radius: 50%;
 
-    transition:
-        transform 0.3s ease,
-        filter 0.3s ease;
-
     filter:
         drop-shadow(
             0 5px 14px rgba(255,140,0,0.18)
         );
-}
 
-.logo-text {
-    display: inline-flex;
-
-    align-items: baseline;
-
-    font-size: 27px;
-
-    font-weight: 950;
-
-    letter-spacing: -1.2px;
-
-    line-height: 1;
-
-    white-space: nowrap;
+    transition: 0.25s;
 }
 
 .logo:hover .logo-image {
     transform: scale(1.06);
-
-    filter:
-        drop-shadow(
-            0 7px 20px rgba(255,140,0,0.30)
-        );
 }
 
-/* ======================================================
-   NAV
-====================================================== */
+.logo-text {
+    display: inline-flex;
+    align-items: baseline;
+
+    font-size: 27px;
+    font-weight: 950;
+
+    letter-spacing: -1.2px;
+
+    white-space: nowrap;
+}
 
 .nav-links {
     display: flex;
-
     align-items: center;
-
     gap: 30px;
 }
 
@@ -497,7 +405,6 @@ img {
     color: #aaa;
 
     font-size: 12px;
-
     font-weight: 800;
 
     transition: 0.25s;
@@ -507,12 +414,10 @@ img {
     content: "";
 
     position: absolute;
-
     left: 0;
     bottom: -9px;
 
     width: 0;
-
     height: 2px;
 
     border-radius: 999px;
@@ -535,48 +440,27 @@ img {
     width: 100%;
 }
 
-/* ======================================================
-   HEADER BUTTONS
-====================================================== */
-
 .header-actions {
     display: flex;
-
     align-items: center;
-
     gap: 9px;
-
-    flex-shrink: 0;
 }
 
 .social-button {
     height: 40px;
 
-    padding:
-        0 14px;
+    padding: 0 14px;
 
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
-    gap: 8px;
 
     border-radius: 11px;
 
     font-size: 10px;
-
     font-weight: 900;
 
     transition: 0.25s;
-}
-
-.social-button svg {
-    width: 16px;
-    height: 16px;
-
-    fill: currentColor;
 }
 
 .social-button:hover {
@@ -590,21 +474,7 @@ img {
         1px solid rgba(145,70,255,0.38);
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(145,70,255,0.17),
-            rgba(111,46,232,0.08)
-        );
-}
-
-.twitch-header:hover {
-    color: white;
-
-    background:
-        rgba(145,70,255,0.28);
-
-    box-shadow:
-        0 10px 32px rgba(145,70,255,0.18);
+        rgba(145,70,255,0.15);
 }
 
 .discord-header {
@@ -616,14 +486,6 @@ img {
             #ff7500,
             #ed3010
         );
-
-    box-shadow:
-        0 10px 30px rgba(255,106,0,0.18);
-}
-
-.discord-header:hover {
-    box-shadow:
-        0 14px 38px rgba(255,106,0,0.30);
 }
 
 .menu-button {
@@ -633,7 +495,6 @@ img {
     height: 40px;
 
     align-items: center;
-
     justify-content: center;
 
     border:
@@ -652,7 +513,6 @@ img {
 .menu-button svg {
     width: 20px;
     height: 20px;
-
     stroke: currentColor;
 }
 
@@ -673,11 +533,9 @@ img {
     z-index: 999;
 
     opacity: 0;
-
     pointer-events: none;
 
-    transform:
-        translateY(-10px);
+    transform: translateY(-10px);
 
     transition: 0.25s;
 
@@ -690,24 +548,13 @@ img {
 
 .mobile-menu.open {
     opacity: 1;
-
     pointer-events: auto;
 
-    transform:
-        translateY(0);
+    transform: translateY(0);
 }
 
 .mobile-menu-inner {
-    width:
-        min(
-            var(--max),
-            100%
-        );
-
-    margin: auto;
-
     display: grid;
-
     gap: 10px;
 }
 
@@ -720,16 +567,11 @@ img {
     border-radius: 12px;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,0.04),
-            rgba(255,255,255,0.015)
-        );
+        rgba(255,255,255,0.035);
 
     color: #bbb;
 
     font-size: 13px;
-
     font-weight: 800;
 }
 
@@ -739,13 +581,9 @@ img {
 
 .top-banner {
     padding-top: 110px;
-
-    position: relative;
 }
 
 .banner-frame {
-    position: relative;
-
     overflow: hidden;
 
     border-radius: 28px;
@@ -762,13 +600,9 @@ img {
 
 .banner-frame img {
     display: block;
-
     width: 100%;
 
-    height: auto;
-
-    transition:
-        transform 0.6s ease;
+    transition: 0.6s;
 }
 
 .banner-frame:hover img {
@@ -780,10 +614,7 @@ img {
 ====================================================== */
 
 .hero {
-    position: relative;
-
-    padding:
-        80px 0 120px;
+    padding: 80px 0 120px;
 
     background:
         radial-gradient(
@@ -806,13 +637,10 @@ img {
 
 .eyebrow {
     display: inline-flex;
-
     align-items: center;
-
     gap: 9px;
 
-    padding:
-        8px 13px;
+    padding: 8px 13px;
 
     border:
         1px solid rgba(255,255,255,0.10);
@@ -825,11 +653,9 @@ img {
     color: #bbb;
 
     font-size: 10px;
-
     font-weight: 900;
 
-    letter-spacing:
-        1.5px;
+    letter-spacing: 1.5px;
 }
 
 .live-dot {
@@ -845,8 +671,6 @@ img {
 }
 
 .hero h1 {
-    max-width: 740px;
-
     margin-top: 23px;
 
     font-size:
@@ -857,7 +681,6 @@ img {
         );
 
     line-height: 0.97;
-
     letter-spacing: -4px;
 
     font-weight: 950;
@@ -875,32 +698,25 @@ img {
             #ee2a16
         );
 
-    background-size:
-        200% auto;
+    background-size: 200% auto;
 
-    -webkit-background-clip:
-        text;
-
-    background-clip:
-        text;
+    -webkit-background-clip: text;
+    background-clip: text;
 
     color: transparent;
 
     animation:
-        gradientMove
-        7s linear infinite;
+        gradientMove 7s linear infinite;
 }
 
 @keyframes gradientMove {
 
     0% {
-        background-position:
-            0% center;
+        background-position: 0% center;
     }
 
     100% {
-        background-position:
-            200% center;
+        background-position: 200% center;
     }
 
 }
@@ -919,9 +735,7 @@ img {
 
 .hero-actions {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 12px;
 
     margin-top: 34px;
@@ -930,19 +744,15 @@ img {
 .btn {
     min-height: 48px;
 
-    padding:
-        0 22px;
+    padding: 0 22px;
 
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 12px;
 
     font-size: 12px;
-
     font-weight: 900;
 
     transition: 0.25s;
@@ -955,17 +765,6 @@ img {
             #ff7900,
             #ec2a12
         );
-
-    box-shadow:
-        0 13px 38px rgba(255,106,0,0.22);
-}
-
-.btn-primary:hover {
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 18px 45px rgba(255,106,0,0.32);
 }
 
 .btn-secondary {
@@ -973,24 +772,13 @@ img {
         1px solid rgba(255,255,255,0.11);
 
     background:
-        linear-gradient(
-            135deg,
-            #18181b,
-            #111113
-        );
+        #18181b;
 
     color: #ddd;
 }
 
-.btn-secondary:hover {
-    transform:
-        translateY(-3px);
-
-    border-color:
-        rgba(255,255,255,0.18);
-
-    background:
-        #1c1c1f;
+.btn:hover {
+    transform: translateY(-3px);
 }
 
 /* ======================================================
@@ -1002,13 +790,9 @@ img {
 }
 
 .deal-showcase {
-    position: relative;
-
     min-height: 430px;
 
     padding: 30px;
-
-    overflow: hidden;
 
     border-radius: 28px;
 
@@ -1030,8 +814,7 @@ img {
     box-shadow:
         0 45px 100px rgba(0,0,0,0.60);
 
-    transform-style:
-        preserve-3d;
+    transform-style: preserve-3d;
 
     transition:
         transform 0.14s ease-out;
@@ -1039,35 +822,27 @@ img {
 
 .deal-showcase-top {
     display: flex;
-
     align-items: center;
-
-    justify-content:
-        space-between;
+    justify-content: space-between;
 }
 
 .top-deal-label {
     color: var(--orange);
 
     font-size: 10px;
-
     font-weight: 900;
 
-    letter-spacing:
-        1.6px;
+    letter-spacing: 1.6px;
 }
 
 .status-live {
     display: inline-flex;
-
     align-items: center;
-
     gap: 6px;
 
     color: #71ff92;
 
     font-size: 10px;
-
     font-weight: 900;
 }
 
@@ -1091,9 +866,7 @@ img {
         55px auto 20px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     overflow: hidden;
@@ -1106,14 +879,10 @@ img {
             #454a59,
             #303440
         );
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,0.32);
 }
 
 .bk-logo img {
     width: 100%;
-
     height: 100%;
 
     object-fit: contain;
@@ -1123,7 +892,6 @@ img {
     text-align: center;
 
     font-size: 31px;
-
     font-weight: 950;
 }
 
@@ -1143,9 +911,7 @@ img {
     min-height: 48px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 12px;
@@ -1158,19 +924,17 @@ img {
         );
 
     font-size: 11px;
-
     font-weight: 900;
 
     transition: 0.25s;
 }
 
 .deal-showcase-button:hover {
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 }
 
 /* ======================================================
-   TRUST
+   TRUST BAR
 ====================================================== */
 
 .trust-bar {
@@ -1199,14 +963,10 @@ img {
 .trust-item {
     min-height: 96px;
 
-    padding: 20px;
-
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -1221,8 +981,6 @@ img {
 
 .trust-item strong {
     font-size: 12px;
-
-    font-weight: 900;
 }
 
 .trust-item span {
@@ -1232,19 +990,15 @@ img {
 
     font-size: 9px;
 
-    letter-spacing:
-        1.1px;
+    letter-spacing: 1px;
 }
 
 /* ======================================================
-   SECTIONS
+   GENERAL
 ====================================================== */
 
 .section {
-    position: relative;
-
-    padding:
-        115px 0;
+    padding: 115px 0;
 }
 
 .section-heading {
@@ -1255,11 +1009,9 @@ img {
     color: var(--orange);
 
     font-size: 9px;
-
     font-weight: 900;
 
-    letter-spacing:
-        2px;
+    letter-spacing: 2px;
 }
 
 .section-title {
@@ -1272,10 +1024,7 @@ img {
             53px
         );
 
-    letter-spacing:
-        -2.3px;
-
-    line-height: 1.05;
+    letter-spacing: -2.3px;
 }
 
 .section-intro {
@@ -1290,7 +1039,9 @@ img {
     line-height: 1.8;
 }
 
-/* DEALS */
+/* ======================================================
+   DEALS
+====================================================== */
 
 #deals {
     background:
@@ -1322,8 +1073,6 @@ img {
 
     padding: 26px;
 
-    overflow: hidden;
-
     border-radius: 21px;
 
     border:
@@ -1336,19 +1085,13 @@ img {
             #101012
         );
 
-    transition:
-        0.30s;
+    transition: 0.30s;
 }
 
 .deal-card:hover {
-    transform:
-        translateY(-6px);
+    transform: translateY(-6px);
 
-    border-color:
-        var(--border-hover);
-
-    box-shadow:
-        0 28px 70px rgba(0,0,0,0.32);
+    border-color: var(--border-hover);
 }
 
 .deal-card.featured {
@@ -1368,21 +1111,16 @@ img {
 .deal-badge {
     display: inline-flex;
 
-    padding:
-        6px 9px;
+    padding: 6px 9px;
 
     border-radius: 8px;
 
     background:
         rgba(255,106,0,0.12);
 
-    border:
-        1px solid rgba(255,106,0,0.18);
-
     color: var(--orange);
 
     font-size: 8px;
-
     font-weight: 900;
 }
 
@@ -1391,12 +1129,6 @@ img {
     height: 70px;
 
     margin-top: 48px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
 
     overflow: hidden;
 
@@ -1412,7 +1144,6 @@ img {
 
 .deal-logo img {
     width: 100%;
-
     height: 100%;
 
     object-fit: contain;
@@ -1422,14 +1153,12 @@ img {
     margin-top: 20px;
 
     font-size: 24px;
-
-    font-weight: 950;
 }
 
 .deal-card p {
-    max-width: 350px;
-
     margin-top: 9px;
+
+    max-width: 350px;
 
     color: var(--muted);
 
@@ -1447,15 +1176,12 @@ img {
     color: var(--orange);
 
     font-size: 10px;
-
     font-weight: 900;
 }
 
 .coming-card {
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 }
 
@@ -1464,9 +1190,7 @@ img {
     height: 66px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 18px;
@@ -1477,16 +1201,6 @@ img {
     color: #626267;
 
     font-size: 25px;
-
-    font-weight: 900;
-}
-
-.coming-card h3 {
-    color: #8a8a8f;
-}
-
-.coming-card p {
-    color: #66666b;
 }
 
 /* ======================================================
@@ -1499,11 +1213,6 @@ img {
             circle at 12% 45%,
             rgba(255,106,0,0.07),
             transparent 25%
-        ),
-        radial-gradient(
-            circle at 92% 65%,
-            rgba(145,70,255,0.05),
-            transparent 28%
         ),
         #080809;
 }
@@ -1534,13 +1243,11 @@ img {
             #111113
         );
 
-    transition:
-        0.30s;
+    transition: 0.30s;
 }
 
 .benefit-card:hover {
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
     border-color:
         rgba(255,106,0,0.30);
@@ -1551,9 +1258,7 @@ img {
     height: 48px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 13px;
@@ -1570,8 +1275,6 @@ img {
     margin-top: 26px;
 
     font-size: 19px;
-
-    font-weight: 900;
 }
 
 .benefit-card p {
@@ -1595,11 +1298,6 @@ img {
             rgba(145,70,255,0.11),
             transparent 30%
         ),
-        radial-gradient(
-            circle at 20% 70%,
-            rgba(255,106,0,0.07),
-            transparent 26%
-        ),
         linear-gradient(
             180deg,
             #0e0e11,
@@ -1608,8 +1306,7 @@ img {
 }
 
 .community-panel {
-    padding:
-        65px 52px;
+    padding: 65px 52px;
 
     border-radius: 29px;
 
@@ -1639,8 +1336,7 @@ img {
             54px
         );
 
-    letter-spacing:
-        -2px;
+    letter-spacing: -2px;
 }
 
 .community-description {
@@ -1672,9 +1368,7 @@ img {
     padding: 22px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 18px;
@@ -1686,24 +1380,11 @@ img {
 
     background:
         rgba(255,255,255,0.035);
-
-    transition:
-        0.3s;
-}
-
-.community-card:hover {
-    transform:
-        translateY(-4px);
-
-    background:
-        rgba(255,255,255,0.065);
 }
 
 .community-platform-info {
     display: flex;
-
     align-items: center;
-
     gap: 14px;
 }
 
@@ -1712,19 +1393,12 @@ img {
     height: 52px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 14px;
-}
 
-.community-platform-icon svg {
-    width: 25px;
-    height: 25px;
-
-    fill: white;
+    font-weight: 950;
 }
 
 .discord-icon {
@@ -1747,8 +1421,6 @@ img {
 
 .community-platform-info h3 {
     font-size: 14px;
-
-    font-weight: 900;
 }
 
 .community-platform-info span {
@@ -1764,23 +1436,16 @@ img {
 .community-link {
     min-height: 40px;
 
-    padding:
-        0 14px;
+    padding: 0 14px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 10px;
 
     font-size: 9px;
-
     font-weight: 900;
-
-    transition:
-        0.25s;
 }
 
 .discord-link {
@@ -1808,11 +1473,6 @@ img {
 
 #faq {
     background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(255,106,0,0.06),
-            transparent 24%
-        ),
         linear-gradient(
             180deg,
             #080809,
@@ -1822,7 +1482,6 @@ img {
 
 .faq-grid {
     display: grid;
-
     gap: 12px;
 }
 
@@ -1852,19 +1511,15 @@ summary {
 
     cursor: pointer;
 
-    padding:
-        22px 24px;
+    padding: 22px 24px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 20px;
 
     font-size: 13px;
-
     font-weight: 850;
 }
 
@@ -1878,12 +1533,8 @@ summary::after {
     width: 32px;
     height: 32px;
 
-    flex-shrink: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 9px;
@@ -1912,10 +1563,6 @@ details[open] summary::after {
 
     line-height: 1.9;
 }
-
-/* ======================================================
-   RESPONSIBLE
-====================================================== */
 
 .responsible-box {
     margin-top: 34px;
@@ -1971,9 +1618,7 @@ details[open] summary::after {
 
 .footer-brand {
     display: inline-flex;
-
     align-items: center;
-
     gap: 14px;
 }
 
@@ -1984,27 +1629,16 @@ details[open] summary::after {
     object-fit: contain;
 
     border-radius: 50%;
-
-    display: block;
-
-    filter:
-        drop-shadow(
-            0 8px 22px rgba(255,140,0,0.20)
-        );
 }
 
 .footer-logo-text {
     display: inline-flex;
-
     align-items: baseline;
 
     font-size: 24px;
-
     font-weight: 950;
 
     letter-spacing: -1px;
-
-    line-height: 1;
 }
 
 .footer-description {
@@ -2025,24 +1659,18 @@ details[open] summary::after {
     color: #77777c;
 
     font-size: 9px;
-
     font-weight: 900;
 
-    letter-spacing:
-        1px;
+    letter-spacing: 1px;
 }
 
 .footer-links {
     display: grid;
-
     gap: 10px;
 }
 
 .footer-links a {
-    width: fit-content;
-
     color: #aaa;
-
     font-size: 11px;
 }
 
@@ -2056,9 +1684,7 @@ details[open] summary::after {
     padding-top: 20px;
 
     display: flex;
-
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
     gap: 20px;
 
@@ -2071,7 +1697,7 @@ details[open] summary::after {
 }
 
 /* ======================================================
-   REVEAL
+   ANIMATION
 ====================================================== */
 
 .reveal {
@@ -2107,8 +1733,7 @@ details[open] summary::after {
     }
 
     .hero-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .deals-grid {
@@ -2139,20 +1764,10 @@ details[open] summary::after {
 
 @media (max-width: 680px) {
 
-    .container {
-        width:
-            min(
-                var(--max),
-                calc(100% - 28px)
-            );
-    }
-
+    .container,
     .navbar {
         width:
-            min(
-                var(--max),
-                calc(100% - 28px)
-            );
+            calc(100% - 28px);
     }
 
     .logo {
@@ -2177,11 +1792,7 @@ details[open] summary::after {
             32px 22px;
     }
 
-    .age-brand {
-        gap: 9px;
-    }
-
-    .age-gate-logo {
+    .age-logo {
         width: 56px;
         height: 56px;
     }
@@ -2195,21 +1806,16 @@ details[open] summary::after {
     }
 
     .top-banner {
-        padding-top:
-            96px;
+        padding-top: 96px;
     }
 
     .banner-frame {
-        border-radius:
-            16px;
+        border-radius: 16px;
     }
 
     .banner-frame img {
-        min-height:
-            145px;
-
-        object-fit:
-            cover;
+        min-height: 145px;
+        object-fit: cover;
     }
 
     .hero {
@@ -2219,16 +1825,11 @@ details[open] summary::after {
 
     .hero h1 {
         font-size: 45px;
-
-        letter-spacing:
-            -2.5px;
+        letter-spacing: -2.5px;
     }
 
     .hero-actions {
         display: grid;
-
-        grid-template-columns:
-            1fr;
     }
 
     .btn {
@@ -2236,8 +1837,7 @@ details[open] summary::after {
     }
 
     .trust-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .trust-item {
@@ -2248,18 +1848,15 @@ details[open] summary::after {
     }
 
     .section {
-        padding:
-            82px 0;
+        padding: 82px 0;
     }
 
     .deals-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .deal-card.featured {
-        grid-column:
-            span 1;
+        grid-column: span 1;
     }
 
     .community-panel {
@@ -2268,11 +1865,8 @@ details[open] summary::after {
     }
 
     .community-card {
-        flex-direction:
-            column;
-
-        align-items:
-            flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .community-link {
@@ -2280,12 +1874,7 @@ details[open] summary::after {
     }
 
     .footer-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .footer-brand {
-        gap: 10px;
+        grid-template-columns: 1fr;
     }
 
     .footer-logo-image {
@@ -2298,8 +1887,16 @@ details[open] summary::after {
     }
 
     .footer-bottom {
-        flex-direction:
-            column;
+        flex-direction: column;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        animation: none !important;
+        transition: none !important;
     }
 
 }
@@ -2310,9 +1907,9 @@ details[open] summary::after {
 
 <body class="age-locked">
 
-<!-- ====================================================
-     18+ POPUP
-==================================================== -->
+<!-- ======================================================
+     AGE GATE
+====================================================== -->
 
 <div
     class="age-gate"
@@ -2330,7 +1927,7 @@ details[open] summary::after {
         <img
             src="images/jumaabonus-logo.png"
             alt="JumaaBonus Logo"
-            class="age-gate-logo"
+            class="age-logo"
         >
 
         <div class="age-brand-text">
@@ -2354,16 +1951,14 @@ details[open] summary::after {
     <p>
 
         Diese Website enthält Inhalte und Angebote
-        rund um Glücksspiel und richtet sich
-        ausschließlich an Personen ab
-        <strong>18 Jahren</strong>.
+        rund um Glücksspiel und richtet sich ausschließlich
+        an Personen ab <strong>18 Jahren</strong>.
 
         <br><br>
 
         Mit dem Betreten bestätigst du,
-        dass du mindestens 18 Jahre alt bist
-        und Glücksspiel an deinem Aufenthaltsort
-        erlaubt ist.
+        dass du mindestens 18 Jahre alt bist und
+        Glücksspiel an deinem Aufenthaltsort erlaubt ist.
 
     </p>
 
@@ -2397,9 +1992,9 @@ details[open] summary::after {
 
 </div>
 
-<!-- ====================================================
+<!-- ======================================================
      HEADER
-==================================================== -->
+====================================================== -->
 
 <header class="header">
 
@@ -2522,6 +2117,7 @@ details[open] summary::after {
     <a
         href="https://www.twitch.tv/jumaabonus"
         target="_blank"
+        rel="noopener noreferrer"
     >
         Twitch
     </a>
@@ -2529,6 +2125,7 @@ details[open] summary::after {
     <a
         href="https://discord.gg/NKxX9DB3ay"
         target="_blank"
+        rel="noopener noreferrer"
     >
         Discord
     </a>
@@ -2539,9 +2136,9 @@ details[open] summary::after {
 
 <main id="top">
 
-<!-- ====================================================
+<!-- ======================================================
      BANNER
-==================================================== -->
+====================================================== -->
 
 <section class="top-banner">
 
@@ -2560,9 +2157,9 @@ details[open] summary::after {
 
 </section>
 
-<!-- ====================================================
+<!-- ======================================================
      HERO
-==================================================== -->
+====================================================== -->
 
 <section class="hero">
 
@@ -2677,9 +2274,9 @@ details[open] summary::after {
 
 </section>
 
-<!-- ====================================================
-     TRUST
-==================================================== -->
+<!-- ======================================================
+     TRUST BAR
+====================================================== -->
 
 <section class="trust-bar">
 
@@ -2725,9 +2322,9 @@ details[open] summary::after {
 
 </section>
 
-<!-- ====================================================
+<!-- ======================================================
      DEALS
-==================================================== -->
+====================================================== -->
 
 <section
     class="section"
@@ -2748,10 +2345,8 @@ details[open] summary::after {
 
         <p class="section-intro">
 
-            Hier findest du unsere aktuellen
-            Partnerschaften und Angebote.
-
-            Sobald neue Deals verfügbar sind,
+            Hier findest du unsere aktuellen Partnerschaften
+            und Angebote. Sobald neue Deals verfügbar sind,
             werden sie direkt hier ergänzt.
 
         </p>
@@ -2836,9 +2431,9 @@ details[open] summary::after {
 
 </section>
 
-<!-- ====================================================
+<!-- ======================================================
      VORTEILE
-==================================================== -->
+====================================================== -->
 
 <section
     class="section"
@@ -2859,13 +2454,12 @@ details[open] summary::after {
 
         <p class="section-intro">
 
-            JumaaBonus verbindet ausgewählte
-            Casino-Angebote mit Entertainment,
-            Streams und Community.
+            JumaaBonus verbindet ausgewählte Casino-Angebote
+            mit Entertainment, Streams und Community.
 
             Unser Ziel ist ein zentraler Ort,
-            an dem unsere Community alle wichtigen
-            Inhalte schnell findet.
+            an dem unsere Community alle wichtigen Inhalte
+            schnell findet.
 
         </p>
 
@@ -2885,18 +2479,14 @@ details[open] summary::after {
 
             <p>
 
-                Kein unnötiges Suchen auf mehreren
-                Seiten.
-
                 Bei JumaaBonus findest du unsere
                 aktuellen Partner-Angebote zentral
                 und übersichtlich an einem Ort.
 
                 <br><br>
 
-                Neue Deals und Partner können jederzeit
-                ergänzt werden, sodass unser Angebot
-                gemeinsam mit der Community weiter wächst.
+                Neue Deals und Partner werden
+                Schritt für Schritt ergänzt.
 
             </p>
 
@@ -2914,16 +2504,13 @@ details[open] summary::after {
 
             <p>
 
-                JumaaBonus besteht nicht nur aus Deals.
-
                 Über unseren Twitch-Kanal kannst du
                 Streams und weitere Inhalte verfolgen
                 und direkt Teil des Geschehens sein.
 
                 <br><br>
 
-                Twitch ist sowohl im Header als auch
-                im Community-Bereich erreichbar.
+                Twitch ist direkt über unsere Website erreichbar.
 
             </p>
 
@@ -2944,14 +2531,10 @@ details[open] summary::after {
                 Der Discord ist der zentrale Treffpunkt
                 unserer Community.
 
-                Dort teilen wir neue Deals,
-                Stream-Informationen, Ankündigungen
-                und weitere Updates.
-
                 <br><br>
 
-                So bleibst du immer mit JumaaBonus
-                und der Community verbunden.
+                Dort teilen wir neue Deals,
+                Stream-Informationen und weitere Updates.
 
             </p>
 
@@ -2963,9 +2546,9 @@ details[open] summary::after {
 
 </section>
 
-<!-- ====================================================
+<!-- ======================================================
      COMMUNITY
-==================================================== -->
+====================================================== -->
 
 <section
     class="section"
@@ -2988,8 +2571,7 @@ details[open] summary::after {
 
             Werde Teil unserer Community,
             entdecke neue Inhalte und bleibe über
-            Deals, Streams und wichtige Updates
-            informiert.
+            Deals, Streams und wichtige Updates informiert.
 
         </p>
 
@@ -3000,13 +2582,7 @@ details[open] summary::after {
                 <div class="community-platform-info">
 
                     <div class="community-platform-icon discord-icon">
-
-                        <svg viewBox="0 0 24 24">
-
-                            <path d="M19.5 5.3A16.5 16.5 0 0 0 15.4 4l-.5 1a15 15 0 0 0-5.8 0l-.5-1a16.5 16.5 0 0 0-4.1 1.3C1.9 9.1 1.2 12.8 1.5 16.4A16.6 16.6 0 0 0 6.6 19l1.2-1.6a10.6 10.6 0 0 1-1.9-.9l.5-.4a11.8 11.8 0 0 0 11.2 0l.5.4a10.6 10.6 0 0 1-1.9.9l1.2 1.6a16.6 16.6 0 0 0 5.1-2.6c.4-4.2-.7-7.8-3-11.1Z"/>
-
-                        </svg>
-
+                        D
                     </div>
 
                     <div>
@@ -3026,6 +2602,7 @@ details[open] summary::after {
                 <a
                     href="https://discord.gg/NKxX9DB3ay"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="community-link discord-link"
                 >
                     BEITRETEN →
@@ -3038,13 +2615,7 @@ details[open] summary::after {
                 <div class="community-platform-info">
 
                     <div class="community-platform-icon twitch-icon">
-
-                        <svg viewBox="0 0 24 24">
-
-                            <path d="M4 2h17v12l-5 5h-4l-3 3v-3H4V2zm2 2v13h5v2l2-2h3l3-3V4H6zm4 3h2v6h-2V7zm5 0h2v6h-2V7z"/>
-
-                        </svg>
-
+                        T
                     </div>
 
                     <div>
@@ -3064,6 +2635,7 @@ details[open] summary::after {
                 <a
                     href="https://www.twitch.tv/jumaabonus"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="community-link twitch-link"
                 >
                     TWITCH →
@@ -3079,9 +2651,9 @@ details[open] summary::after {
 
 </section>
 
-<!-- ====================================================
+<!-- ======================================================
      FAQ
-==================================================== -->
+====================================================== -->
 
 <section
     class="section"
@@ -3120,21 +2692,15 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                JumaaBonus ist keine klassische Plattform,
-                sondern eine Community rund um Casino-Content,
-                aktuelle Deals, Streams und gemeinsame Unterhaltung.
+                JumaaBonus ist eine Community rund um
+                Casino-Content, aktuelle Deals,
+                Streams und Unterhaltung.
 
                 <br><br>
 
-                Unser Ziel ist es, einen zentralen Ort zu schaffen,
-                an dem sich unsere Community informieren,
-                austauschen und neue Inhalte entdecken kann.
-
-                <br><br>
-
-                Neben aktuellen Deals findest du bei uns auch
-                Twitch-Streams, Discord-Updates und weitere Inhalte,
-                die sich rund um unsere Community entwickeln.
+                Unser Ziel ist ein zentraler Ort,
+                an dem unsere Community neue Inhalte
+                und Angebote entdecken kann.
 
             </div>
 
@@ -3149,13 +2715,8 @@ details[open] summary::after {
             <div class="faq-answer">
 
                 Bei JumaaBonus findest du ausgewählte Deals,
-                aktuelle Partner-Angebote, Twitch-Content
-                und direkte Verbindungen zu unserer Community.
-
-                <br><br>
-
-                Wir möchten die wichtigsten Inhalte möglichst
-                übersichtlich an einem Ort bündeln.
+                aktuelle Partner-Angebote,
+                Twitch-Content und unsere Discord-Community.
 
             </div>
 
@@ -3169,41 +2730,14 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Unsere aktuellen Partner-Deals findest du direkt
-                im Bereich „Aktuelle Deals“.
+                Über die jeweiligen Deal-Buttons gelangst du
+                direkt zur Website unseres Partners.
 
                 <br><br>
 
-                Über den jeweiligen Button gelangst du auf die
-                Website des entsprechenden Partners.
-
-                <br><br>
-
-                Einige dieser Links können Affiliate-Links sein.
+                Einige Links können Affiliate-Links sein.
                 JumaaBonus kann dadurch eine Provision erhalten,
                 ohne dass dir zusätzliche Kosten entstehen.
-
-            </div>
-
-        </details>
-
-        <details>
-
-            <summary>
-                Warum gibt es JumaaBonus?
-            </summary>
-
-            <div class="faq-answer">
-
-                JumaaBonus wurde aufgebaut, um Deals,
-                Entertainment und Community an einem Ort
-                zusammenzubringen.
-
-                <br><br>
-
-                Langfristig möchten wir eine aktive Community
-                rund um Streams, Partnerschaften und
-                Casino-Entertainment aufbauen.
 
             </div>
 
@@ -3218,12 +2752,7 @@ details[open] summary::after {
             <div class="faq-answer">
 
                 Unsere Streams findest du auf unserem
-                Twitch-Kanal.
-
-                <br><br>
-
-                Twitch erreichst du direkt über die Buttons
-                auf unserer Website.
+                Twitch-Kanal jumaabonus.
 
             </div>
 
@@ -3237,13 +2766,9 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Unser Discord ist der zentrale Treffpunkt
-                der JumaaBonus-Community.
-
-                <br><br>
-
-                Dort teilen wir neue Deals, Stream-Infos,
-                Ankündigungen und weitere Updates.
+                Dort findest du neue Deals,
+                Stream-Infos, Ankündigungen
+                und kannst dich mit unserer Community austauschen.
 
             </div>
 
@@ -3257,12 +2782,7 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Ja. JumaaBonus soll sich mit der Zeit
-                weiterentwickeln und gemeinsam mit der
-                Community wachsen.
-
-                <br><br>
-
+                Ja. JumaaBonus soll mit der Zeit wachsen.
                 Neue Partner und Deals werden ergänzt,
                 sobald passende Möglichkeiten verfügbar sind.
 
@@ -3278,8 +2798,8 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Nein. Die Nutzung der JumaaBonus-Website,
-                unseres Twitch-Kanals und unserer
+                Nein. Die Nutzung unserer Website,
+                unseres Twitch-Kanals und der
                 Discord-Community ist grundsätzlich kostenlos.
 
             </div>
@@ -3294,14 +2814,8 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Ja. Casino- und Glücksspielinhalte auf
-                JumaaBonus richten sich ausschließlich
-                an volljährige Personen.
-
-                <br><br>
-
-                Glücksspiel sollte immer verantwortungsvoll
-                genutzt werden.
+                Ja. Casino- und Glücksspielinhalte
+                richten sich ausschließlich an volljährige Personen.
 
             </div>
 
@@ -3317,22 +2831,18 @@ details[open] summary::after {
 
         <br><br>
 
-        Glücksspiel kann süchtig machen und zu
-        finanziellen Problemen führen.
+        Glücksspiel kann süchtig machen und zu finanziellen
+        Problemen führen.
 
-        Spiele nur mit Geld, dessen Verlust du
-        verkraften kannst, und nur wenn Glücksspiel
-        an deinem Aufenthaltsort legal ist und du
-        volljährig bist.
+        Spiele nur mit Geld, dessen Verlust du verkraften kannst,
+        und nur wenn Glücksspiel an deinem Aufenthaltsort
+        legal ist und du volljährig bist.
 
         <br><br>
 
-        Einige Links auf dieser Website können
-        Affiliate-Links sein.
-
-        Dadurch kann JumaaBonus eine Provision
-        erhalten, ohne dass dir dadurch zusätzliche
-        Kosten entstehen.
+        Einige Links auf dieser Website können Affiliate-Links sein.
+        Dadurch kann JumaaBonus eine Provision erhalten,
+        ohne dass dir dadurch zusätzliche Kosten entstehen.
 
     </div>
 
@@ -3342,9 +2852,9 @@ details[open] summary::after {
 
 </main>
 
-<!-- ====================================================
+<!-- ======================================================
      FOOTER
-==================================================== -->
+====================================================== -->
 
 <footer class="footer">
 
@@ -3409,7 +2919,7 @@ details[open] summary::after {
                 </a>
 
                 <a href="#faq">
-                    Häufige Fragen
+                    FAQ
                 </a>
 
             </div>
@@ -3427,6 +2937,7 @@ details[open] summary::after {
                 <a
                     href="https://www.twitch.tv/jumaabonus"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     Twitch
                 </a>
@@ -3434,6 +2945,7 @@ details[open] summary::after {
                 <a
                     href="https://discord.gg/NKxX9DB3ay"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     Discord
                 </a>
@@ -3463,7 +2975,7 @@ details[open] summary::after {
 <script>
 
 /* ======================================================
-   18+ AGE GATE
+   AGE GATE
 ====================================================== */
 
 const ageGate =
@@ -3493,10 +3005,7 @@ function checkAgeVerification() {
     }
 
     const verifiedAt =
-        parseInt(
-            stored,
-            10
-        );
+        parseInt(stored, 10);
 
     if (isNaN(verifiedAt)) {
         return false;
@@ -3526,11 +3035,10 @@ function closeAgeGate() {
     document.body.classList.remove(
         "age-locked"
     );
+
 }
 
-if (
-    checkAgeVerification()
-) {
+if (checkAgeVerification()) {
     closeAgeGate();
 }
 
@@ -3563,14 +3071,10 @@ ageLeave.addEventListener(
 ====================================================== */
 
 const menuButton =
-    document.getElementById(
-        "menuButton"
-    );
+    document.getElementById("menuButton");
 
 const mobileMenu =
-    document.getElementById(
-        "mobileMenu"
-    );
+    document.getElementById("mobileMenu");
 
 menuButton.addEventListener(
     "click",
@@ -3633,8 +3137,7 @@ document
                     );
 
                 if (
-                    !href
-                    ||
+                    !href ||
                     href === "#"
                 ) {
                     return;
@@ -3698,14 +3201,10 @@ if (showcase) {
                 showcase.getBoundingClientRect();
 
             const x =
-                e.clientX
-                -
-                rect.left;
+                e.clientX - rect.left;
 
             const y =
-                e.clientY
-                -
-                rect.top;
+                e.clientY - rect.top;
 
             const centerX =
                 rect.width / 2;
