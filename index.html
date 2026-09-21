@@ -2,7 +2,6 @@
 <html lang="de">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,22 +15,9 @@
 <meta name="theme-color" content="#090909">
 
 <!-- FAVICON -->
-<link
-    rel="icon"
-    type="image/png"
-    href="images/jumaabonus-logo.png"
->
-
-<link
-    rel="shortcut icon"
-    type="image/png"
-    href="images/jumaabonus-logo.png"
->
-
-<link
-    rel="apple-touch-icon"
-    href="images/jumaabonus-logo.png"
->
+<link rel="icon" type="image/png" href="images/jumaabonus-logo.png">
+<link rel="shortcut icon" type="image/png" href="images/jumaabonus-logo.png">
+<link rel="apple-touch-icon" href="images/jumaabonus-logo.png">
 
 <!-- SOCIAL PREVIEW -->
 <meta property="og:title" content="JumaaBonus | Casino Deals">
@@ -50,13 +36,17 @@
     --red: #e50914;
     --purple: #9146ff;
     --green: #50ff7a;
+
     --bg: #050505;
     --card: #111113;
+
     --text: #f7f7f7;
     --muted: #a1a1a6;
     --muted2: #6e6e73;
+
     --border: rgba(255,255,255,0.085);
     --border-hover: rgba(255,106,0,0.32);
+
     --max: 1180px;
 }
 
@@ -120,12 +110,13 @@ img {
 }
 
 /* ======================================================
-   AGE GATE
+   18+ AGE GATE
 ====================================================== */
 
 .age-gate {
     position: fixed;
     inset: 0;
+
     z-index: 99999;
 
     display: flex;
@@ -220,7 +211,6 @@ img {
     height: 70px;
 
     object-fit: contain;
-
     border-radius: 50%;
 
     filter:
@@ -245,7 +235,9 @@ img {
 
 .age-card h2 {
     margin-top: 22px;
+
     font-size: 29px;
+
     letter-spacing: -1.2px;
 }
 
@@ -260,7 +252,9 @@ img {
 
 .age-actions {
     display: grid;
+
     gap: 11px;
+
     margin-top: 30px;
 }
 
@@ -271,6 +265,7 @@ img {
     border-radius: 13px;
 
     color: white;
+
     cursor: pointer;
 
     font-size: 11px;
@@ -314,7 +309,9 @@ img {
 
 .age-note {
     margin-top: 19px !important;
+
     color: #666 !important;
+
     font-size: 9px !important;
 }
 
@@ -324,10 +321,12 @@ img {
 
 .header {
     position: fixed;
+
     top: 0;
     left: 0;
 
     width: 100%;
+
     z-index: 1000;
 
     border-bottom:
@@ -342,20 +341,27 @@ img {
 
 .navbar {
     width: min(var(--max), calc(100% - 40px));
+
     height: 76px;
 
     margin: auto;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 30px;
 }
 
+/* LOGO */
+
 .logo {
     display: inline-flex;
+
     align-items: center;
+
     gap: 12px;
 
     flex-shrink: 0;
@@ -383,9 +389,11 @@ img {
 
 .logo-text {
     display: inline-flex;
+
     align-items: baseline;
 
     font-size: 27px;
+
     font-weight: 950;
 
     letter-spacing: -1.2px;
@@ -393,9 +401,13 @@ img {
     white-space: nowrap;
 }
 
+/* NAV */
+
 .nav-links {
     display: flex;
+
     align-items: center;
+
     gap: 30px;
 }
 
@@ -405,6 +417,7 @@ img {
     color: #aaa;
 
     font-size: 12px;
+
     font-weight: 800;
 
     transition: 0.25s;
@@ -414,6 +427,7 @@ img {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: -9px;
 
@@ -442,7 +456,9 @@ img {
 
 .header-actions {
     display: flex;
+
     align-items: center;
+
     gap: 9px;
 }
 
@@ -452,15 +468,27 @@ img {
     padding: 0 14px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
+    gap: 7px;
 
     border-radius: 11px;
 
     font-size: 10px;
+
     font-weight: 900;
 
     transition: 0.25s;
+}
+
+.social-button svg {
+    width: 16px;
+    height: 16px;
+
+    fill: currentColor;
 }
 
 .social-button:hover {
@@ -495,6 +523,7 @@ img {
     height: 40px;
 
     align-items: center;
+
     justify-content: center;
 
     border:
@@ -513,6 +542,7 @@ img {
 .menu-button svg {
     width: 20px;
     height: 20px;
+
     stroke: currentColor;
 }
 
@@ -533,6 +563,7 @@ img {
     z-index: 999;
 
     opacity: 0;
+
     pointer-events: none;
 
     transform: translateY(-10px);
@@ -548,6 +579,7 @@ img {
 
 .mobile-menu.open {
     opacity: 1;
+
     pointer-events: auto;
 
     transform: translateY(0);
@@ -555,6 +587,7 @@ img {
 
 .mobile-menu-inner {
     display: grid;
+
     gap: 10px;
 }
 
@@ -572,6 +605,7 @@ img {
     color: #bbb;
 
     font-size: 13px;
+
     font-weight: 800;
 }
 
@@ -600,6 +634,7 @@ img {
 
 .banner-frame img {
     display: block;
+
     width: 100%;
 
     transition: 0.6s;
@@ -614,7 +649,8 @@ img {
 ====================================================== */
 
 .hero {
-    padding: 80px 0 120px;
+    padding:
+        80px 0 120px;
 
     background:
         radial-gradient(
@@ -637,10 +673,13 @@ img {
 
 .eyebrow {
     display: inline-flex;
+
     align-items: center;
+
     gap: 9px;
 
-    padding: 8px 13px;
+    padding:
+        8px 13px;
 
     border:
         1px solid rgba(255,255,255,0.10);
@@ -653,9 +692,11 @@ img {
     color: #bbb;
 
     font-size: 10px;
+
     font-weight: 900;
 
-    letter-spacing: 1.5px;
+    letter-spacing:
+        1.5px;
 }
 
 .live-dot {
@@ -681,6 +722,7 @@ img {
         );
 
     line-height: 0.97;
+
     letter-spacing: -4px;
 
     font-weight: 950;
@@ -701,6 +743,7 @@ img {
     background-size: 200% auto;
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     color: transparent;
@@ -712,11 +755,13 @@ img {
 @keyframes gradientMove {
 
     0% {
-        background-position: 0% center;
+        background-position:
+            0% center;
     }
 
     100% {
-        background-position: 200% center;
+        background-position:
+            200% center;
     }
 
 }
@@ -735,7 +780,9 @@ img {
 
 .hero-actions {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 12px;
 
     margin-top: 34px;
@@ -744,15 +791,19 @@ img {
 .btn {
     min-height: 48px;
 
-    padding: 0 22px;
+    padding:
+        0 22px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 12px;
 
     font-size: 12px;
+
     font-weight: 900;
 
     transition: 0.25s;
@@ -822,7 +873,9 @@ img {
 
 .deal-showcase-top {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
@@ -830,19 +883,24 @@ img {
     color: var(--orange);
 
     font-size: 10px;
+
     font-weight: 900;
 
-    letter-spacing: 1.6px;
+    letter-spacing:
+        1.6px;
 }
 
 .status-live {
     display: inline-flex;
+
     align-items: center;
+
     gap: 6px;
 
     color: #71ff92;
 
     font-size: 10px;
+
     font-weight: 900;
 }
 
@@ -866,7 +924,9 @@ img {
         55px auto 20px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     overflow: hidden;
@@ -892,6 +952,7 @@ img {
     text-align: center;
 
     font-size: 31px;
+
     font-weight: 950;
 }
 
@@ -911,7 +972,9 @@ img {
     min-height: 48px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 12px;
@@ -924,6 +987,7 @@ img {
         );
 
     font-size: 11px;
+
     font-weight: 900;
 
     transition: 0.25s;
@@ -964,9 +1028,11 @@ img {
     min-height: 96px;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -990,15 +1056,17 @@ img {
 
     font-size: 9px;
 
-    letter-spacing: 1px;
+    letter-spacing:
+        1px;
 }
 
 /* ======================================================
-   GENERAL
+   GENERAL SECTIONS
 ====================================================== */
 
 .section {
-    padding: 115px 0;
+    padding:
+        115px 0;
 }
 
 .section-heading {
@@ -1009,9 +1077,11 @@ img {
     color: var(--orange);
 
     font-size: 9px;
+
     font-weight: 900;
 
-    letter-spacing: 2px;
+    letter-spacing:
+        2px;
 }
 
 .section-title {
@@ -1024,7 +1094,8 @@ img {
             53px
         );
 
-    letter-spacing: -2.3px;
+    letter-spacing:
+        -2.3px;
 }
 
 .section-intro {
@@ -1089,9 +1160,11 @@ img {
 }
 
 .deal-card:hover {
-    transform: translateY(-6px);
+    transform:
+        translateY(-6px);
 
-    border-color: var(--border-hover);
+    border-color:
+        var(--border-hover);
 }
 
 .deal-card.featured {
@@ -1111,7 +1184,8 @@ img {
 .deal-badge {
     display: inline-flex;
 
-    padding: 6px 9px;
+    padding:
+        6px 9px;
 
     border-radius: 8px;
 
@@ -1121,6 +1195,7 @@ img {
     color: var(--orange);
 
     font-size: 8px;
+
     font-weight: 900;
 }
 
@@ -1176,12 +1251,15 @@ img {
     color: var(--orange);
 
     font-size: 10px;
+
     font-weight: 900;
 }
 
 .coming-card {
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
@@ -1190,7 +1268,9 @@ img {
     height: 66px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 18px;
@@ -1247,7 +1327,8 @@ img {
 }
 
 .benefit-card:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
     border-color:
         rgba(255,106,0,0.30);
@@ -1258,7 +1339,9 @@ img {
     height: 48px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 13px;
@@ -1306,7 +1389,8 @@ img {
 }
 
 .community-panel {
-    padding: 65px 52px;
+    padding:
+        65px 52px;
 
     border-radius: 29px;
 
@@ -1336,7 +1420,8 @@ img {
             54px
         );
 
-    letter-spacing: -2px;
+    letter-spacing:
+        -2px;
 }
 
 .community-description {
@@ -1368,7 +1453,9 @@ img {
     padding: 22px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 18px;
@@ -1380,11 +1467,23 @@ img {
 
     background:
         rgba(255,255,255,0.035);
+
+    transition: 0.3s;
+}
+
+.community-card:hover {
+    transform:
+        translateY(-4px);
+
+    background:
+        rgba(255,255,255,0.06);
 }
 
 .community-platform-info {
     display: flex;
+
     align-items: center;
+
     gap: 14px;
 }
 
@@ -1392,13 +1491,24 @@ img {
     width: 52px;
     height: 52px;
 
+    flex-shrink: 0;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 14px;
+}
 
-    font-weight: 950;
+/* HIER SIND DIE SYMBOLE WIEDER KORREKT */
+
+.community-platform-icon svg {
+    width: 25px;
+    height: 25px;
+
+    fill: white;
 }
 
 .discord-icon {
@@ -1408,6 +1518,9 @@ img {
             #ff7600,
             #e82c12
         );
+
+    box-shadow:
+        0 12px 30px rgba(255,106,0,0.18);
 }
 
 .twitch-icon {
@@ -1417,6 +1530,9 @@ img {
             #a15cff,
             #702de4
         );
+
+    box-shadow:
+        0 12px 30px rgba(145,70,255,0.25);
 }
 
 .community-platform-info h3 {
@@ -1436,15 +1552,19 @@ img {
 .community-link {
     min-height: 40px;
 
-    padding: 0 14px;
+    padding:
+        0 14px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 10px;
 
     font-size: 9px;
+
     font-weight: 900;
 }
 
@@ -1482,6 +1602,7 @@ img {
 
 .faq-grid {
     display: grid;
+
     gap: 12px;
 }
 
@@ -1511,15 +1632,19 @@ summary {
 
     cursor: pointer;
 
-    padding: 22px 24px;
+    padding:
+        22px 24px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 20px;
 
     font-size: 13px;
+
     font-weight: 850;
 }
 
@@ -1534,7 +1659,9 @@ summary::after {
     height: 32px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 9px;
@@ -1618,7 +1745,9 @@ details[open] summary::after {
 
 .footer-brand {
     display: inline-flex;
+
     align-items: center;
+
     gap: 14px;
 }
 
@@ -1633,9 +1762,11 @@ details[open] summary::after {
 
 .footer-logo-text {
     display: inline-flex;
+
     align-items: baseline;
 
     font-size: 24px;
+
     font-weight: 950;
 
     letter-spacing: -1px;
@@ -1659,18 +1790,22 @@ details[open] summary::after {
     color: #77777c;
 
     font-size: 9px;
+
     font-weight: 900;
 
-    letter-spacing: 1px;
+    letter-spacing:
+        1px;
 }
 
 .footer-links {
     display: grid;
+
     gap: 10px;
 }
 
 .footer-links a {
     color: #aaa;
+
     font-size: 11px;
 }
 
@@ -1684,6 +1819,7 @@ details[open] summary::after {
     padding-top: 20px;
 
     display: flex;
+
     justify-content: space-between;
 
     gap: 20px;
@@ -1733,7 +1869,8 @@ details[open] summary::after {
     }
 
     .hero-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .deals-grid {
@@ -1815,6 +1952,7 @@ details[open] summary::after {
 
     .banner-frame img {
         min-height: 145px;
+
         object-fit: cover;
     }
 
@@ -1825,7 +1963,9 @@ details[open] summary::after {
 
     .hero h1 {
         font-size: 45px;
-        letter-spacing: -2.5px;
+
+        letter-spacing:
+            -2.5px;
     }
 
     .hero-actions {
@@ -1837,7 +1977,8 @@ details[open] summary::after {
     }
 
     .trust-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .trust-item {
@@ -1848,15 +1989,18 @@ details[open] summary::after {
     }
 
     .section {
-        padding: 82px 0;
+        padding:
+            82px 0;
     }
 
     .deals-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .deal-card.featured {
-        grid-column: span 1;
+        grid-column:
+            span 1;
     }
 
     .community-panel {
@@ -1865,8 +2009,11 @@ details[open] summary::after {
     }
 
     .community-card {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
     }
 
     .community-link {
@@ -1874,7 +2021,8 @@ details[open] summary::after {
     }
 
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .footer-logo-image {
@@ -1887,7 +2035,8 @@ details[open] summary::after {
     }
 
     .footer-bottom {
-        flex-direction: column;
+        flex-direction:
+            column;
     }
 
 }
@@ -2053,7 +2202,13 @@ details[open] summary::after {
             rel="noopener noreferrer"
             class="social-button twitch-header"
         >
+
+            <svg viewBox="0 0 24 24">
+                <path d="M4 2h17v12l-5 5h-4l-3 3v-3H4V2zm2 2v13h5v2l2-2h3l3-3V4H6zm4 3h2v6h-2V7zm5 0h2v6h-2V7z"/>
+            </svg>
+
             TWITCH
+
         </a>
 
         <a
@@ -2275,7 +2430,7 @@ details[open] summary::after {
 </section>
 
 <!-- ======================================================
-     TRUST BAR
+     TRUST
 ====================================================== -->
 
 <section class="trust-bar">
@@ -2479,14 +2634,14 @@ details[open] summary::after {
 
             <p>
 
-                Bei JumaaBonus findest du unsere
-                aktuellen Partner-Angebote zentral
-                und übersichtlich an einem Ort.
+                Bei JumaaBonus findest du unsere aktuellen
+                Partner-Angebote zentral und übersichtlich
+                an einem Ort.
 
                 <br><br>
 
-                Neue Deals und Partner werden
-                Schritt für Schritt ergänzt.
+                Neue Deals und Partner werden Schritt
+                für Schritt ergänzt.
 
             </p>
 
@@ -2577,12 +2732,18 @@ details[open] summary::after {
 
         <div class="community-grid">
 
+            <!-- DISCORD -->
+
             <div class="community-card">
 
                 <div class="community-platform-info">
 
                     <div class="community-platform-icon discord-icon">
-                        D
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19.5 5.3A16.5 16.5 0 0 0 15.4 4l-.5 1a15 15 0 0 0-5.8 0l-.5-1a16.5 16.5 0 0 0-4.1 1.3C1.9 9.1 1.2 12.8 1.5 16.4A16.6 16.6 0 0 0 6.6 19l1.2-1.6a10.6 10.6 0 0 1-1.9-.9l.5-.4a11.8 11.8 0 0 0 11.2 0l.5.4a10.6 10.6 0 0 1-1.9.9l1.2 1.6a16.6 16.6 0 0 0 5.1-2.6c.4-4.2-.7-7.8-3-11.1Z"/>
+                        </svg>
+
                     </div>
 
                     <div>
@@ -2610,12 +2771,18 @@ details[open] summary::after {
 
             </div>
 
+            <!-- TWITCH -->
+
             <div class="community-card">
 
                 <div class="community-platform-info">
 
                     <div class="community-platform-icon twitch-icon">
-                        T
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 2h17v12l-5 5h-4l-3 3v-3H4V2zm2 2v13h5v2l2-2h3l3-3V4H6zm4 3h2v6h-2V7zm5 0h2v6h-2V7z"/>
+                        </svg>
+
                     </div>
 
                     <div>
@@ -3005,7 +3172,10 @@ function checkAgeVerification() {
     }
 
     const verifiedAt =
-        parseInt(stored, 10);
+        parseInt(
+            stored,
+            10
+        );
 
     if (isNaN(verifiedAt)) {
         return false;
@@ -3038,7 +3208,9 @@ function closeAgeGate() {
 
 }
 
-if (checkAgeVerification()) {
+if (
+    checkAgeVerification()
+) {
     closeAgeGate();
 }
 
@@ -3071,10 +3243,14 @@ ageLeave.addEventListener(
 ====================================================== */
 
 const menuButton =
-    document.getElementById("menuButton");
+    document.getElementById(
+        "menuButton"
+    );
 
 const mobileMenu =
-    document.getElementById("mobileMenu");
+    document.getElementById(
+        "mobileMenu"
+    );
 
 menuButton.addEventListener(
     "click",
