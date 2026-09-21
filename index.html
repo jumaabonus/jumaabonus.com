@@ -2,6 +2,7 @@
 <html lang="de">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,65 +10,92 @@
 
 <meta
     name="description"
-    content="JumaaBonus – Casino Deals, Twitch Streams und Community an einem Ort."
+    content="JumaaBonus – ausgewählte Casino Deals, Twitch Streams und Community an einem Ort."
 >
 
-<meta name="theme-color" content="#080808">
+<meta name="theme-color" content="#070707">
 
-<!-- FAVICON -->
-<link rel="icon" type="image/png" href="images/jumaabonus-logo.png">
-<link rel="shortcut icon" type="image/png" href="images/jumaabonus-logo.png">
-<link rel="apple-touch-icon" href="images/jumaabonus-logo.png">
+<link
+    rel="icon"
+    type="image/png"
+    href="images/jumaabonus-logo.png"
+>
 
-<!-- SOCIAL PREVIEW -->
-<meta property="og:title" content="JumaaBonus | Casino Deals">
+<link
+    rel="shortcut icon"
+    href="images/jumaabonus-logo.png"
+>
+
+<link
+    rel="apple-touch-icon"
+    href="images/jumaabonus-logo.png"
+>
+
+<meta
+    property="og:title"
+    content="JumaaBonus | Casino Deals"
+>
+
 <meta
     property="og:description"
-    content="Casino Deals, Twitch Streams und Community – alles an einem Ort."
+    content="Deals, Streams und Community – zentral an einem Ort."
 >
-<meta property="og:image" content="images/jumaabonus-banner.jpg">
-<meta property="og:type" content="website">
+
+<meta
+    property="og:image"
+    content="images/jumaabonus-banner.jpg"
+>
+
+<meta
+    property="og:type"
+    content="website"
+>
 
 <style>
 
-/* ======================================================
+/* =========================================================
    ROOT
-====================================================== */
+========================================================= */
 
 :root {
-    --orange: #ff6a00;
-    --orange2: #ff9b38;
-    --red: #e72912;
 
-    --gold: #ffbf40;
-    --gold2: #ffe29b;
+    --orange: #ff6a00;
+    --orange2: #ff9b31;
+
+    --gold: #f7b82b;
+    --gold2: #ffe09a;
+
+    --red: #e93416;
 
     --purple: #9146ff;
-    --purple2: #bc91ff;
+    --purple2: #b987ff;
 
-    --green: #58ff81;
+    --green: #59ff82;
 
-    --slot-yellow: #fff200;
-    --slot-purple: #47033c;
+    --slot-yellow: #fff000;
+    --slot-purple: #4c073f;
 
-    --bg: #060607;
-    --surface: #0d0d0f;
-    --surface2: #151518;
-    --surface3: #1b1b1f;
+    --bg: #050506;
+    --bg2: #09090b;
+
+    --surface: #101012;
+    --surface2: #17171a;
+    --surface3: #202024;
 
     --text: #f7f7f8;
-    --muted: #9b9ba1;
-    --muted2: #66666c;
+    --muted: #9c9ca3;
+    --muted2: #66666d;
 
     --border: rgba(255,255,255,0.085);
-    --border-strong: rgba(255,255,255,0.13);
+    --border2: rgba(255,255,255,0.13);
 
-    --max: 1180px;
+    --max: 1220px;
+
 }
 
-/* ======================================================
+/* =========================================================
    RESET
-====================================================== */
+========================================================= */
 
 * {
     margin: 0;
@@ -80,14 +108,12 @@ html {
 }
 
 body {
-    position: relative;
 
     min-height: 100vh;
 
     overflow-x: hidden;
 
     font-family:
-        Inter,
         Arial,
         Helvetica,
         sans-serif;
@@ -95,84 +121,26 @@ body {
     color: var(--text);
 
     background:
+
         radial-gradient(
-            circle at 10% 5%,
-            rgba(255,106,0,0.14),
-            transparent 23%
-        ),
-        radial-gradient(
-            circle at 94% 26%,
-            rgba(145,70,255,0.07),
+            circle at 10% 8%,
+            rgba(255,106,0,0.10),
             transparent 25%
         ),
+
+        radial-gradient(
+            circle at 92% 25%,
+            rgba(145,70,255,0.07),
+            transparent 24%
+        ),
+
         linear-gradient(
             180deg,
-            #050506 0%,
-            #09090b 45%,
-            #050506 100%
-        );
-}
-
-/* feines Hintergrundlicht */
-
-body::before {
-    content: "";
-
-    position: fixed;
-    inset: 0;
-
-    z-index: -2;
-
-    pointer-events: none;
-
-    background:
-        radial-gradient(
-            circle at 15% 70%,
-            rgba(255,106,0,0.04),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 85% 85%,
-            rgba(145,70,255,0.04),
-            transparent 24%
-        );
-}
-
-/* sehr dezente Struktur */
-
-body::after {
-    content: "";
-
-    position: fixed;
-    inset: 0;
-
-    z-index: -1;
-
-    pointer-events: none;
-
-    opacity: 0.025;
-
-    background-image:
-        linear-gradient(
-            rgba(255,255,255,0.08) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0.08) 1px,
-            transparent 1px
+            #050506,
+            #09090b 50%,
+            #050506
         );
 
-    background-size: 45px 45px;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            transparent,
-            black 20%,
-            black 80%,
-            transparent
-        );
 }
 
 body.menu-open,
@@ -190,43 +158,49 @@ button {
 }
 
 img {
+    display: block;
     max-width: 100%;
 }
 
 .container {
-    width: min(var(--max), calc(100% - 40px));
+    width: min(var(--max), calc(100% - 44px));
     margin: auto;
 }
 
-/* ======================================================
+/* =========================================================
    SCROLLBAR
-====================================================== */
+========================================================= */
 
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #060607;
+    background: #050506;
 }
 
 ::-webkit-scrollbar-thumb {
-    border: 2px solid #060607;
+
     border-radius: 999px;
+
+    border:
+        2px solid #050506;
 
     background:
         linear-gradient(
             180deg,
             var(--orange),
-            #d92b12
+            var(--red)
         );
+
 }
 
-/* ======================================================
-   AGE GATE
-====================================================== */
+/* =========================================================
+   18+ AGE GATE
+========================================================= */
 
 .age-gate {
+
     position: fixed;
     inset: 0;
 
@@ -239,14 +213,18 @@ img {
     padding: 25px;
 
     background:
-        rgba(0,0,0,0.86);
+        rgba(0,0,0,0.88);
 
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
 
     transition:
         opacity 0.35s ease,
         visibility 0.35s ease;
+
 }
 
 .age-gate.hidden {
@@ -256,45 +234,51 @@ img {
 }
 
 .age-card {
+
     position: relative;
 
-    width: min(520px, 100%);
-
-    padding: 42px;
+    width: min(525px,100%);
 
     overflow: hidden;
 
+    padding: 42px;
+
     text-align: center;
 
-    border-radius: 28px;
+    border-radius: 30px;
 
     border:
-        1px solid rgba(255,126,26,0.28);
+        1px solid rgba(255,122,24,0.30);
 
     background:
+
         radial-gradient(
-            circle at 90% 10%,
-            rgba(255,106,0,0.22),
-            transparent 35%
+            circle at 88% 8%,
+            rgba(255,106,0,0.24),
+            transparent 34%
         ),
+
         radial-gradient(
-            circle at 5% 100%,
-            rgba(145,70,255,0.11),
-            transparent 42%
+            circle at 8% 100%,
+            rgba(145,70,255,0.12),
+            transparent 40%
         ),
+
         linear-gradient(
             145deg,
-            #1a1a1d,
-            #0b0b0d 70%
+            #1c1c20,
+            #0b0b0d
         );
 
     box-shadow:
-        0 45px 120px rgba(0,0,0,0.78),
-        0 0 80px rgba(255,106,0,0.10),
+        0 50px 140px rgba(0,0,0,0.80),
+        0 0 70px rgba(255,106,0,0.10),
         inset 0 1px 0 rgba(255,255,255,0.06);
+
 }
 
 .age-card::before {
+
     content: "";
 
     position: absolute;
@@ -302,18 +286,23 @@ img {
     width: 180px;
     height: 180px;
 
-    right: -90px;
+    right: -80px;
     top: -90px;
 
     border-radius: 50%;
 
     background:
-        rgba(255,125,0,0.16);
+        rgba(255,145,31,0.14);
 
-    filter: blur(35px);
+    filter: blur(30px);
+
 }
 
 .age-badge {
+
+    position: relative;
+    z-index: 2;
+
     width: 90px;
     height: 90px;
 
@@ -331,23 +320,29 @@ img {
     background:
         linear-gradient(
             135deg,
-            #ff7b00,
-            #e82312
+            #ff7a00,
+            #e82d12
         );
 
     box-shadow:
-        0 18px 45px rgba(255,106,0,0.30),
-        inset 0 1px 0 rgba(255,255,255,0.25);
+        0 18px 45px rgba(255,106,0,0.30);
+
 }
 
 .age-brand {
+
+    position: relative;
+    z-index: 2;
+
     display: inline-flex;
     align-items: center;
 
     gap: 12px;
+
 }
 
 .age-logo {
+
     width: 68px;
     height: 68px;
 
@@ -357,19 +352,24 @@ img {
 
     filter:
         drop-shadow(
-            0 8px 22px rgba(255,140,0,0.28)
+            0 8px 20px rgba(255,145,0,0.25)
         );
+
 }
 
 .age-brand-text {
+
+    display: inline-flex;
+
     font-size: 23px;
     font-weight: 950;
 
     letter-spacing: -1px;
+
 }
 
 .logo-jumaa {
-    color: #fff;
+    color: white;
 }
 
 .logo-bonus {
@@ -377,14 +377,23 @@ img {
 }
 
 .age-card h2 {
+
+    position: relative;
+    z-index: 2;
+
     margin-top: 22px;
 
     font-size: 29px;
 
     letter-spacing: -1.2px;
+
 }
 
 .age-card p {
+
+    position: relative;
+    z-index: 2;
+
     margin-top: 17px;
 
     color: var(--muted);
@@ -392,6 +401,7 @@ img {
     font-size: 13px;
 
     line-height: 1.8;
+
 }
 
 .age-card strong {
@@ -399,52 +409,59 @@ img {
 }
 
 .age-actions {
+
+    position: relative;
+    z-index: 2;
+
     display: grid;
 
     gap: 11px;
 
     margin-top: 30px;
+
 }
 
 .age-enter {
+
     min-height: 52px;
 
-    border: none;
-    border-radius: 13px;
+    border: 0;
 
-    color: white;
+    border-radius: 13px;
 
     cursor: pointer;
 
+    color: white;
+
     font-size: 11px;
     font-weight: 950;
-
-    letter-spacing: 0.4px;
 
     background:
         linear-gradient(
             135deg,
             #ff7a00,
-            #e62c12
+            #e82c12
         );
 
     box-shadow:
-        0 14px 35px rgba(255,106,0,0.23),
-        inset 0 1px 0 rgba(255,255,255,0.22);
+        0 14px 35px rgba(255,106,0,0.24);
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: 0.25s;
+
 }
 
 .age-enter:hover {
-    transform: translateY(-2px);
+
+    transform:
+        translateY(-2px);
 
     box-shadow:
-        0 19px 45px rgba(255,106,0,0.34);
+        0 18px 45px rgba(255,106,0,0.36);
+
 }
 
 .age-leave {
+
     min-height: 48px;
 
     border-radius: 13px;
@@ -452,9 +469,9 @@ img {
     border:
         1px solid rgba(255,255,255,0.10);
 
-    color: #aaa;
-
     cursor: pointer;
+
+    color: #aaa;
 
     background:
         rgba(255,255,255,0.035);
@@ -462,29 +479,19 @@ img {
     font-size: 10px;
     font-weight: 850;
 
-    transition: 0.25s;
-}
-
-.age-leave:hover {
-    color: white;
-
-    background:
-        rgba(255,255,255,0.065);
 }
 
 .age-note {
-    margin-top: 19px !important;
-
     color: #68686e !important;
-
     font-size: 9px !important;
 }
 
-/* ======================================================
+/* =========================================================
    HEADER
-====================================================== */
+========================================================= */
 
 .header {
+
     position: fixed;
 
     top: 0;
@@ -495,105 +502,128 @@ img {
     z-index: 1000;
 
     border-bottom:
-        1px solid rgba(255,255,255,0.065);
+        1px solid rgba(255,255,255,0.06);
 
     background:
-        linear-gradient(
-            180deg,
-            rgba(10,10,11,0.91),
-            rgba(6,6,7,0.82)
-        );
+        rgba(5,5,6,0.84);
 
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter:
+        blur(24px);
 
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.15);
+    -webkit-backdrop-filter:
+        blur(24px);
+
 }
 
 .navbar {
-    width: min(var(--max), calc(100% - 40px));
 
-    height: 76px;
+    width:
+        min(
+            var(--max),
+            calc(100% - 44px)
+        );
+
+    height: 78px;
 
     margin: auto;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 30px;
+
 }
 
 .logo {
+
     display: inline-flex;
+
     align-items: center;
 
     gap: 11px;
 
     flex-shrink: 0;
+
 }
 
 .logo-image {
-    width: 58px;
-    height: 58px;
+
+    width: 56px;
+    height: 56px;
 
     object-fit: contain;
 
     border-radius: 50%;
 
-    transition:
-        transform 0.3s ease,
-        filter 0.3s ease;
-
     filter:
         drop-shadow(
-            0 6px 15px rgba(255,140,0,0.20)
+            0 6px 18px rgba(255,145,0,0.22)
         );
+
+    transition: 0.28s;
+
 }
 
 .logo:hover .logo-image {
+
     transform:
-        scale(1.065)
+        scale(1.06)
         rotate(-2deg);
 
-    filter:
-        drop-shadow(
-            0 8px 23px rgba(255,140,0,0.34)
-        );
 }
 
 .logo-text {
+
     display: inline-flex;
+
     align-items: baseline;
 
     font-size: 27px;
+
     font-weight: 950;
 
-    letter-spacing: -1.25px;
+    letter-spacing:
+        -1.2px;
 
     white-space: nowrap;
+
 }
 
+/* NAV LINKS */
+
 .nav-links {
+
     display: flex;
+
     align-items: center;
 
     gap: 30px;
+
 }
 
 .nav-links a {
+
     position: relative;
 
-    color: #a8a8ad;
+    color: #a4a4aa;
 
     font-size: 12px;
-    font-weight: 800;
 
-    transition: 0.25s;
+    font-weight: 850;
+
+    transition: 0.2s;
+
+}
+
+.nav-links a:hover {
+    color: white;
 }
 
 .nav-links a::after {
+
     content: "";
 
     position: absolute;
@@ -616,37 +646,37 @@ img {
             var(--gold)
         );
 
-    box-shadow:
-        0 0 10px rgba(255,106,0,0.55);
-
     transition: 0.25s;
-}
 
-.nav-links a:hover {
-    color: white;
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
+/* HEADER SOCIAL */
+
 .header-actions {
+
     display: flex;
+
     align-items: center;
 
     gap: 9px;
 
-    flex-shrink: 0;
 }
 
 .social-button {
-    height: 40px;
+
+    min-height: 40px;
 
     padding:
         0 14px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 7px;
@@ -654,19 +684,20 @@ img {
     border-radius: 11px;
 
     font-size: 10px;
+
     font-weight: 900;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
+    transition: 0.25s;
+
 }
 
 .social-button svg {
+
     width: 16px;
     height: 16px;
 
     fill: currentColor;
+
 }
 
 .social-button:hover {
@@ -674,84 +705,93 @@ img {
 }
 
 .twitch-header {
-    color: #d9c5ff;
+
+    color: #ddcaff;
 
     border:
         1px solid rgba(145,70,255,0.38);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(145,70,255,0.20),
-            rgba(145,70,255,0.07)
-        );
+        rgba(145,70,255,0.14);
+
 }
 
 .twitch-header:hover {
+
     background:
-        rgba(145,70,255,0.27);
+        rgba(145,70,255,0.26);
 
     box-shadow:
-        0 12px 30px rgba(145,70,255,0.19);
+        0 12px 28px rgba(145,70,255,0.18);
+
 }
 
 .discord-header {
+
     color: white;
 
     background:
         linear-gradient(
             135deg,
-            #ff7700,
-            #e92d12
+            #ff7600,
+            #eb3012
         );
 
     box-shadow:
-        0 10px 28px rgba(255,106,0,0.17),
-        inset 0 1px 0 rgba(255,255,255,0.17);
+        0 10px 25px rgba(255,106,0,0.18);
+
 }
 
 .discord-header:hover {
+
     box-shadow:
-        0 14px 36px rgba(255,106,0,0.30);
+        0 14px 34px rgba(255,106,0,0.30);
+
 }
 
 .menu-button {
+
     display: none;
 
     width: 40px;
     height: 40px;
 
     align-items: center;
+
     justify-content: center;
+
+    border-radius: 11px;
 
     border:
         1px solid var(--border);
 
-    border-radius: 11px;
+    color: white;
 
     background:
         rgba(255,255,255,0.04);
 
-    color: white;
-
     cursor: pointer;
+
 }
 
 .menu-button svg {
+
     width: 20px;
     height: 20px;
 
     stroke: currentColor;
+
 }
 
-/* ======================================================
+/* =========================================================
    MOBILE MENU
-====================================================== */
+========================================================= */
 
 .mobile-menu {
+
     position: fixed;
 
-    top: 76px;
+    top: 78px;
     left: 0;
 
     width: 100%;
@@ -770,288 +810,298 @@ img {
     transition: 0.25s;
 
     background:
-        rgba(8,8,9,0.98);
-
-    backdrop-filter: blur(22px);
+        rgba(7,7,8,0.98);
 
     border-bottom:
         1px solid var(--border);
+
+    backdrop-filter:
+        blur(20px);
+
 }
 
 .mobile-menu.open {
+
     opacity: 1;
 
     pointer-events: auto;
 
     transform:
         translateY(0);
+
 }
 
 .mobile-menu-inner {
+
     display: grid;
 
     gap: 10px;
+
 }
 
 .mobile-menu a {
+
     padding: 16px;
+
+    border-radius: 12px;
 
     border:
         1px solid var(--border);
 
-    border-radius: 13px;
-
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.05),
-            rgba(255,255,255,0.02)
-        );
+        rgba(255,255,255,0.03);
 
     color: #bbb;
 
     font-size: 13px;
 
     font-weight: 800;
+
 }
 
-/* ======================================================
-   BANNER
-====================================================== */
+/* =========================================================
+   CINEMATIC HERO
+========================================================= */
 
-.top-banner {
-    padding-top: 108px;
-}
+.hero {
 
-.banner-frame {
     position: relative;
+
+    min-height: 760px;
+
+    padding-top: 78px;
+
+    display: flex;
+
+    align-items: flex-end;
 
     overflow: hidden;
 
-    border-radius: 28px;
-
-    border:
-        1px solid rgba(255,165,54,0.30);
-
-    background: #090909;
-
-    box-shadow:
-        0 36px 110px rgba(0,0,0,0.62),
-        0 0 65px rgba(255,106,0,0.09),
-        inset 0 1px 0 rgba(255,255,255,0.05);
-}
-
-.banner-frame::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    z-index: 2;
-
-    pointer-events: none;
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
 
     background:
+        #060606;
+
+}
+
+/* background image */
+
+.hero-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("images/jumaabonus-banner.jpg");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    transform:
+        scale(1.03);
+
+}
+
+/* cinematic dark overlay */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
         linear-gradient(
-            105deg,
-            transparent 25%,
-            rgba(255,255,255,0.05) 48%,
-            transparent 60%
+            90deg,
+            rgba(5,5,6,0.97) 0%,
+            rgba(5,5,6,0.78) 35%,
+            rgba(5,5,6,0.28) 65%,
+            rgba(5,5,6,0.50) 100%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.16),
+            rgba(0,0,0,0.18) 45%,
+            #050506 100%
         );
 
-    transform:
-        translateX(-120%);
-
-    transition:
-        transform 0.9s ease;
 }
 
-.banner-frame:hover::before {
-    transform:
-        translateX(120%);
+/* orange glow */
+
+.hero-glow {
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: -190px;
+    bottom: -160px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,106,0,0.16);
+
+    filter:
+        blur(90px);
+
 }
 
-.banner-frame img {
-    display: block;
+.hero-content {
+
+    position: relative;
+
+    z-index: 4;
 
     width: 100%;
 
-    transition:
-        transform 0.65s ease,
-        filter 0.65s ease;
-}
-
-.banner-frame:hover img {
-    transform: scale(1.018);
-
-    filter:
-        contrast(1.04)
-        brightness(1.025);
-}
-
-/* ======================================================
-   HERO
-====================================================== */
-
-.hero {
-    position: relative;
-
     padding:
-        85px 0 120px;
+        145px 0 95px;
 
-    border-bottom:
-        1px solid rgba(255,255,255,0.045);
-
-    background:
-        radial-gradient(
-            circle at 14% 42%,
-            rgba(255,106,0,0.08),
-            transparent 29%
-        );
 }
 
-.hero-grid {
-    display: grid;
+.hero-copy {
 
-    grid-template-columns:
-        1.03fr 0.97fr;
+    max-width: 690px;
 
-    align-items: center;
-
-    gap: 75px;
 }
 
-.eyebrow {
+.hero-eyebrow {
+
     display: inline-flex;
 
     align-items: center;
 
-    gap: 9px;
+    gap: 8px;
 
     padding:
         8px 13px;
 
-    border:
-        1px solid rgba(255,255,255,0.10);
-
     border-radius: 999px;
 
+    border:
+        1px solid rgba(255,175,70,0.20);
+
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.055),
-            rgba(255,255,255,0.022)
-        );
+        rgba(10,10,12,0.62);
 
-    color: #c1c1c5;
+    backdrop-filter:
+        blur(12px);
 
-    font-size: 10px;
+    color:
+        #e5e5e7;
+
+    font-size: 9px;
+
     font-weight: 900;
 
-    letter-spacing: 1.5px;
+    letter-spacing:
+        1.7px;
 
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
-.live-dot {
+.hero-eyebrow-dot {
+
     width: 7px;
     height: 7px;
 
     border-radius: 50%;
 
-    background: var(--green);
+    background:
+        var(--green);
 
     box-shadow:
-        0 0 15px rgba(80,255,122,0.9);
+        0 0 12px var(--green);
+
 }
 
 .hero h1 {
-    max-width: 730px;
 
-    margin-top: 24px;
+    margin-top: 23px;
+
+    max-width: 680px;
 
     font-size:
         clamp(
-            50px,
-            6vw,
-            80px
+            57px,
+            7vw,
+            92px
         );
 
-    line-height: 0.96;
+    line-height: 0.93;
 
-    letter-spacing: -4px;
+    letter-spacing:
+        -5px;
 
     font-weight: 950;
+
 }
 
-.hero-gradient {
+.hero h1 span {
+
     display: block;
 
     background:
         linear-gradient(
             90deg,
-            #fff,
-            #ffd59b,
-            #ff8a1a,
-            #ff4a20,
-            #fff
+            #ffffff,
+            #ffd199,
+            #ff8a22
         );
 
-    background-size:
-        220% auto;
+    -webkit-background-clip:
+        text;
 
-    -webkit-background-clip: text;
-    background-clip: text;
+    background-clip:
+        text;
 
-    color: transparent;
-
-    animation:
-        gradientMove
-        8s linear infinite;
-}
-
-@keyframes gradientMove {
-
-    0% {
-        background-position:
-            0% center;
-    }
-
-    100% {
-        background-position:
-            220% center;
-    }
+    color:
+        transparent;
 
 }
 
 .hero-description {
-    max-width: 610px;
 
-    margin-top: 28px;
+    max-width: 570px;
 
-    color: var(--muted);
+    margin-top: 26px;
+
+    color:
+        #b2b2b7;
 
     font-size: 15px;
 
     line-height: 1.85;
+
 }
 
 .hero-actions {
+
     display: flex;
 
     flex-wrap: wrap;
 
     gap: 12px;
 
-    margin-top: 35px;
+    margin-top: 33px;
+
 }
 
-.btn {
-    min-height: 49px;
+.hero-btn {
+
+    min-height: 50px;
 
     padding:
-        0 22px;
+        0 23px;
 
     display: inline-flex;
 
@@ -1060,436 +1110,203 @@ img {
     justify-content: center;
 
     border-radius: 13px;
-
-    font-size: 12px;
-
-    font-weight: 900;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-}
-
-.btn-primary {
-    background:
-        linear-gradient(
-            135deg,
-            #ff7900,
-            #e92f13
-        );
-
-    box-shadow:
-        0 14px 38px rgba(255,106,0,0.22),
-        inset 0 1px 0 rgba(255,255,255,0.20);
-}
-
-.btn-primary:hover {
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 20px 48px rgba(255,106,0,0.34);
-}
-
-.btn-secondary {
-    border:
-        1px solid rgba(255,255,255,0.11);
-
-    background:
-        linear-gradient(
-            145deg,
-            #1a1a1d,
-            #111113
-        );
-
-    color: #ddd;
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.04);
-}
-
-.btn-secondary:hover {
-    transform:
-        translateY(-3px);
-
-    border-color:
-        rgba(255,255,255,0.20);
-}
-
-/* ======================================================
-   SLOTTORO TOP DEAL
-====================================================== */
-
-.deal-showcase-wrap {
-    perspective: 1200px;
-}
-
-.deal-showcase {
-    position: relative;
-
-    min-height: 440px;
-
-    padding: 30px;
-
-    overflow: hidden;
-
-    border-radius: 29px;
-
-    border:
-        1px solid rgba(255,230,64,0.28);
-
-    background:
-        radial-gradient(
-            circle at 85% 10%,
-            rgba(255,242,0,0.16),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 15% 90%,
-            rgba(94,8,76,0.48),
-            transparent 36%
-        ),
-        linear-gradient(
-            145deg,
-            #211421,
-            #0d0c0e 68%
-        );
-
-    box-shadow:
-        0 45px 100px rgba(0,0,0,0.62),
-        0 0 60px rgba(255,218,0,0.065),
-        inset 0 1px 0 rgba(255,255,255,0.07);
-
-    transform-style: preserve-3d;
-
-    transition:
-        transform 0.14s ease-out,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.deal-showcase:hover {
-    border-color:
-        rgba(255,235,80,0.45);
-
-    box-shadow:
-        0 50px 115px rgba(0,0,0,0.68),
-        0 0 72px rgba(255,218,0,0.09),
-        inset 0 1px 0 rgba(255,255,255,0.08);
-}
-
-.deal-showcase::after {
-    content: "";
-
-    position: absolute;
-
-    width: 270px;
-    height: 270px;
-
-    right: -150px;
-    bottom: -140px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(255,221,0,0.08);
-
-    filter:
-        blur(25px);
-}
-
-.deal-showcase-top {
-    position: relative;
-
-    z-index: 3;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content:
-        space-between;
-}
-
-.top-deal-label {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    padding:
-        6px 9px;
-
-    border-radius: 8px;
-
-    color:
-        var(--slot-yellow);
-
-    background:
-        rgba(255,242,0,0.07);
-
-    border:
-        1px solid rgba(255,242,0,0.13);
-
-    font-size: 9px;
-
-    font-weight: 950;
-
-    letter-spacing:
-        1.2px;
-}
-
-.status-live {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    color: #76ff97;
-
-    font-size: 9px;
-
-    font-weight: 900;
-
-    letter-spacing: 0.7px;
-}
-
-.status-live span {
-    width: 6px;
-    height: 6px;
-
-    border-radius: 50%;
-
-    background:
-        #50ff7a;
-
-    box-shadow:
-        0 0 10px #50ff7a;
-}
-
-.slot-logo {
-    position: relative;
-
-    z-index: 3;
-
-    width: 235px;
-    height: 145px;
-
-    margin:
-        48px auto 22px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    border-radius: 24px;
-
-    background:
-        #47033c;
-
-    border:
-        1px solid rgba(255,242,0,0.18);
-
-    box-shadow:
-        0 24px 55px rgba(0,0,0,0.38),
-        0 0 30px rgba(255,242,0,0.035),
-        inset 0 1px 0 rgba(255,255,255,0.08);
-
-    transform:
-        translateZ(30px);
-
-    transition:
-        transform 0.3s ease;
-}
-
-.deal-showcase:hover .slot-logo {
-    transform:
-        translateZ(35px)
-        scale(1.035);
-}
-
-.slot-logo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-}
-
-.deal-showcase h3 {
-    position: relative;
-
-    z-index: 3;
-
-    text-align: center;
-
-    font-size: 31px;
-
-    font-weight: 950;
-
-    letter-spacing:
-        -0.8px;
-}
-
-.deal-showcase-sub {
-    position: relative;
-
-    z-index: 3;
-
-    margin-top: 7px;
-
-    text-align: center;
-
-    color: var(--muted);
-
-    font-size: 12px;
-}
-
-.deal-showcase-button {
-    position: relative;
-
-    z-index: 3;
-
-    margin-top: 29px;
-
-    min-height: 49px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 13px;
-
-    color: #101010;
-
-    background:
-        linear-gradient(
-            135deg,
-            #fff700,
-            #ffc928
-        );
-
-    box-shadow:
-        0 14px 32px rgba(255,230,0,0.16),
-        inset 0 1px 0 rgba(255,255,255,0.65);
 
     font-size: 11px;
 
     font-weight: 950;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: 0.25s;
+
 }
 
-.deal-showcase-button:hover {
+.hero-btn-primary {
+
+    color:
+        white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7a00,
+            #e62c12
+        );
+
+    box-shadow:
+        0 15px 38px rgba(255,106,0,0.24);
+
+}
+
+.hero-btn-primary:hover {
+
     transform:
         translateY(-3px);
 
     box-shadow:
-        0 20px 42px rgba(255,230,0,0.24);
+        0 20px 48px rgba(255,106,0,0.35);
+
 }
 
-/* ======================================================
-   TRUST BAR
-====================================================== */
+.hero-btn-secondary {
 
-.trust-bar {
-    position: relative;
-
-    border-top:
-        1px solid rgba(255,255,255,0.07);
-
-    border-bottom:
-        1px solid rgba(255,255,255,0.07);
+    border:
+        1px solid rgba(255,255,255,0.13);
 
     background:
-        linear-gradient(
-            90deg,
-            #0c0c0e,
-            #141417,
-            #0c0c0e
-        );
+        rgba(8,8,10,0.55);
 
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.025);
+    backdrop-filter:
+        blur(14px);
+
+    color:
+        #e4e4e6;
+
 }
 
-.trust-grid {
+.hero-btn-secondary:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255,255,255,0.08);
+
+}
+
+/* HERO INFO STRIP */
+
+.hero-info {
+
+    margin-top: 55px;
+
+    max-width: 760px;
+
     display: grid;
 
     grid-template-columns:
         repeat(3,1fr);
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,0.09);
+
+    background:
+        rgba(8,8,10,0.52);
+
+    backdrop-filter:
+        blur(15px);
+
 }
 
-.trust-item {
-    min-height: 96px;
+.hero-info-item {
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
+    padding:
+        18px 20px;
 
     border-right:
         1px solid rgba(255,255,255,0.07);
+
 }
 
-.trust-item:last-child {
+.hero-info-item:last-child {
     border-right: none;
 }
 
-.trust-item strong {
-    font-size: 12px;
+.hero-info-item strong {
+
+    display: block;
+
+    font-size: 11px;
 
     font-weight: 950;
 
-    letter-spacing: 0.2px;
 }
 
-.trust-item span {
-    margin-top: 7px;
+.hero-info-item span {
 
-    color: var(--muted2);
+    display: block;
 
-    font-size: 9px;
+    margin-top: 5px;
+
+    color:
+        #77777e;
+
+    font-size: 8px;
 
     letter-spacing:
-        1.1px;
+        1px;
+
 }
 
-/* ======================================================
-   SECTIONS
-====================================================== */
+/* =========================================================
+   DEAL SPOTLIGHT
+========================================================= */
 
-.section {
+.spotlight {
+
     position: relative;
 
     padding:
-        115px 0;
+        115px 0 120px;
 
-    border-bottom:
-        1px solid rgba(255,255,255,0.04);
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255,239,0,0.06),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 12% 65%,
+            rgba(255,106,0,0.07),
+            transparent 27%
+        ),
+
+        #070708;
+
 }
 
-.section-heading {
-    margin-bottom: 48px;
+.spotlight::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,174,53,0.30),
+            transparent
+        );
+
+}
+
+.spotlight-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
 }
 
 .section-kicker {
-    display: inline-flex;
 
     color:
         var(--orange);
@@ -1500,28 +1317,41 @@ img {
 
     letter-spacing:
         2px;
+
 }
 
-.section-title {
-    margin-top: 11px;
+.spotlight-copy h2 {
+
+    margin-top: 13px;
+
+    max-width: 520px;
 
     font-size:
         clamp(
-            35px,
-            4vw,
-            53px
+            43px,
+            5vw,
+            66px
         );
 
-    line-height: 1.04;
+    line-height: 0.98;
 
     letter-spacing:
-        -2.4px;
+        -3px;
+
 }
 
-.section-intro {
-    max-width: 720px;
+.spotlight-copy h2 span {
 
-    margin-top: 18px;
+    color:
+        var(--slot-yellow);
+
+}
+
+.spotlight-copy p {
+
+    max-width: 520px;
+
+    margin-top: 20px;
 
     color:
         var(--muted);
@@ -1529,149 +1359,518 @@ img {
     font-size: 14px;
 
     line-height: 1.85;
+
 }
 
-/* ======================================================
-   DEALS
-====================================================== */
+.spotlight-points {
 
-#deals {
-    background:
-        radial-gradient(
-            circle at 87% 18%,
-            rgba(255,106,0,0.075),
-            transparent 25%
-        ),
-        linear-gradient(
-            180deg,
-            #0b0b0d,
-            #0f0f12
-        );
-}
+    margin-top: 29px;
 
-.deals-grid {
     display: grid;
 
-    grid-template-columns:
-        1.25fr 1fr 1fr;
+    gap: 11px;
 
-    gap: 18px;
 }
 
-.deal-card {
+.spotlight-point {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color:
+        #c8c8cc;
+
+    font-size: 11px;
+
+}
+
+.point-check {
+
+    width: 25px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    color:
+        var(--slot-yellow);
+
+    border:
+        1px solid rgba(255,240,0,0.16);
+
+    background:
+        rgba(255,240,0,0.07);
+
+}
+
+/* BIG DEAL CARD */
+
+.spotlight-card {
+
     position: relative;
 
-    min-height: 370px;
-
-    padding: 27px;
+    min-height: 520px;
 
     overflow: hidden;
 
-    border-radius: 22px;
+    padding: 32px;
+
+    border-radius: 30px;
 
     border:
-        1px solid rgba(255,255,255,0.085);
+        1px solid rgba(255,240,0,0.25);
 
     background:
+
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(255,240,0,0.15),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(84,5,70,0.55),
+            transparent 36%
+        ),
+
         linear-gradient(
             145deg,
-            #19191c,
-            #101012
+            #221422,
+            #0c0b0d
         );
 
     box-shadow:
-        0 18px 50px rgba(0,0,0,0.18),
-        inset 0 1px 0 rgba(255,255,255,0.035);
+        0 50px 110px rgba(0,0,0,0.58),
+        0 0 60px rgba(255,223,0,0.05),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+
+    transform-style:
+        preserve-3d;
 
     transition:
-        transform 0.30s ease,
-        border-color 0.30s ease,
-        box-shadow 0.30s ease;
+        transform 0.16s ease-out,
+        border-color 0.3s ease;
+
 }
 
-.deal-card::after {
+.spotlight-card:hover {
+
+    border-color:
+        rgba(255,240,0,0.43);
+
+}
+
+.spotlight-card::after {
+
     content: "";
 
     position: absolute;
 
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
 
-    right: -80px;
-    bottom: -80px;
+    right: -160px;
+    bottom: -160px;
 
     border-radius: 50%;
 
     background:
-        rgba(255,106,0,0.055);
+        rgba(255,220,0,0.08);
 
-    filter: blur(25px);
+    filter:
+        blur(35px);
 
-    pointer-events: none;
 }
 
-.deal-card:hover {
+.spotlight-top {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+}
+
+.spotlight-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        7px 10px;
+
+    border-radius: 9px;
+
+    color:
+        var(--slot-yellow);
+
+    border:
+        1px solid rgba(255,240,0,0.16);
+
+    background:
+        rgba(255,240,0,0.07);
+
+    font-size: 9px;
+
+    font-weight: 950;
+
+    letter-spacing:
+        1px;
+
+}
+
+.spotlight-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        #6fff91;
+
+    font-size: 9px;
+
+    font-weight: 950;
+
+}
+
+.spotlight-status i {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        #54ff7a;
+
+    box-shadow:
+        0 0 12px #54ff7a;
+
+}
+
+.spotlight-logo {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(330px,80%);
+    height: 190px;
+
+    margin:
+        70px auto 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        #48043d;
+
+    border:
+        1px solid rgba(255,240,0,0.18);
+
+    box-shadow:
+        0 28px 60px rgba(0,0,0,0.38),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+
     transform:
-        translateY(-7px);
+        translateZ(30px);
 
-    border-color:
-        rgba(255,106,0,0.30);
-
-    box-shadow:
-        0 30px 75px rgba(0,0,0,0.34),
-        inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
-/* SLOTTORO */
+.spotlight-logo img {
 
-.deal-card.featured-slottoro {
-    border-color:
-        rgba(255,235,65,0.19);
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+.spotlight-card h3 {
+
+    position: relative;
+
+    z-index: 3;
+
+    text-align: center;
+
+    font-size: 34px;
+
+    letter-spacing: -1px;
+
+}
+
+.spotlight-sub {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin-top: 7px;
+
+    text-align: center;
+
+    color:
+        var(--muted);
+
+    font-size: 12px;
+
+}
+
+.spotlight-cta {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin-top: 30px;
+
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    color:
+        #111;
 
     background:
-        radial-gradient(
-            circle at 88% 15%,
-            rgba(255,242,0,0.12),
-            transparent 38%
-        ),
-        radial-gradient(
-            circle at 12% 100%,
-            rgba(76,7,63,0.30),
-            transparent 34%
-        ),
         linear-gradient(
-            145deg,
-            #201621,
-            #111113
+            135deg,
+            #fff300,
+            #ffc62d
         );
-}
-
-.deal-card.featured-slottoro:hover {
-    border-color:
-        rgba(255,235,65,0.38);
 
     box-shadow:
-        0 30px 75px rgba(0,0,0,0.35),
-        0 0 38px rgba(255,230,0,0.05);
+        0 15px 35px rgba(255,230,0,0.17);
+
+    font-size: 11px;
+
+    font-weight: 950;
+
+    transition: 0.25s;
+
 }
 
-/* BITKINGZ */
+.spotlight-cta:hover {
 
-.deal-card.bitkingz-card {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 20px 45px rgba(255,230,0,0.25);
+
+}
+
+/* =========================================================
+   DEALS SECTION
+========================================================= */
+
+.deals-section {
+
+    padding:
+        120px 0;
+
     background:
+
         radial-gradient(
-            circle at 85% 15%,
-            rgba(255,106,0,0.12),
-            transparent 38%
+            circle at 10% 20%,
+            rgba(255,106,0,0.06),
+            transparent 23%
         ),
+
+        linear-gradient(
+            180deg,
+            #0a0a0c,
+            #0e0e11
+        );
+
+    border-top:
+        1px solid rgba(255,255,255,0.045);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.045);
+
+}
+
+.section-head {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content:
+        space-between;
+
+    gap: 30px;
+
+    margin-bottom: 43px;
+
+}
+
+.section-head-left h2 {
+
+    margin-top: 11px;
+
+    font-size:
+        clamp(
+            38px,
+            4vw,
+            54px
+        );
+
+    letter-spacing:
+        -2.5px;
+
+}
+
+.section-head-left p {
+
+    max-width: 680px;
+
+    margin-top: 15px;
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+.partner-count {
+
+    padding:
+        9px 12px;
+
+    border-radius: 999px;
+
+    border:
+        1px solid rgba(255,255,255,0.09);
+
+    background:
+        rgba(255,255,255,0.035);
+
+    color:
+        #77777d;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+}
+
+/* DEAL GRID */
+
+.deal-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.45fr 0.95fr;
+
+    gap: 18px;
+
+}
+
+.deal-main {
+
+    position: relative;
+
+    min-height: 420px;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    border:
+        1px solid rgba(255,240,0,0.18);
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255,240,0,0.10),
+            transparent 31%
+        ),
+
+        radial-gradient(
+            circle at 10% 100%,
+            rgba(76,7,63,0.26),
+            transparent 35%
+        ),
+
         linear-gradient(
             145deg,
-            #1a1a1d,
-            #111113
+            #1d141f,
+            #101012
         );
+
+    box-shadow:
+        0 24px 65px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+
 }
 
-.deal-badge {
+.deal-main:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(255,240,0,0.34);
+
+}
+
+.deal-main-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+}
+
+.deal-chip {
+
     display: inline-flex;
 
     align-items: center;
@@ -1681,43 +1880,34 @@ img {
 
     border-radius: 8px;
 
-    background:
-        rgba(255,106,0,0.11);
-
-    border:
-        1px solid rgba(255,106,0,0.14);
-
-    color:
-        var(--orange);
-
     font-size: 8px;
 
     font-weight: 950;
 
     letter-spacing:
         0.6px;
+
 }
 
-.slottoro-badge {
+.deal-chip.top {
+
     color:
         var(--slot-yellow);
 
-    background:
-        rgba(255,242,0,0.075);
-
     border:
-        1px solid rgba(255,242,0,0.14);
+        1px solid rgba(255,240,0,0.13);
+
+    background:
+        rgba(255,240,0,0.07);
+
 }
 
-.deal-logo {
-    width: 115px;
-    height: 78px;
+.deal-main-logo {
 
-    margin-top: 43px;
+    width: 170px;
+    height: 102px;
 
-    overflow: hidden;
-
-    border-radius: 15px;
+    margin-top: 47px;
 
     display: flex;
 
@@ -1725,62 +1915,43 @@ img {
 
     justify-content: center;
 
-    background:
-        linear-gradient(
-            145deg,
-            #454a59,
-            #303440
-        );
+    overflow: hidden;
 
-    border:
-        1px solid rgba(255,255,255,0.07);
-
-    box-shadow:
-        0 14px 32px rgba(0,0,0,0.25);
-
-    transition:
-        transform 0.3s ease;
-}
-
-.deal-card:hover .deal-logo {
-    transform:
-        scale(1.04);
-}
-
-.deal-logo.slottoro-card-logo {
-    width: 145px;
+    border-radius: 17px;
 
     background:
-        #47033c;
+        #48043d;
 
     border:
-        1px solid rgba(255,242,0,0.14);
+        1px solid rgba(255,240,0,0.13);
 
     box-shadow:
-        0 14px 32px rgba(0,0,0,0.28),
-        0 0 25px rgba(255,242,0,0.035);
+        0 15px 35px rgba(0,0,0,0.25);
+
 }
 
-.deal-logo img {
+.deal-main-logo img {
+
     width: 100%;
     height: 100%;
 
     object-fit: contain;
+
 }
 
-.deal-card h3 {
-    margin-top: 21px;
+.deal-main h3 {
 
-    font-size: 24px;
+    margin-top: 22px;
 
-    font-weight: 950;
+    font-size: 28px;
 
-    letter-spacing:
-        -0.6px;
+    letter-spacing: -0.7px;
+
 }
 
-.deal-card p {
-    max-width: 350px;
+.deal-main p {
+
+    max-width: 470px;
 
     margin-top: 10px;
 
@@ -1790,138 +1961,49 @@ img {
     font-size: 12px;
 
     line-height: 1.75;
+
 }
 
-.deal-card-link {
+.deal-main-link {
+
     position: absolute;
 
-    left: 27px;
-    bottom: 27px;
-
-    z-index: 3;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 6px;
+    left: 30px;
+    bottom: 30px;
 
     color:
-        var(--orange);
+        var(--slot-yellow);
 
     font-size: 10px;
 
     font-weight: 950;
 
-    transition:
-        transform 0.2s ease,
-        color 0.2s ease;
 }
 
-.deal-card-link:hover {
-    transform:
-        translateX(3px);
+/* SIDE DEALS */
 
-    color:
-        var(--orange2);
-}
+.deal-side {
 
-.slottoro-link {
-    color:
-        var(--slot-yellow);
-}
-
-.slottoro-link:hover {
-    color:
-        #fff57b;
-}
-
-.coming-card {
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-.coming-icon {
-    width: 66px;
-    height: 66px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 18px;
-
-    border:
-        1px solid rgba(255,255,255,0.06);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.055),
-            rgba(255,255,255,0.025)
-        );
-
-    color: #626267;
-
-    font-size: 25px;
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.035);
-}
-
-.coming-card h3 {
-    color:
-        #8b8b90;
-}
-
-.coming-card p {
-    color:
-        #68686d;
-}
-
-/* ======================================================
-   VORTEILE
-====================================================== */
-
-#vorteile {
-    background:
-        radial-gradient(
-            circle at 10% 45%,
-            rgba(255,106,0,0.06),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 92% 70%,
-            rgba(145,70,255,0.045),
-            transparent 28%
-        ),
-        #080809;
-}
-
-.benefits-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(3,1fr);
+    grid-template-rows:
+        1fr 1fr;
 
     gap: 18px;
+
 }
 
-.benefit-card {
+.deal-small {
+
     position: relative;
 
-    min-height: 335px;
+    min-height: 200px;
 
-    padding: 31px;
+    padding: 25px;
 
     overflow: hidden;
 
-    border-radius: 22px;
+    border-radius: 23px;
 
     border:
         1px solid rgba(255,255,255,0.085);
@@ -1934,49 +2016,57 @@ img {
         );
 
     box-shadow:
-        0 18px 48px rgba(0,0,0,0.16),
-        inset 0 1px 0 rgba(255,255,255,0.035);
+        0 20px 50px rgba(0,0,0,0.18);
 
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: 0.3s;
+
 }
 
-.benefit-card::before {
-    content: "";
+.deal-small:hover {
 
-    position: absolute;
-
-    width: 160px;
-    height: 160px;
-
-    right: -85px;
-    bottom: -90px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(255,106,0,0.09);
-
-    filter:
-        blur(28px);
-}
-
-.benefit-card:hover {
     transform:
-        translateY(-6px);
+        translateY(-5px);
 
     border-color:
         rgba(255,106,0,0.28);
 
-    box-shadow:
-        0 28px 65px rgba(0,0,0,0.30);
 }
 
-.benefit-icon {
-    width: 49px;
-    height: 49px;
+.deal-small.bitkingz {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255,106,0,0.13),
+            transparent 38%
+        ),
+
+        linear-gradient(
+            145deg,
+            #1a1a1d,
+            #111113
+        );
+
+}
+
+.small-deal-head {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+}
+
+.small-deal-logo {
+
+    width: 92px;
+    height: 62px;
+
+    margin-top: 28px;
 
     display: flex;
 
@@ -1984,49 +2074,241 @@ img {
 
     justify-content: center;
 
-    border-radius: 14px;
+    overflow: hidden;
+
+    border-radius: 13px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,106,0,0.18),
-            rgba(229,41,18,0.07)
+            #444a58,
+            #30343f
         );
 
-    border:
-        1px solid rgba(255,106,0,0.19);
+}
+
+.small-deal-logo img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+.deal-small h3 {
+
+    margin-top: 16px;
+
+    font-size: 20px;
+
+}
+
+.deal-small p {
+
+    margin-top: 7px;
+
+    color:
+        var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+}
+
+.deal-small-link {
+
+    position: absolute;
+
+    right: 24px;
+    bottom: 24px;
 
     color:
         var(--orange);
 
-    font-size: 18px;
+    font-size: 9px;
 
-    box-shadow:
-        0 10px 28px rgba(255,106,0,0.07),
-        inset 0 1px 0 rgba(255,255,255,0.06);
+    font-weight: 950;
+
 }
 
-.benefit-card h3 {
+.placeholder-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.placeholder-icon {
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    border:
+        1px solid rgba(255,255,255,0.07);
+
+    background:
+        rgba(255,255,255,0.035);
+
+    color:
+        #66666c;
+
+    font-size: 22px;
+
+}
+
+.placeholder-card h3 {
+    color: #909096;
+}
+
+/* =========================================================
+   WHY SECTION
+========================================================= */
+
+.why-section {
+
+    padding:
+        120px 0;
+
+    background:
+
+        radial-gradient(
+            circle at 12% 70%,
+            rgba(255,106,0,0.055),
+            transparent 25%
+        ),
+
+        #070708;
+
+}
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 18px;
+
+    margin-top: 43px;
+
+}
+
+.why-card {
+
     position: relative;
 
+    min-height: 300px;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            #18181b,
+            #101012
+        );
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,0.17);
+
+    transition: 0.3s;
+
+}
+
+.why-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -85px;
+    bottom: -85px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,106,0,0.09);
+
+    filter:
+        blur(25px);
+
+}
+
+.why-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(255,106,0,0.28);
+
+}
+
+.why-icon {
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color:
+        var(--orange);
+
+    border:
+        1px solid rgba(255,106,0,0.16);
+
+    background:
+        rgba(255,106,0,0.09);
+
+    font-size: 18px;
+
+}
+
+.why-card h3 {
+
+    position: relative;
     z-index: 2;
 
-    margin-top: 26px;
+    margin-top: 25px;
 
     font-size: 19px;
 
-    font-weight: 900;
-
-    letter-spacing:
-        -0.3px;
 }
 
-.benefit-card p {
-    position: relative;
+.why-card p {
 
+    position: relative;
     z-index: 2;
 
-    margin-top: 13px;
+    margin-top: 12px;
 
     color:
         var(--muted);
@@ -2034,105 +2316,90 @@ img {
     font-size: 12px;
 
     line-height: 1.85;
+
 }
 
-/* ======================================================
+/* =========================================================
    COMMUNITY
-====================================================== */
+========================================================= */
 
-#community {
-    background:
-        radial-gradient(
-            circle at 82% 30%,
-            rgba(145,70,255,0.09),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 16% 72%,
-            rgba(255,106,0,0.06),
-            transparent 28%
-        ),
-        linear-gradient(
-            180deg,
-            #0d0d10,
-            #09090b
-        );
-}
-
-.community-panel {
-    position: relative;
+.community-section {
 
     padding:
-        65px 52px;
+        120px 0;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(145,70,255,0.09),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            180deg,
+            #0c0c0f,
+            #08080a
+        );
+
+}
+
+.community-box {
+
+    position: relative;
 
     overflow: hidden;
 
-    border-radius: 29px;
+    padding:
+        58px 50px;
+
+    border-radius: 30px;
 
     border:
-        1px solid rgba(255,106,0,0.20);
+        1px solid rgba(255,106,0,0.18);
 
     background:
+
         radial-gradient(
-            circle at 85% 35%,
-            rgba(145,70,255,0.14),
+            circle at 85% 30%,
+            rgba(145,70,255,0.13),
             transparent 35%
         ),
+
         radial-gradient(
-            circle at 10% 85%,
-            rgba(255,106,0,0.09),
+            circle at 8% 90%,
+            rgba(255,106,0,0.08),
             transparent 30%
         ),
+
         linear-gradient(
             145deg,
-            #1a1a1d,
+            #19191c,
             #101012
         );
 
     box-shadow:
-        0 38px 95px rgba(0,0,0,0.33),
-        inset 0 1px 0 rgba(255,255,255,0.045);
+        0 40px 100px rgba(0,0,0,0.30);
+
 }
 
-.community-panel::after {
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
-
-    right: -190px;
-    top: -180px;
-
-    border-radius: 50%;
-
-    border:
-        1px solid rgba(145,70,255,0.08);
-}
-
-.community-panel h2 {
-    position: relative;
-
-    z-index: 2;
+.community-box h2 {
 
     margin-top: 10px;
 
     font-size:
         clamp(
-            38px,
+            39px,
             4vw,
             54px
         );
 
     letter-spacing:
-        -2.2px;
+        -2.3px;
+
 }
 
-.community-description {
-    position: relative;
-
-    z-index: 2;
+.community-copy {
 
     max-width: 680px;
 
@@ -2144,12 +2411,10 @@ img {
     font-size: 13px;
 
     line-height: 1.8;
+
 }
 
-.community-grid {
-    position: relative;
-
-    z-index: 2;
+.community-actions {
 
     display: grid;
 
@@ -2159,10 +2424,12 @@ img {
     gap: 16px;
 
     margin-top: 35px;
+
 }
 
 .community-card {
-    min-height: 135px;
+
+    min-height: 130px;
 
     padding: 22px;
 
@@ -2181,131 +2448,117 @@ img {
         1px solid rgba(255,255,255,0.085);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.052),
-            rgba(255,255,255,0.022)
-        );
+        rgba(255,255,255,0.032);
 
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.035);
+    transition: 0.3s;
 
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
 }
 
 .community-card:hover {
-    transform:
-        translateY(-5px);
 
-    background:
-        rgba(255,255,255,0.06);
+    transform:
+        translateY(-4px);
+
 }
 
-.community-card:first-child:hover {
+.community-card.discord-card:hover {
+
     border-color:
         rgba(255,106,0,0.30);
 
-    box-shadow:
-        0 20px 45px rgba(255,106,0,0.06);
 }
 
-.community-card:last-child:hover {
+.community-card.twitch-card:hover {
+
     border-color:
         rgba(145,70,255,0.38);
 
-    box-shadow:
-        0 20px 45px rgba(145,70,255,0.07);
 }
 
-.community-platform-info {
+.community-info {
+
     display: flex;
 
     align-items: center;
 
     gap: 14px;
+
 }
 
-.community-platform-icon {
+.community-icon {
+
     width: 52px;
     height: 52px;
-
-    flex-shrink: 0;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 14px;
+
 }
 
-.community-platform-icon svg {
+.community-icon svg {
+
     width: 25px;
     height: 25px;
 
     fill: white;
+
 }
 
 .discord-icon {
+
     background:
         linear-gradient(
             135deg,
-            #ff7800,
-            #e62d12
+            #ff7700,
+            #e82d12
         );
 
-    box-shadow:
-        0 13px 30px rgba(255,106,0,0.18),
-        inset 0 1px 0 rgba(255,255,255,0.17);
 }
 
 .twitch-icon {
+
     background:
         linear-gradient(
             135deg,
-            #a25cff,
-            #702de5
+            #a35fff,
+            #712de5
         );
 
-    box-shadow:
-        0 13px 30px rgba(145,70,255,0.25),
-        inset 0 1px 0 rgba(255,255,255,0.16);
 }
 
-.community-platform-info h3 {
+.community-info h3 {
+
     font-size: 14px;
 
-    font-weight: 900;
 }
 
-.community-platform-info span {
+.community-info span {
+
     display: block;
 
     margin-top: 5px;
 
     color:
-        #858589;
+        #838389;
 
     font-size: 10px;
+
 }
 
-.community-link {
+.community-button {
+
     min-height: 40px;
 
     padding:
         0 14px;
 
-    flex-shrink: 0;
-
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 10px;
@@ -2314,17 +2567,10 @@ img {
 
     font-weight: 950;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
 }
 
-.community-link:hover {
-    transform:
-        translateY(-2px);
-}
+.discord-button {
 
-.discord-link {
     background:
         linear-gradient(
             135deg,
@@ -2332,16 +2578,10 @@ img {
             #e82c12
         );
 
-    box-shadow:
-        0 10px 25px rgba(255,106,0,0.14);
 }
 
-.discord-link:hover {
-    box-shadow:
-        0 14px 32px rgba(255,106,0,0.24);
-}
+.twitch-button {
 
-.twitch-link {
     color:
         #e1d0ff;
 
@@ -2350,43 +2590,42 @@ img {
 
     background:
         rgba(145,70,255,0.18);
+
 }
 
-.twitch-link:hover {
-    color: white;
-
-    background:
-        rgba(145,70,255,0.29);
-
-    box-shadow:
-        0 14px 32px rgba(145,70,255,0.14);
-}
-
-/* ======================================================
+/* =========================================================
    FAQ
-====================================================== */
+========================================================= */
 
-#faq {
+.faq-section {
+
+    padding:
+        120px 0;
+
     background:
+
         radial-gradient(
-            circle at 12% 15%,
+            circle at 12% 10%,
             rgba(255,106,0,0.045),
-            transparent 24%
+            transparent 22%
         ),
-        linear-gradient(
-            180deg,
-            #080809,
-            #0c0c0e
-        );
+
+        #080809;
+
 }
 
 .faq-grid {
+
+    margin-top: 43px;
+
     display: grid;
 
     gap: 12px;
+
 }
 
 details {
+
     overflow: hidden;
 
     border-radius: 16px;
@@ -2401,39 +2640,26 @@ details {
             #101012
         );
 
-    box-shadow:
-        0 11px 32px rgba(0,0,0,0.11),
-        inset 0 1px 0 rgba(255,255,255,0.025);
+    transition: 0.25s;
 
-    transition:
-        border-color 0.25s ease,
-        transform 0.25s ease,
-        background 0.25s ease;
 }
 
 details:hover {
+
     border-color:
         rgba(255,106,0,0.18);
+
 }
 
 details[open] {
-    border-color:
-        rgba(255,106,0,0.29);
 
-    background:
-        radial-gradient(
-            circle at 92% 20%,
-            rgba(255,106,0,0.06),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
-            #19191c,
-            #111113
-        );
+    border-color:
+        rgba(255,106,0,0.30);
+
 }
 
 summary {
+
     list-style: none;
 
     cursor: pointer;
@@ -2453,6 +2679,7 @@ summary {
     font-size: 13px;
 
     font-weight: 850;
+
 }
 
 summary::-webkit-details-marker {
@@ -2460,6 +2687,7 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
+
     content: "+";
 
     width: 32px;
@@ -2470,7 +2698,6 @@ summary::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     border-radius: 9px;
@@ -2479,13 +2706,10 @@ summary::after {
         var(--orange);
 
     background:
-        rgba(255,106,0,0.075);
-
-    border:
-        1px solid rgba(255,106,0,0.11);
+        rgba(255,106,0,0.08);
 
     font-size: 20px;
-    font-weight: 400;
+
 }
 
 details[open] summary::after {
@@ -2493,6 +2717,7 @@ details[open] summary::after {
 }
 
 .faq-answer {
+
     max-width: 900px;
 
     padding:
@@ -2504,28 +2729,22 @@ details[open] summary::after {
     font-size: 12px;
 
     line-height: 1.9;
+
 }
 
-/* ======================================================
-   RESPONSIBLE
-====================================================== */
-
 .responsible-box {
+
     margin-top: 35px;
 
-    padding: 25px;
+    padding: 24px;
 
-    border-radius: 17px;
+    border-radius: 16px;
 
     border:
         1px solid rgba(255,255,255,0.07);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.035),
-            rgba(255,255,255,0.015)
-        );
+        rgba(255,255,255,0.025);
 
     color:
         #77777c;
@@ -2534,21 +2753,17 @@ details[open] summary::after {
 
     line-height: 1.8;
 
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.025);
 }
 
 .responsible-box strong {
-    color:
-        #b4b4b9;
+    color: #b7b7bc;
 }
 
-/* ======================================================
+/* =========================================================
    FOOTER
-====================================================== */
+========================================================= */
 
 .footer {
-    position: relative;
 
     padding:
         55px 0 30px;
@@ -2557,38 +2772,39 @@ details[open] summary::after {
         1px solid rgba(255,255,255,0.07);
 
     background:
-        radial-gradient(
-            circle at 80% 100%,
-            rgba(145,70,255,0.045),
-            transparent 30%
-        ),
         linear-gradient(
             180deg,
             #09090a,
             #050505
         );
+
 }
 
 .footer-grid {
+
     display: grid;
 
     grid-template-columns:
         1.4fr 1fr 1fr;
 
     gap: 40px;
+
 }
 
 .footer-brand {
+
     display: inline-flex;
 
     align-items: center;
 
-    gap: 14px;
+    gap: 13px;
+
 }
 
 .footer-logo-image {
-    width: 78px;
-    height: 78px;
+
+    width: 74px;
+    height: 74px;
 
     object-fit: contain;
 
@@ -2596,14 +2812,14 @@ details[open] summary::after {
 
     filter:
         drop-shadow(
-            0 8px 22px rgba(255,140,0,0.18)
+            0 8px 20px rgba(255,145,0,0.18)
         );
+
 }
 
 .footer-logo-text {
-    display: inline-flex;
 
-    align-items: baseline;
+    display: inline-flex;
 
     font-size: 24px;
 
@@ -2611,22 +2827,26 @@ details[open] summary::after {
 
     letter-spacing:
         -1px;
+
 }
 
 .footer-description {
+
     max-width: 330px;
 
     margin-top: 14px;
 
     color:
-        #6d6d72;
+        #6b6b72;
 
     font-size: 11px;
 
     line-height: 1.7;
+
 }
 
 .footer-column-title {
+
     margin-bottom: 15px;
 
     color:
@@ -2638,15 +2858,19 @@ details[open] summary::after {
 
     letter-spacing:
         1px;
+
 }
 
 .footer-links {
+
     display: grid;
 
     gap: 10px;
+
 }
 
 .footer-links a {
+
     width: fit-content;
 
     color:
@@ -2654,20 +2878,22 @@ details[open] summary::after {
 
     font-size: 11px;
 
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+    transition: 0.2s;
+
 }
 
 .footer-links a:hover {
+
     color:
         var(--orange2);
 
     transform:
         translateX(2px);
+
 }
 
 .footer-bottom {
+
     margin-top: 45px;
 
     padding-top: 20px;
@@ -2686,33 +2912,38 @@ details[open] summary::after {
         #59595e;
 
     font-size: 9px;
+
 }
 
-/* ======================================================
+/* =========================================================
    REVEAL
-====================================================== */
+========================================================= */
 
 .reveal {
+
     opacity: 0;
 
     transform:
-        translateY(24px);
+        translateY(25px);
 
     transition:
         opacity 0.65s ease,
         transform 0.65s ease;
+
 }
 
 .reveal.visible {
+
     opacity: 1;
 
     transform:
         translateY(0);
+
 }
 
-/* ======================================================
+/* =========================================================
    TABLET
-====================================================== */
+========================================================= */
 
 @media (max-width: 1000px) {
 
@@ -2724,252 +2955,377 @@ details[open] summary::after {
         display: flex;
     }
 
-    .hero-grid {
+    .hero {
+
+        min-height:
+            690px;
+
+    }
+
+    .hero-overlay {
+
+        background:
+
+            linear-gradient(
+                90deg,
+                rgba(5,5,6,0.96),
+                rgba(5,5,6,0.72)
+            ),
+
+            linear-gradient(
+                180deg,
+                transparent,
+                #050506
+            );
+
+    }
+
+    .spotlight-layout {
+
         grid-template-columns:
             1fr;
 
-        gap: 55px;
     }
 
-    .deal-showcase-wrap {
-        width: 100%;
+    .spotlight-copy {
 
-        max-width: 650px;
+        max-width:
+            700px;
 
-        margin: auto;
     }
 
-    .deals-grid {
+    .spotlight-card {
+
+        max-width:
+            700px;
+
+    }
+
+    .deal-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .deal-side {
+
         grid-template-columns:
             1fr 1fr;
+
+        grid-template-rows:
+            auto;
+
     }
 
-    .featured-slottoro {
-        grid-column:
-            span 2;
-    }
+    .why-grid {
 
-    .benefits-grid {
         grid-template-columns:
             1fr;
+
     }
 
-    .community-grid {
+    .community-actions {
+
         grid-template-columns:
             1fr;
+
     }
 
 }
 
-/* ======================================================
+/* =========================================================
    MOBILE
-====================================================== */
+========================================================= */
 
 @media (max-width: 680px) {
 
     .container,
     .navbar {
+
         width:
             calc(100% - 28px);
-    }
 
-    .logo {
-        gap: 8px;
     }
 
     .logo-image {
+
         width: 44px;
         height: 44px;
+
     }
 
     .logo-text {
+
         font-size: 19px;
+
     }
 
     .header-actions {
+
         display: none;
+
     }
 
     .age-card {
+
         padding:
             31px 21px;
 
-        border-radius: 23px;
     }
 
     .age-badge {
+
         width: 78px;
         height: 78px;
 
         font-size: 27px;
+
     }
 
     .age-logo {
-        width: 55px;
-        height: 55px;
+
+        width: 54px;
+        height: 54px;
+
     }
 
     .age-brand-text {
+
         font-size: 19px;
+
     }
 
     .age-card h2 {
+
         font-size: 24px;
-    }
 
-    .top-banner {
-        padding-top:
-            94px;
-    }
-
-    .banner-frame {
-        border-radius:
-            17px;
-    }
-
-    .banner-frame img {
-        min-height:
-            145px;
-
-        object-fit:
-            cover;
     }
 
     .hero {
+
+        min-height:
+            740px;
+
+    }
+
+    .hero-bg {
+
+        background-position:
+            60% center;
+
+    }
+
+    .hero-overlay {
+
+        background:
+
+            linear-gradient(
+                180deg,
+                rgba(5,5,6,0.58),
+                rgba(5,5,6,0.83) 45%,
+                #050506 90%
+            );
+
+    }
+
+    .hero-content {
+
         padding:
-            55px 0 75px;
+            145px 0 65px;
+
     }
 
     .hero h1 {
+
         font-size:
-            45px;
+            50px;
 
         letter-spacing:
-            -2.6px;
+            -3px;
+
     }
 
     .hero-description {
+
         font-size:
             13px;
+
     }
 
     .hero-actions {
+
         display: grid;
 
         grid-template-columns:
             1fr;
+
     }
 
-    .btn {
+    .hero-btn {
+
         width: 100%;
+
     }
 
-    .deal-showcase {
-        min-height:
-            410px;
+    .hero-info {
 
-        padding:
-            24px;
-    }
-
-    .slot-logo {
-        width:
-            205px;
-
-        height:
-            128px;
-    }
-
-    .trust-grid {
         grid-template-columns:
             1fr;
+
     }
 
-    .trust-item {
-        min-height: 82px;
+    .hero-info-item {
 
-        border-right: none;
+        border-right:
+            none;
 
         border-bottom:
             1px solid rgba(255,255,255,0.07);
+
     }
 
-    .trust-item:last-child {
+    .hero-info-item:last-child {
+
         border-bottom:
             none;
+
     }
 
-    .section {
+    .spotlight {
+
         padding:
             80px 0;
+
     }
 
-    .section-heading {
-        margin-bottom:
-            38px;
+    .spotlight-layout {
+
+        gap:
+            45px;
+
     }
 
-    .deals-grid {
+    .spotlight-copy h2 {
+
+        font-size:
+            43px;
+
+    }
+
+    .spotlight-card {
+
+        min-height:
+            450px;
+
+        padding:
+            24px;
+
+    }
+
+    .spotlight-logo {
+
+        width:
+            220px;
+
+        height:
+            135px;
+
+        margin-top:
+            55px;
+
+    }
+
+    .deals-section,
+    .why-section,
+    .community-section,
+    .faq-section {
+
+        padding:
+            82px 0;
+
+    }
+
+    .section-head {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+    .deal-side {
+
         grid-template-columns:
             1fr;
+
     }
 
-    .featured-slottoro {
-        grid-column:
-            span 1;
-    }
+    .deal-main {
 
-    .deal-card {
         min-height:
-            350px;
+            380px;
+
     }
 
-    .benefit-card {
+    .deal-small {
+
         min-height:
-            290px;
+            250px;
+
     }
 
-    .community-panel {
+    .community-box {
+
         padding:
             42px 23px;
 
-        border-radius:
-            23px;
     }
 
     .community-card {
+
         flex-direction:
             column;
 
         align-items:
             flex-start;
 
-        min-height:
-            auto;
     }
 
-    .community-link {
+    .community-button {
+
         width:
             100%;
+
     }
 
     .footer-grid {
+
         grid-template-columns:
             1fr;
+
     }
 
     .footer-logo-image {
+
         width: 62px;
         height: 62px;
+
     }
 
     .footer-logo-text {
+
         font-size: 20px;
+
     }
 
     .footer-bottom {
+
         flex-direction:
             column;
+
     }
 
 }
@@ -2977,8 +3333,13 @@ details[open] summary::after {
 @media (prefers-reduced-motion: reduce) {
 
     * {
-        animation: none !important;
-        transition: none !important;
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
     }
 
 }
@@ -2989,91 +3350,94 @@ details[open] summary::after {
 
 <body class="age-locked">
 
-<!-- ======================================================
-     18+ AGE GATE
-====================================================== -->
+<!-- =========================================================
+     AGE GATE
+========================================================= -->
 
-<div class="age-gate" id="ageGate">
+<div
+    class="age-gate"
+    id="ageGate"
+>
 
-<div class="age-card">
+    <div class="age-card">
 
-    <div class="age-badge">
-        18+
-    </div>
+        <div class="age-badge">
+            18+
+        </div>
 
-    <div class="age-brand">
+        <div class="age-brand">
 
-        <img
-            src="images/jumaabonus-logo.png"
-            alt="JumaaBonus Logo"
-            class="age-logo"
-        >
+            <img
+                src="images/jumaabonus-logo.png"
+                alt="JumaaBonus Logo"
+                class="age-logo"
+            >
 
-        <div class="age-brand-text">
+            <div class="age-brand-text">
 
-            <span class="logo-jumaa">
-                jumaa
-            </span>
+                <span class="logo-jumaa">
+                    jumaa
+                </span>
 
-            <span class="logo-bonus">
-                bonus.com
-            </span>
+                <span class="logo-bonus">
+                    bonus.com
+                </span>
+
+            </div>
 
         </div>
 
+        <h2>
+            Willkommen bei JumaaBonus
+        </h2>
+
+        <p>
+
+            Diese Website enthält Inhalte und Angebote
+            rund um Glücksspiel und richtet sich ausschließlich
+            an Personen ab <strong>18 Jahren</strong>.
+
+            <br><br>
+
+            Mit dem Betreten bestätigst du,
+            dass du mindestens 18 Jahre alt bist und
+            Glücksspiel an deinem Aufenthaltsort erlaubt ist.
+
+        </p>
+
+        <div class="age-actions">
+
+            <button
+                class="age-enter"
+                id="ageEnter"
+            >
+                ICH BIN 18+ · SEITE BETRETEN
+            </button>
+
+            <button
+                class="age-leave"
+                id="ageLeave"
+            >
+                SEITE VERLASSEN
+            </button>
+
+        </div>
+
+        <p class="age-note">
+
+            Glücksspiel kann süchtig machen.
+            Spiele verantwortungsvoll und nur mit Geld,
+            dessen Verlust du verkraften kannst.
+
+        </p>
+
     </div>
-
-    <h2>
-        Willkommen bei JumaaBonus
-    </h2>
-
-    <p>
-
-        Diese Website enthält Inhalte und Angebote
-        rund um Glücksspiel und richtet sich ausschließlich
-        an Personen ab <strong>18 Jahren</strong>.
-
-        <br><br>
-
-        Mit dem Betreten bestätigst du,
-        dass du mindestens 18 Jahre alt bist und
-        Glücksspiel an deinem Aufenthaltsort erlaubt ist.
-
-    </p>
-
-    <div class="age-actions">
-
-        <button
-            class="age-enter"
-            id="ageEnter"
-        >
-            ICH BIN 18+ · SEITE BETRETEN
-        </button>
-
-        <button
-            class="age-leave"
-            id="ageLeave"
-        >
-            SEITE VERLASSEN
-        </button>
-
-    </div>
-
-    <p class="age-note">
-
-        Glücksspiel kann süchtig machen.
-        Spiele verantwortungsvoll und nur mit Geld,
-        dessen Verlust du verkraften kannst.
-
-    </p>
 
 </div>
 
-</div>
-
-<!-- ======================================================
+<!-- =========================================================
      HEADER
-====================================================== -->
+========================================================= -->
 
 <header class="header">
 
@@ -3174,9 +3538,7 @@ details[open] summary::after {
 
 </header>
 
-<!-- ======================================================
-     MOBILE MENU
-====================================================== -->
+<!-- MOBILE MENU -->
 
 <div
     class="mobile-menu"
@@ -3223,238 +3585,293 @@ details[open] summary::after {
 
 <main id="top">
 
-<!-- ======================================================
-     BANNER
-====================================================== -->
-
-<section class="top-banner">
-
-<div class="container">
-
-    <div class="banner-frame reveal">
-
-        <img
-            src="images/jumaabonus-banner.jpg"
-            alt="JumaaBonus Casino Deals Banner"
-        >
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- ======================================================
-     HERO
-====================================================== -->
+<!-- =========================================================
+     CINEMATIC HERO
+========================================================= -->
 
 <section class="hero">
 
-<div class="container hero-grid">
+    <div class="hero-bg"></div>
 
-    <div class="reveal">
+    <div class="hero-overlay"></div>
 
-        <div class="eyebrow">
+    <div class="hero-glow"></div>
 
-            <span class="live-dot"></span>
+    <div class="hero-content">
 
-            JUMAA BONUS · CASINO DEALS
+        <div class="container">
+
+            <div class="hero-copy reveal">
+
+                <div class="hero-eyebrow">
+
+                    <span class="hero-eyebrow-dot"></span>
+
+                    JUMAA BONUS · CASINO COMMUNITY
+
+                </div>
+
+                <h1>
+
+                    Deals.
+                    Streams.
+
+                    <span>
+                        Community.
+                    </span>
+
+                </h1>
+
+                <p class="hero-description">
+
+                    Willkommen bei JumaaBonus.
+
+                    Entdecke ausgewählte Casino-Partner,
+                    aktuelle Deals, Twitch-Content und unsere
+                    Community – alles zentral an einem Ort.
+
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#deals"
+                        class="hero-btn hero-btn-primary"
+                    >
+                        DEALS ENTDECKEN →
+                    </a>
+
+                    <a
+                        href="#community"
+                        class="hero-btn hero-btn-secondary"
+                    >
+                        COMMUNITY ANSEHEN
+                    </a>
+
+                </div>
+
+                <div class="hero-info">
+
+                    <div class="hero-info-item">
+
+                        <strong>
+                            AKTUELLE DEALS
+                        </strong>
+
+                        <span>
+                            AUSGEWÄHLTE PARTNER
+                        </span>
+
+                    </div>
+
+                    <div class="hero-info-item">
+
+                        <strong>
+                            TWITCH
+                        </strong>
+
+                        <span>
+                            STREAMS & CONTENT
+                        </span>
+
+                    </div>
+
+                    <div class="hero-info-item">
+
+                        <strong>
+                            DISCORD
+                        </strong>
+
+                        <span>
+                            COMMUNITY & UPDATES
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <h1>
+    </div>
 
-            Entdecke deine
+</section>
 
-            <span class="hero-gradient">
-                nächsten Deals.
-            </span>
+<!-- =========================================================
+     SLOTTORO SPOTLIGHT
+========================================================= -->
 
-        </h1>
+<section class="spotlight">
 
-        <p class="hero-description">
+<div class="container spotlight-layout">
 
-            Willkommen bei JumaaBonus.
+    <div class="spotlight-copy reveal">
 
-            Entdecke ausgewählte Casino-Angebote,
-            aktuelle Partner-Deals und unsere Community.
+        <div class="section-kicker">
+            AKTUELLER TOP DEAL
+        </div>
 
-            Twitch, Discord und neue Angebote findest
-            du übersichtlich an einem Ort.
+        <h2>
+            Unser Spotlight:
+            <span>Slottoro.</span>
+        </h2>
+
+        <p>
+
+            Slottoro ist aktuell unser hervorgehobener
+            JumaaBonus-Partner.
+
+            Über unseren Partner-Link gelangst du direkt
+            zum aktuellen Angebot.
 
         </p>
 
-        <div class="hero-actions">
+        <div class="spotlight-points">
 
-            <a
-                href="#deals"
-                class="btn btn-primary"
-            >
-                Deals entdecken →
-            </a>
+            <div class="spotlight-point">
 
-            <a
-                href="#community"
-                class="btn btn-secondary"
-            >
-                Community ansehen
-            </a>
-
-        </div>
-
-    </div>
-
-    <!-- SLOTTORO TOP DEAL -->
-
-    <div class="deal-showcase-wrap reveal">
-
-        <div
-            class="deal-showcase"
-            id="dealShowcase"
-        >
-
-            <div class="deal-showcase-top">
-
-                <span class="top-deal-label">
-                    ★ TOP DEAL
+                <span class="point-check">
+                    ✓
                 </span>
 
-                <span class="status-live">
-
-                    <span></span>
-
-                    AKTUELL
-
-                </span>
-
-            </div>
-
-            <div class="slot-logo">
-
-                <img
-                    src="images/slottoro-logo.png"
-                    alt="Slottoro Casino Logo"
-                >
-
-            </div>
-
-            <h3>
-                Slottoro Casino
-            </h3>
-
-            <p class="deal-showcase-sub">
                 Aktueller JumaaBonus Partner
-            </p>
 
-            <a
-                href="https://promo-click.com/l/6ab147c99ecd8c60ff04daf2?sub_id={sub_id_1}&amp;click_id={click_id}"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                class="deal-showcase-button"
-            >
-                SLOTTORO ANSEHEN →
-            </a>
+            </div>
+
+            <div class="spotlight-point">
+
+                <span class="point-check">
+                    ✓
+                </span>
+
+                Direkter Partner-Link
+
+            </div>
+
+            <div class="spotlight-point">
+
+                <span class="point-check">
+                    ✓
+                </span>
+
+                Weitere Deals werden ergänzt
+
+            </div>
 
         </div>
 
     </div>
 
+    <div
+        class="spotlight-card reveal"
+        id="dealShowcase"
+    >
+
+        <div class="spotlight-top">
+
+            <div class="spotlight-badge">
+                ★ TOP DEAL
+            </div>
+
+            <div class="spotlight-status">
+
+                <i></i>
+
+                AKTUELL
+
+            </div>
+
+        </div>
+
+        <div class="spotlight-logo">
+
+            <img
+                src="images/slottoro-logo.png"
+                alt="Slottoro Casino Logo"
+            >
+
+        </div>
+
+        <h3>
+            Slottoro Casino
+        </h3>
+
+        <div class="spotlight-sub">
+            Aktueller JumaaBonus Partner
+        </div>
+
+        <a
+            href="https://promo-click.com/l/6ab147c99ecd8c60ff04daf2?sub_id={sub_id_1}&amp;click_id={click_id}"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            class="spotlight-cta"
+        >
+            SLOTTORO ANSEHEN →
+        </a>
+
+    </div>
+
 </div>
 
 </section>
 
-<!-- ======================================================
-     TRUST BAR
-====================================================== -->
-
-<section class="trust-bar">
-
-<div class="container trust-grid">
-
-    <div class="trust-item">
-
-        <strong>
-            AUSGEWÄHLTE DEALS
-        </strong>
-
-        <span>
-            ZENTRAL AN EINEM ORT
-        </span>
-
-    </div>
-
-    <div class="trust-item">
-
-        <strong>
-            TWITCH
-        </strong>
-
-        <span>
-            STREAMS & CONTENT
-        </span>
-
-    </div>
-
-    <div class="trust-item">
-
-        <strong>
-            DISCORD
-        </strong>
-
-        <span>
-            COMMUNITY & UPDATES
-        </span>
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- ======================================================
+<!-- =========================================================
      DEALS
-====================================================== -->
+========================================================= -->
 
 <section
-    class="section"
+    class="deals-section"
     id="deals"
 >
 
 <div class="container">
 
-    <div class="section-heading reveal">
+    <div class="section-head reveal">
 
-        <div class="section-kicker">
-            AUSGEWÄHLTE ANGEBOTE
+        <div class="section-head-left">
+
+            <div class="section-kicker">
+                PARTNER & ANGEBOTE
+            </div>
+
+            <h2>
+                Aktuelle Deals
+            </h2>
+
+            <p>
+
+                Unsere aktuellen Partnerschaften
+                auf einen Blick.
+
+                Neue Deals und Partner werden hier
+                Schritt für Schritt ergänzt.
+
+            </p>
+
         </div>
 
-        <h2 class="section-title">
-            Aktuelle Deals
-        </h2>
-
-        <p class="section-intro">
-
-            Hier findest du unsere aktuellen
-            Partnerschaften und Angebote.
-
-            Sobald neue Deals verfügbar sind,
-            werden sie direkt hier ergänzt.
-
-        </p>
+        <div class="partner-count">
+            2 AKTIVE PARTNER
+        </div>
 
     </div>
 
-    <div class="deals-grid">
+    <div class="deal-grid">
 
-        <!-- SLOTTORO -->
+        <!-- MAIN DEAL -->
 
-        <article class="deal-card featured-slottoro reveal">
+        <article class="deal-main reveal">
 
-            <div class="deal-badge slottoro-badge">
-                ★ TOP DEAL
+            <div class="deal-main-top">
+
+                <div class="deal-chip top">
+                    ★ TOP DEAL
+                </div>
+
             </div>
 
-            <div class="deal-logo slottoro-card-logo">
+            <div class="deal-main-logo">
 
                 <img
                     src="images/slottoro-logo.png"
@@ -3469,11 +3886,10 @@ details[open] summary::after {
 
             <p>
 
-                Slottoro ist unser aktueller Top Partner.
+                Slottoro ist aktuell unser hervorgehobener Partner.
 
-                Über unseren Partner-Link gelangst du
-                direkt zur Slottoro-Seite und kannst dir
-                das aktuelle Angebot ansehen.
+                Über unseren JumaaBonus-Link gelangst du
+                direkt zur Partnerseite.
 
             </p>
 
@@ -3481,70 +3897,72 @@ details[open] summary::after {
                 href="https://promo-click.com/l/6ab147c99ecd8c60ff04daf2?sub_id={sub_id_1}&amp;click_id={click_id}"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                class="deal-card-link slottoro-link"
+                class="deal-main-link"
             >
-                SLOTTORO ANSEHEN →
+                DEAL ANSEHEN →
             </a>
 
         </article>
 
-        <!-- BITKINGZ -->
+        <!-- SIDE DEALS -->
 
-        <article class="deal-card bitkingz-card reveal">
+        <div class="deal-side">
 
-            <div class="deal-badge">
-                PARTNER
-            </div>
+            <article class="deal-small bitkingz reveal">
 
-            <div class="deal-logo">
+                <div class="small-deal-head">
 
-                <img
-                    src="images/bitkingz-logo.png"
-                    alt="BitKingz Logo"
+                    <div class="deal-chip">
+                        PARTNER
+                    </div>
+
+                </div>
+
+                <div class="small-deal-logo">
+
+                    <img
+                        src="images/bitkingz-logo.png"
+                        alt="BitKingz Logo"
+                    >
+
+                </div>
+
+                <h3>
+                    BitKingz
+                </h3>
+
+                <p>
+                    Aktuelles Partner-Angebot von JumaaBonus.
+                </p>
+
+                <a
+                    href="https://www.bitkingzmedia.com/aevsnqrhw"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    class="deal-small-link"
                 >
+                    ANSEHEN →
+                </a>
 
-            </div>
+            </article>
 
-            <h3>
-                BitKingz
-            </h3>
+            <article class="deal-small placeholder-card reveal">
 
-            <p>
+                <div class="placeholder-icon">
+                    +
+                </div>
 
-                Entdecke das aktuelle BitKingz-Angebot
-                über JumaaBonus und gelang direkt
-                über unseren Partner-Link zur Seite.
+                <h3>
+                    Neuer Partner
+                </h3>
 
-            </p>
+                <p>
+                    Weitere Angebote folgen in Kürze.
+                </p>
 
-            <a
-                href="https://www.bitkingzmedia.com/aevsnqrhw"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                class="deal-card-link"
-            >
-                BITKINGZ ANSEHEN →
-            </a>
+            </article>
 
-        </article>
-
-        <!-- NEXT PARTNER -->
-
-        <article class="deal-card coming-card reveal">
-
-            <div class="coming-icon">
-                +
-            </div>
-
-            <h3>
-                Neuer Partner
-            </h3>
-
-            <p>
-                Weitere Deals folgen in Kürze.
-            </p>
-
-        </article>
+        </div>
 
     </div>
 
@@ -3552,110 +3970,111 @@ details[open] summary::after {
 
 </section>
 
-<!-- ======================================================
-     VORTEILE
-====================================================== -->
+<!-- =========================================================
+     WHY JUMAA
+========================================================= -->
 
 <section
-    class="section"
+    class="why-section"
     id="vorteile"
 >
 
 <div class="container">
 
-    <div class="section-heading reveal">
+    <div class="section-head reveal">
 
-        <div class="section-kicker">
-            WARUM JUMAA BONUS
+        <div class="section-head-left">
+
+            <div class="section-kicker">
+                WARUM JUMAA BONUS
+            </div>
+
+            <h2>
+                Mehr als nur Deals.
+            </h2>
+
+            <p>
+
+                JumaaBonus verbindet aktuelle Partner-Angebote
+                mit Streams, Entertainment und Community.
+
+            </p>
+
         </div>
-
-        <h2 class="section-title">
-            Mehr als nur Deals.
-        </h2>
-
-        <p class="section-intro">
-
-            JumaaBonus verbindet ausgewählte Casino-Angebote
-            mit Entertainment, Streams und Community.
-
-            Unser Ziel ist ein zentraler Ort,
-            an dem unsere Community alle wichtigen Inhalte
-            schnell findet.
-
-        </p>
 
     </div>
 
-    <div class="benefits-grid">
+    <div class="why-grid">
 
-        <article class="benefit-card reveal">
+        <article class="why-card reveal">
 
-            <div class="benefit-icon">
-                ☰
+            <div class="why-icon">
+                ◫
             </div>
 
             <h3>
-                Übersichtliche Deals
+                Deals an einem Ort
             </h3>
 
             <p>
 
-                Bei JumaaBonus findest du unsere aktuellen
-                Partner-Angebote zentral und übersichtlich
-                an einem Ort.
+                Unsere aktuellen Partnerschaften
+                werden übersichtlich und zentral
+                auf JumaaBonus dargestellt.
 
                 <br><br>
 
-                Neue Deals und Partner werden Schritt
-                für Schritt ergänzt.
+                Neue Partner können jederzeit
+                ergänzt werden.
 
             </p>
 
         </article>
 
-        <article class="benefit-card reveal">
+        <article class="why-card reveal">
 
-            <div class="benefit-icon">
+            <div class="why-icon">
                 ▶
             </div>
 
             <h3>
-                Twitch & Entertainment
+                Streams & Content
             </h3>
 
             <p>
 
-                Über unseren Twitch-Kanal kannst du
-                Streams und weitere Inhalte verfolgen
-                und direkt Teil des Geschehens sein.
+                Über unseren Twitch-Kanal findest du
+                Streams und weiteren Content rund
+                um JumaaBonus.
 
                 <br><br>
 
-                Twitch ist direkt über unsere Website erreichbar.
+                Twitch erreichst du direkt über
+                unsere Website.
 
             </p>
 
         </article>
 
-        <article class="benefit-card reveal">
+        <article class="why-card reveal">
 
-            <div class="benefit-icon">
+            <div class="why-icon">
                 ★
             </div>
 
             <h3>
-                Community & Updates
+                Community
             </h3>
 
             <p>
 
-                Der Discord ist der zentrale Treffpunkt
-                unserer Community.
+                Unser Discord ist der Treffpunkt
+                für Deals, Updates und Community.
 
                 <br><br>
 
-                Dort teilen wir neue Deals,
-                Stream-Informationen und weitere Updates.
+                Dort bleibst du über neue Inhalte
+                und Streams informiert.
 
             </p>
 
@@ -3667,18 +4086,18 @@ details[open] summary::after {
 
 </section>
 
-<!-- ======================================================
+<!-- =========================================================
      COMMUNITY
-====================================================== -->
+========================================================= -->
 
 <section
-    class="section"
+    class="community-section"
     id="community"
 >
 
 <div class="container">
 
-    <div class="community-panel reveal">
+    <div class="community-box reveal">
 
         <div class="section-kicker">
             JUMAA BONUS COMMUNITY
@@ -3688,26 +4107,27 @@ details[open] summary::after {
             Sei direkt dabei.
         </h2>
 
-        <p class="community-description">
+        <p class="community-copy">
 
-            Werde Teil unserer Community,
-            entdecke neue Inhalte und bleibe über
-            Deals, Streams und wichtige Updates informiert.
+            Werde Teil unserer Community und bleibe über
+            neue Deals, Streams und wichtige Updates informiert.
 
         </p>
 
-        <div class="community-grid">
+        <div class="community-actions">
 
             <!-- DISCORD -->
 
-            <div class="community-card">
+            <div class="community-card discord-card">
 
-                <div class="community-platform-info">
+                <div class="community-info">
 
-                    <div class="community-platform-icon discord-icon">
+                    <div class="community-icon discord-icon">
 
                         <svg viewBox="0 0 24 24">
+
                             <path d="M19.5 5.3A16.5 16.5 0 0 0 15.4 4l-.5 1a15 15 0 0 0-5.8 0l-.5-1a16.5 16.5 0 0 0-4.1 1.3C1.9 9.1 1.2 12.8 1.5 16.4A16.6 16.6 0 0 0 6.6 19l1.2-1.6a10.6 10.6 0 0 1-1.9-.9l.5-.4a11.8 11.8 0 0 0 11.2 0l.5.4a10.6 10.6 0 0 1-1.9.9l1.2 1.6a16.6 16.6 0 0 0 5.1-2.6c.4-4.2-.7-7.8-3-11.1Z"/>
+
                         </svg>
 
                     </div>
@@ -3730,7 +4150,7 @@ details[open] summary::after {
                     href="https://discord.gg/NKxX9DB3ay"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="community-link discord-link"
+                    class="community-button discord-button"
                 >
                     BEITRETEN →
                 </a>
@@ -3739,14 +4159,16 @@ details[open] summary::after {
 
             <!-- TWITCH -->
 
-            <div class="community-card">
+            <div class="community-card twitch-card">
 
-                <div class="community-platform-info">
+                <div class="community-info">
 
-                    <div class="community-platform-icon twitch-icon">
+                    <div class="community-icon twitch-icon">
 
                         <svg viewBox="0 0 24 24">
+
                             <path d="M4 2h17v12l-5 5h-4l-3 3v-3H4V2zm2 2v13h5v2l2-2h3l3-3V4H6zm4 3h2v6h-2V7zm5 0h2v6h-2V7z"/>
+
                         </svg>
 
                     </div>
@@ -3769,7 +4191,7 @@ details[open] summary::after {
                     href="https://www.twitch.tv/jumaabonus"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="community-link twitch-link"
+                    class="community-button twitch-button"
                 >
                     TWITCH →
                 </a>
@@ -3784,34 +4206,37 @@ details[open] summary::after {
 
 </section>
 
-<!-- ======================================================
+<!-- =========================================================
      FAQ
-====================================================== -->
+========================================================= -->
 
 <section
-    class="section"
+    class="faq-section"
     id="faq"
 >
 
 <div class="container">
 
-    <div class="section-heading reveal">
+    <div class="section-head reveal">
 
-        <div class="section-kicker">
-            FRAGEN & ANTWORTEN
+        <div class="section-head-left">
+
+            <div class="section-kicker">
+                FRAGEN & ANTWORTEN
+            </div>
+
+            <h2>
+                Häufige Fragen
+            </h2>
+
+            <p>
+
+                Die wichtigsten Informationen rund um
+                JumaaBonus, Deals, Twitch und Discord.
+
+            </p>
+
         </div>
-
-        <h2 class="section-title">
-            Häufige Fragen
-        </h2>
-
-        <p class="section-intro">
-
-            Hier findest du die wichtigsten Infos rund um
-            JumaaBonus, unsere Community, Deals,
-            Twitch und Discord.
-
-        </p>
 
     </div>
 
@@ -3827,50 +4252,13 @@ details[open] summary::after {
 
                 JumaaBonus ist eine Community rund um
                 Casino-Content, aktuelle Deals,
-                Streams und Unterhaltung.
+                Streams und Entertainment.
 
                 <br><br>
 
-                Unser Ziel ist ein zentraler Ort,
-                an dem unsere Community neue Inhalte
-                und Angebote entdecken kann.
-
-            </div>
-
-        </details>
-
-        <details>
-
-            <summary>
-                Was finde ich bei JumaaBonus?
-            </summary>
-
-            <div class="faq-answer">
-
-                Bei JumaaBonus findest du ausgewählte Deals,
-                aktuelle Partner-Angebote,
-                Twitch-Content und unsere Discord-Community.
-
-            </div>
-
-        </details>
-
-        <details>
-
-            <summary>
-                Wie funktionieren die Deals?
-            </summary>
-
-            <div class="faq-answer">
-
-                Über die jeweiligen Deal-Buttons gelangst du
-                direkt zur Website unseres Partners.
-
-                <br><br>
-
-                Einige Links können Affiliate-Links sein.
-                JumaaBonus kann dadurch eine Provision erhalten,
-                ohne dass dir zusätzliche Kosten entstehen.
+                Unser Ziel ist es,
+                die wichtigsten Inhalte und Partnerschaften
+                übersichtlich an einem Ort zusammenzubringen.
 
             </div>
 
@@ -3884,13 +4272,32 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Aktuell findest du unter anderem
-                Slottoro Casino und BitKingz
-                als Partner auf unserer Website.
+                Aktuell findest du Slottoro Casino
+                und BitKingz als Partner auf unserer Website.
+
+                Weitere Partnerschaften können zukünftig folgen.
+
+            </div>
+
+        </details>
+
+        <details>
+
+            <summary>
+                Wie funktionieren die Deals?
+            </summary>
+
+            <div class="faq-answer">
+
+                Über den jeweiligen Deal-Button
+                gelangst du direkt zur Website
+                des entsprechenden Partners.
 
                 <br><br>
 
-                Weitere Partnerschaften sollen zukünftig folgen.
+                Einige Links auf JumaaBonus sind Affiliate-Links.
+                Dadurch kann JumaaBonus eine Provision erhalten,
+                ohne dass dir zusätzliche Kosten entstehen.
 
             </div>
 
@@ -3914,14 +4321,14 @@ details[open] summary::after {
         <details>
 
             <summary>
-                Was erwartet mich auf dem Discord?
+                Was erwartet mich auf Discord?
             </summary>
 
             <div class="faq-answer">
 
                 Dort findest du neue Deals,
                 Stream-Infos, Ankündigungen
-                und kannst dich mit unserer Community austauschen.
+                und unsere Community.
 
             </div>
 
@@ -3930,15 +4337,15 @@ details[open] summary::after {
         <details>
 
             <summary>
-                Werden neue Deals und Partner hinzukommen?
+                Werden neue Partner hinzukommen?
             </summary>
 
             <div class="faq-answer">
 
-                Ja. JumaaBonus soll mit der Zeit wachsen.
+                Ja.
 
-                Neue Partner und Deals werden ergänzt,
-                sobald passende Möglichkeiten verfügbar sind.
+                JumaaBonus soll Schritt für Schritt wachsen
+                und weitere Partnerschaften und Angebote ergänzen.
 
             </div>
 
@@ -3952,9 +4359,12 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Nein. Die Nutzung unserer Website,
-                unseres Twitch-Kanals und der
-                Discord-Community ist grundsätzlich kostenlos.
+                Nein.
+
+                Die Nutzung der Website,
+                unseres Twitch-Kanals
+                und der Discord-Community
+                ist grundsätzlich kostenlos.
 
             </div>
 
@@ -3968,8 +4378,11 @@ details[open] summary::after {
 
             <div class="faq-answer">
 
-                Ja. Casino- und Glücksspielinhalte
-                richten sich ausschließlich an volljährige Personen.
+                Ja.
+
+                Casino- und Glücksspielinhalte
+                richten sich ausschließlich
+                an volljährige Personen.
 
             </div>
 
@@ -3985,10 +4398,11 @@ details[open] summary::after {
 
         <br><br>
 
-        Glücksspiel kann süchtig machen und zu finanziellen
-        Problemen führen.
+        Glücksspiel kann süchtig machen
+        und zu finanziellen Problemen führen.
 
-        Spiele nur mit Geld, dessen Verlust du verkraften kannst,
+        Spiele nur mit Geld,
+        dessen Verlust du verkraften kannst,
         und nur wenn Glücksspiel an deinem Aufenthaltsort
         legal ist und du volljährig bist.
 
@@ -3996,7 +4410,7 @@ details[open] summary::after {
 
         Einige Links auf dieser Website sind Affiliate-Links.
         Dadurch kann JumaaBonus eine Provision erhalten,
-        ohne dass dir dadurch zusätzliche Kosten entstehen.
+        ohne dass dir zusätzliche Kosten entstehen.
 
     </div>
 
@@ -4006,9 +4420,9 @@ details[open] summary::after {
 
 </main>
 
-<!-- ======================================================
+<!-- =========================================================
      FOOTER
-====================================================== -->
+========================================================= -->
 
 <footer class="footer">
 
@@ -4128,9 +4542,9 @@ details[open] summary::after {
 
 <script>
 
-/* ======================================================
+/* =========================================================
    AGE GATE
-====================================================== */
+========================================================= */
 
 const ageGate =
     document.getElementById("ageGate");
@@ -4173,7 +4587,9 @@ function checkAgeVerification() {
         <
         AGE_DURATION
     ) {
+
         return true;
+
     }
 
     localStorage.removeItem(
@@ -4181,6 +4597,7 @@ function checkAgeVerification() {
     );
 
     return false;
+
 }
 
 function closeAgeGate() {
@@ -4198,7 +4615,9 @@ function closeAgeGate() {
 if (
     checkAgeVerification()
 ) {
+
     closeAgeGate();
+
 }
 
 ageEnter.addEventListener(
@@ -4225,9 +4644,9 @@ ageLeave.addEventListener(
     }
 );
 
-/* ======================================================
+/* =========================================================
    MOBILE MENU
-====================================================== */
+========================================================= */
 
 const menuButton =
     document.getElementById(
@@ -4243,11 +4662,15 @@ menuButton.addEventListener(
     "click",
     function() {
 
-        mobileMenu.classList.toggle(
+        mobileMenu
+        .classList
+        .toggle(
             "open"
         );
 
-        document.body.classList.toggle(
+        document.body
+        .classList
+        .toggle(
             "menu-open"
         );
 
@@ -4265,13 +4688,17 @@ document
             "click",
             function() {
 
-                mobileMenu.classList.remove(
+                mobileMenu
+                .classList
+                .remove(
                     "open"
                 );
 
-                document.body.classList.remove(
-                    "menu-open"
-                );
+                document.body
+                    .classList
+                    .remove(
+                        "menu-open"
+                    );
 
             }
         );
@@ -4279,9 +4706,9 @@ document
     }
 );
 
-/* ======================================================
+/* =========================================================
    SMOOTH SCROLL
-====================================================== */
+========================================================= */
 
 document
 .querySelectorAll(
@@ -4300,10 +4727,13 @@ document
                     );
 
                 if (
-                    !href ||
+                    !href
+                    ||
                     href === "#"
                 ) {
+
                     return;
+
                 }
 
                 const target =
@@ -4337,9 +4767,9 @@ document
     }
 );
 
-/* ======================================================
-   TOP DEAL 3D
-====================================================== */
+/* =========================================================
+   SLOTTORO 3D CARD
+========================================================= */
 
 const showcase =
     document.getElementById(
@@ -4357,7 +4787,9 @@ if (showcase) {
                 <
                 900
             ) {
+
                 return;
+
             }
 
             const rect =
@@ -4387,7 +4819,7 @@ if (showcase) {
                     centerY
                 )
                 *
-                -4;
+                -3.5;
 
             const rotateY =
                 (
@@ -4396,7 +4828,7 @@ if (showcase) {
                     centerX
                 )
                 *
-                4;
+                3.5;
 
             showcase.style.transform =
                 `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
@@ -4416,9 +4848,9 @@ if (showcase) {
 
 }
 
-/* ======================================================
+/* =========================================================
    REVEAL
-====================================================== */
+========================================================= */
 
 const revealElements =
     document.querySelectorAll(
@@ -4427,9 +4859,11 @@ const revealElements =
 
 const revealObserver =
     new IntersectionObserver(
+
         function(entries) {
 
             entries.forEach(
+
                 function(entry) {
 
                     if (
@@ -4450,12 +4884,15 @@ const revealObserver =
                     }
 
                 }
+
             );
 
         },
+
         {
-            threshold: 0.12
+            threshold: 0.11
         }
+
     );
 
 revealElements.forEach(
@@ -4471,5 +4908,4 @@ revealElements.forEach(
 </script>
 
 </body>
-
 </html>
