@@ -19,10 +19,12 @@
 <link rel="apple-touch-icon" href="images/jumaabonus-logo.png">
 
 <meta property="og:title" content="JumaaBonus | Casino Deals">
+
 <meta
     property="og:description"
     content="Deals, Streams und Community – zentral an einem Ort."
 >
+
 <meta property="og:image" content="images/jumaabonus-banner.jpg">
 <meta property="og:type" content="website">
 
@@ -33,20 +35,30 @@
 ========================================================= */
 
 :root {
+
     --orange: #ff6a00;
     --orange2: #ff9b31;
+
     --gold: #f7b82b;
     --gold2: #ffe09a;
+
     --red: #e93416;
+
     --purple: #9146ff;
     --purple2: #b987ff;
+
     --green: #59ff82;
-    --slot-yellow: #fff000;
-    --slot-purple: #4c073f;
+
+    --spintroll-green: #6ad27c;
+    --spintroll-green2: #2e9660;
+    --spintroll-yellow: #f2df4b;
+
     --text: #f7f7f8;
     --muted: #9c9ca3;
     --muted2: #66666d;
+
     --border: rgba(255,255,255,0.085);
+
     --max: 1220px;
 }
 
@@ -65,7 +77,9 @@ html {
 }
 
 body {
+
     min-height: 100vh;
+
     overflow-x: hidden;
 
     font-family:
@@ -74,6 +88,7 @@ body {
         sans-serif;
 
     color: var(--text);
+
     background: #070708;
 }
 
@@ -114,7 +129,9 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
+
     border-radius: 999px;
+
     border: 2px solid #050506;
 
     background:
@@ -130,6 +147,7 @@ img {
 ========================================================= */
 
 .age-gate {
+
     position: fixed;
     inset: 0;
 
@@ -158,6 +176,7 @@ img {
 }
 
 .age-card {
+
     position: relative;
 
     width: min(525px,100%);
@@ -174,16 +193,19 @@ img {
         1px solid rgba(255,122,24,0.30);
 
     background:
+
         radial-gradient(
             circle at 88% 8%,
             rgba(255,106,0,0.24),
             transparent 34%
         ),
+
         radial-gradient(
             circle at 8% 100%,
             rgba(145,70,255,0.12),
             transparent 40%
         ),
+
         linear-gradient(
             145deg,
             #1c1c20,
@@ -196,6 +218,7 @@ img {
 }
 
 .age-badge {
+
     width: 90px;
     height: 90px;
 
@@ -222,20 +245,25 @@ img {
 }
 
 .age-brand {
+
     display: inline-flex;
     align-items: center;
+
     gap: 12px;
 }
 
 .age-logo {
+
     width: 68px;
     height: 68px;
 
     object-fit: contain;
+
     border-radius: 50%;
 }
 
 .age-brand-text {
+
     display: inline-flex;
 
     font-size: 23px;
@@ -253,6 +281,7 @@ img {
 }
 
 .age-card h2 {
+
     margin-top: 22px;
 
     font-size: 29px;
@@ -261,6 +290,7 @@ img {
 }
 
 .age-card p {
+
     margin-top: 17px;
 
     color: var(--muted);
@@ -275,6 +305,7 @@ img {
 }
 
 .age-actions {
+
     display: grid;
 
     gap: 11px;
@@ -283,6 +314,7 @@ img {
 }
 
 .age-enter {
+
     min-height: 52px;
 
     border: 0;
@@ -304,6 +336,7 @@ img {
 }
 
 .age-leave {
+
     min-height: 48px;
 
     border-radius: 13px;
@@ -332,6 +365,7 @@ img {
 ========================================================= */
 
 .header {
+
     position: fixed;
 
     top: 0;
@@ -352,6 +386,7 @@ img {
 }
 
 .navbar {
+
     width:
         min(
             var(--max),
@@ -363,6 +398,7 @@ img {
     margin: auto;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -370,7 +406,9 @@ img {
 }
 
 .logo {
+
     display: inline-flex;
+
     align-items: center;
 
     gap: 11px;
@@ -379,6 +417,7 @@ img {
 }
 
 .logo-image {
+
     width: 56px;
     height: 56px;
 
@@ -388,7 +427,9 @@ img {
 }
 
 .logo-text {
+
     display: inline-flex;
+
     align-items: baseline;
 
     font-size: 27px;
@@ -401,13 +442,16 @@ img {
 }
 
 .nav-links {
+
     display: flex;
+
     align-items: center;
 
     gap: 30px;
 }
 
 .nav-links a {
+
     position: relative;
 
     color: #a4a4aa;
@@ -422,6 +466,7 @@ img {
 }
 
 .header-actions {
+
     display: flex;
 
     align-items: center;
@@ -430,13 +475,16 @@ img {
 }
 
 .social-button {
+
     min-height: 40px;
 
     padding:
         0 14px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 7px;
@@ -444,10 +492,12 @@ img {
     border-radius: 11px;
 
     font-size: 10px;
+
     font-weight: 900;
 }
 
 .social-button svg {
+
     width: 16px;
     height: 16px;
 
@@ -455,6 +505,7 @@ img {
 }
 
 .twitch-header {
+
     color: #ddcaff;
 
     border:
@@ -465,6 +516,7 @@ img {
 }
 
 .discord-header {
+
     color: white;
 
     background:
@@ -476,6 +528,7 @@ img {
 }
 
 .menu-button {
+
     display: none;
 
     width: 40px;
@@ -502,6 +555,7 @@ img {
 ========================================================= */
 
 .mobile-menu {
+
     position: fixed;
 
     top: 78px;
@@ -517,7 +571,8 @@ img {
 
     pointer-events: none;
 
-    transform: translateY(-10px);
+    transform:
+        translateY(-10px);
 
     transition: 0.25s;
 
@@ -529,20 +584,24 @@ img {
 }
 
 .mobile-menu.open {
+
     opacity: 1;
 
     pointer-events: auto;
 
-    transform: translateY(0);
+    transform:
+        translateY(0);
 }
 
 .mobile-menu-inner {
+
     display: grid;
 
     gap: 10px;
 }
 
 .mobile-menu a {
+
     padding: 16px;
 
     border-radius: 12px;
@@ -565,6 +624,7 @@ img {
 ========================================================= */
 
 .hero {
+
     position: relative;
 
     min-height: 760px;
@@ -572,6 +632,7 @@ img {
     padding-top: 78px;
 
     display: flex;
+
     align-items: flex-end;
 
     overflow: hidden;
@@ -580,23 +641,29 @@ img {
 }
 
 .hero-bg {
+
     position: absolute;
+
     inset: 0;
 
     background-image:
         url("images/jumaabonus-banner.jpg");
 
     background-size: cover;
+
     background-position: center;
 
     transform: scale(1.03);
 }
 
 .hero-overlay {
+
     position: absolute;
+
     inset: 0;
 
     background:
+
         linear-gradient(
             90deg,
             rgba(5,5,6,0.97) 0%,
@@ -604,15 +671,17 @@ img {
             rgba(5,5,6,0.28) 65%,
             rgba(5,5,6,0.50) 100%
         ),
+
         linear-gradient(
             180deg,
             rgba(0,0,0,0.16),
             rgba(0,0,0,0.18) 45%,
-            #0d090b 100%
+            #09100c 100%
         );
 }
 
 .hero-content {
+
     position: relative;
 
     z-index: 4;
@@ -628,7 +697,9 @@ img {
 }
 
 .hero-eyebrow {
+
     display: inline-flex;
+
     align-items: center;
 
     gap: 8px;
@@ -648,12 +719,14 @@ img {
         #e5e5e7;
 
     font-size: 9px;
+
     font-weight: 900;
 
     letter-spacing: 1.7px;
 }
 
 .hero-eyebrow-dot {
+
     width: 7px;
     height: 7px;
 
@@ -667,6 +740,7 @@ img {
 }
 
 .hero h1 {
+
     margin-top: 23px;
 
     max-width: 680px;
@@ -686,6 +760,7 @@ img {
 }
 
 .hero h1 span {
+
     display: block;
 
     background:
@@ -703,11 +778,13 @@ img {
 }
 
 .hero-description {
+
     max-width: 570px;
 
     margin-top: 26px;
 
-    color: #b2b2b7;
+    color:
+        #b2b2b7;
 
     font-size: 15px;
 
@@ -715,7 +792,9 @@ img {
 }
 
 .hero-actions {
+
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 12px;
@@ -724,22 +803,27 @@ img {
 }
 
 .hero-btn {
+
     min-height: 50px;
 
     padding:
         0 23px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 13px;
 
     font-size: 11px;
+
     font-weight: 950;
 }
 
 .hero-btn-primary {
+
     background:
         linear-gradient(
             135deg,
@@ -749,6 +833,7 @@ img {
 }
 
 .hero-btn-secondary {
+
     border:
         1px solid rgba(255,255,255,0.13);
 
@@ -760,6 +845,7 @@ img {
 }
 
 .hero-info {
+
     margin-top: 55px;
 
     max-width: 760px;
@@ -781,6 +867,7 @@ img {
 }
 
 .hero-info-item {
+
     padding:
         18px 20px;
 
@@ -793,6 +880,7 @@ img {
 }
 
 .hero-info-item strong {
+
     display: block;
 
     font-size: 11px;
@@ -801,6 +889,7 @@ img {
 }
 
 .hero-info-item span {
+
     display: block;
 
     margin-top: 5px;
@@ -814,10 +903,11 @@ img {
 }
 
 /* =========================================================
-   SLOTORO SPOTLIGHT
+   SPINTROLL SPOTLIGHT
 ========================================================= */
 
 .spotlight {
+
     position: relative;
 
     padding:
@@ -826,35 +916,40 @@ img {
     overflow: hidden;
 
     background:
+
         radial-gradient(
             circle at 85% 15%,
-            rgba(255,230,0,0.11),
+            rgba(242,223,75,0.11),
             transparent 28%
         ),
+
         radial-gradient(
             circle at 12% 75%,
-            rgba(112,28,92,0.24),
+            rgba(63,170,99,0.22),
             transparent 32%
         ),
+
         radial-gradient(
             circle at 50% 100%,
-            rgba(255,106,0,0.07),
+            rgba(106,210,124,0.08),
             transparent 35%
         ),
+
         linear-gradient(
             180deg,
-            #140d13,
-            #0b0a0d
+            #0c1710,
+            #0a0d0b
         );
 
     border-top:
-        1px solid rgba(255,178,58,0.11);
+        1px solid rgba(242,223,75,0.12);
 
     border-bottom:
         1px solid rgba(255,255,255,0.045);
 }
 
 .spotlight-layout {
+
     display: grid;
 
     grid-template-columns:
@@ -866,6 +961,7 @@ img {
 }
 
 .section-kicker {
+
     color:
         var(--orange);
 
@@ -877,6 +973,7 @@ img {
 }
 
 .spotlight-copy h2 {
+
     margin-top: 13px;
 
     max-width: 520px;
@@ -894,10 +991,13 @@ img {
 }
 
 .spotlight-copy h2 span {
-    color: var(--slot-yellow);
+
+    color:
+        var(--spintroll-green);
 }
 
 .spotlight-copy p {
+
     max-width: 520px;
 
     margin-top: 20px;
@@ -911,6 +1011,7 @@ img {
 }
 
 .spotlight-points {
+
     margin-top: 29px;
 
     display: grid;
@@ -919,6 +1020,7 @@ img {
 }
 
 .spotlight-point {
+
     display: flex;
 
     align-items: center;
@@ -932,27 +1034,32 @@ img {
 }
 
 .point-check {
+
     width: 25px;
     height: 25px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border-radius: 8px;
 
     color:
-        var(--slot-yellow);
+        var(--spintroll-yellow);
 
     border:
-        1px solid rgba(255,240,0,0.16);
+        1px solid rgba(242,223,75,0.18);
 
     background:
-        rgba(255,240,0,0.07);
+        rgba(106,210,124,0.08);
 }
 
+/* TOP DEAL CARD */
+
 .spotlight-card {
+
     position: relative;
 
     min-height: 520px;
@@ -964,52 +1071,59 @@ img {
     border-radius: 30px;
 
     border:
-        1px solid rgba(255,240,0,0.25);
+        1px solid rgba(106,210,124,0.35);
 
     background:
+
         radial-gradient(
             circle at 85% 10%,
-            rgba(255,240,0,0.15),
+            rgba(242,223,75,0.14),
             transparent 28%
         ),
+
         radial-gradient(
             circle at 10% 90%,
-            rgba(84,5,70,0.55),
+            rgba(51,155,92,0.34),
             transparent 36%
         ),
+
         linear-gradient(
             145deg,
-            #221422,
-            #0c0b0d
+            #122119,
+            #0b0d0c
         );
 
     box-shadow:
         0 50px 110px rgba(0,0,0,0.58),
-        0 0 60px rgba(255,223,0,0.05);
+        0 0 70px rgba(74,184,106,0.08);
 
-    transform-style: preserve-3d;
+    transform-style:
+        preserve-3d;
 }
 
 .spotlight-top {
+
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 }
 
 .spotlight-badge {
+
     padding:
         7px 10px;
 
     border-radius: 9px;
 
     color:
-        var(--slot-yellow);
+        var(--spintroll-yellow);
 
     border:
-        1px solid rgba(255,240,0,0.16);
+        1px solid rgba(242,223,75,0.20);
 
     background:
-        rgba(255,240,0,0.07);
+        rgba(242,223,75,0.07);
 
     font-size: 9px;
 
@@ -1017,6 +1131,7 @@ img {
 }
 
 .spotlight-status {
+
     display: inline-flex;
 
     align-items: center;
@@ -1032,6 +1147,7 @@ img {
 }
 
 .spotlight-status i {
+
     width: 7px;
     height: 7px;
 
@@ -1045,12 +1161,13 @@ img {
 }
 
 .spotlight-logo {
-    width: min(330px,80%);
 
-    height: 190px;
+    width: min(350px,82%);
+
+    height: 180px;
 
     margin:
-        70px auto 30px;
+        65px auto 30px;
 
     display: flex;
 
@@ -1060,16 +1177,20 @@ img {
 
     overflow: hidden;
 
-    border-radius: 28px;
+    border-radius: 26px;
 
     background:
-        #48043d;
+        #111313;
 
     border:
-        1px solid rgba(255,240,0,0.18);
+        1px solid rgba(106,210,124,0.22);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.38);
 }
 
 .spotlight-logo img {
+
     width: 100%;
     height: 100%;
 
@@ -1077,12 +1198,14 @@ img {
 }
 
 .spotlight-card h3 {
+
     text-align: center;
 
     font-size: 34px;
 }
 
 .spotlight-sub {
+
     margin-top: 7px;
 
     text-align: center;
@@ -1094,6 +1217,7 @@ img {
 }
 
 .spotlight-cta {
+
     margin-top: 30px;
 
     min-height: 52px;
@@ -1106,14 +1230,18 @@ img {
 
     border-radius: 13px;
 
-    color: #111;
+    color:
+        #0b1b10;
 
     background:
         linear-gradient(
             135deg,
-            #fff300,
-            #ffc62d
+            #79db8a,
+            #e4dd4e
         );
+
+    box-shadow:
+        0 15px 35px rgba(106,210,124,0.15);
 
     font-size: 11px;
 
@@ -1125,20 +1253,24 @@ img {
 ========================================================= */
 
 .deals-section {
+
     padding:
         120px 0;
 
     background:
+
         radial-gradient(
             circle at 12% 18%,
             rgba(255,106,0,0.12),
             transparent 26%
         ),
+
         radial-gradient(
             circle at 90% 75%,
-            rgba(255,145,45,0.05),
+            rgba(106,210,124,0.05),
             transparent 30%
         ),
+
         linear-gradient(
             180deg,
             #151416,
@@ -1150,6 +1282,7 @@ img {
 }
 
 .section-head {
+
     display: flex;
 
     align-items: end;
@@ -1163,6 +1296,7 @@ img {
 }
 
 .section-head-left h2 {
+
     margin-top: 11px;
 
     font-size:
@@ -1177,6 +1311,7 @@ img {
 }
 
 .section-head-left p {
+
     max-width: 680px;
 
     margin-top: 15px;
@@ -1190,6 +1325,7 @@ img {
 }
 
 .partner-count {
+
     padding:
         9px 12px;
 
@@ -1210,37 +1346,92 @@ img {
 }
 
 .deal-grid {
+
     display: grid;
 
     grid-template-columns:
-        1.45fr 0.95fr;
+        1.35fr 1fr 1fr;
 
     gap: 18px;
 }
 
-.deal-main {
+.deal-card {
+
     position: relative;
 
-    min-height: 420px;
+    min-height: 400px;
 
-    padding: 30px;
+    padding: 27px;
 
-    border-radius: 26px;
+    border-radius: 25px;
 
     border:
-        1px solid rgba(255,240,0,0.18);
+        1px solid rgba(255,255,255,0.09);
+
+    overflow: hidden;
 
     background:
+        linear-gradient(
+            145deg,
+            #1b1b1f,
+            #111114
+        );
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-6px);
+}
+
+/* SPINTROLL */
+
+.spintroll-card {
+
+    border-color:
+        rgba(106,210,124,0.25);
+
+    background:
+
         radial-gradient(
-            circle at 90% 10%,
-            rgba(255,240,0,0.10),
-            transparent 31%
+            circle at 88% 12%,
+            rgba(242,223,75,0.10),
+            transparent 34%
         ),
+
         radial-gradient(
             circle at 10% 100%,
-            rgba(76,7,63,0.26),
+            rgba(58,163,95,0.18),
+            transparent 38%
+        ),
+
+        linear-gradient(
+            145deg,
+            #17231b,
+            #101311
+        );
+}
+
+.spintroll-card:hover {
+
+    border-color:
+        rgba(106,210,124,0.48);
+}
+
+/* SLOTORO */
+
+.slotoro-card {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(238,220,0,0.08),
             transparent 35%
         ),
+
         linear-gradient(
             145deg,
             #211820,
@@ -1248,7 +1439,27 @@ img {
         );
 }
 
+/* BITKINGZ */
+
+.bitkingz-card {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255,106,0,0.14),
+            transparent 38%
+        ),
+
+        linear-gradient(
+            145deg,
+            #211b1a,
+            #131316
+        );
+}
+
 .deal-chip {
+
     display: inline-flex;
 
     padding:
@@ -1262,21 +1473,35 @@ img {
 }
 
 .deal-chip.top {
+
     color:
-        var(--slot-yellow);
+        var(--spintroll-yellow);
 
     border:
-        1px solid rgba(255,240,0,0.13);
+        1px solid rgba(242,223,75,0.16);
 
     background:
-        rgba(255,240,0,0.07);
+        rgba(242,223,75,0.07);
 }
 
-.deal-main-logo {
-    width: 170px;
-    height: 102px;
+.deal-chip.partner {
 
-    margin-top: 47px;
+    color:
+        var(--orange);
+
+    border:
+        1px solid rgba(255,106,0,0.15);
+
+    background:
+        rgba(255,106,0,0.07);
+}
+
+.deal-logo {
+
+    width: 150px;
+    height: 94px;
+
+    margin-top: 46px;
 
     display: flex;
 
@@ -1284,29 +1509,56 @@ img {
 
     justify-content: center;
 
-    border-radius: 17px;
-
     overflow: hidden;
+
+    border-radius: 16px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+}
+
+.spintroll-logo-box {
+
+    width: 180px;
+
+    background:
+        #101212;
+}
+
+.slotoro-logo-box {
 
     background:
         #48043d;
 }
 
-.deal-main-logo img {
+.bitkingz-logo-box {
+
+    background:
+        linear-gradient(
+            145deg,
+            #444a58,
+            #30343f
+        );
+}
+
+.deal-logo img {
+
     width: 100%;
     height: 100%;
 
     object-fit: contain;
 }
 
-.deal-main h3 {
+.deal-card h3 {
+
     margin-top: 22px;
 
-    font-size: 28px;
+    font-size: 25px;
 }
 
-.deal-main p {
-    max-width: 470px;
+.deal-card p {
+
+    max-width: 350px;
 
     margin-top: 10px;
 
@@ -1318,150 +1570,31 @@ img {
     line-height: 1.75;
 }
 
-.deal-main-link {
+.deal-link {
+
     position: absolute;
 
-    left: 30px;
-    bottom: 30px;
-
-    color:
-        var(--slot-yellow);
+    left: 27px;
+    bottom: 27px;
 
     font-size: 10px;
 
     font-weight: 950;
 }
 
-.deal-side {
-    display: grid;
-
-    grid-template-rows:
-        1fr 1fr;
-
-    gap: 18px;
-}
-
-.deal-small {
-    position: relative;
-
-    min-height: 200px;
-
-    padding: 25px;
-
-    border-radius: 23px;
-
-    border:
-        1px solid rgba(255,255,255,0.085);
-
-    background:
-        linear-gradient(
-            145deg,
-            #1d1d21,
-            #121214
-        );
-}
-
-.deal-small.bitkingz {
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(255,106,0,0.15),
-            transparent 38%
-        ),
-        linear-gradient(
-            145deg,
-            #211b1a,
-            #131316
-        );
-}
-
-.small-deal-logo {
-    width: 92px;
-    height: 62px;
-
-    margin-top: 28px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    border-radius: 13px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #444a58,
-            #30343f
-        );
-}
-
-.small-deal-logo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-}
-
-.deal-small h3 {
-    margin-top: 16px;
-
-    font-size: 20px;
-}
-
-.deal-small p {
-    margin-top: 7px;
-
+.spintroll-link {
     color:
-        var(--muted);
-
-    font-size: 11px;
+        var(--spintroll-green);
 }
 
-.deal-small-link {
-    position: absolute;
+.slotoro-link {
+    color:
+        #f2df4b;
+}
 
-    right: 24px;
-    bottom: 24px;
-
+.bitkingz-link {
     color:
         var(--orange);
-
-    font-size: 9px;
-
-    font-weight: 950;
-}
-
-.placeholder-card {
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-.placeholder-icon {
-    width: 54px;
-    height: 54px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 15px;
-
-    background:
-        rgba(255,255,255,0.04);
-
-    color:
-        #77777d;
-
-    font-size: 22px;
 }
 
 /* =========================================================
@@ -1469,20 +1602,24 @@ img {
 ========================================================= */
 
 .why-section {
+
     padding:
         120px 0;
 
     background:
+
         radial-gradient(
             circle at 85% 30%,
             rgba(255,160,40,0.08),
             transparent 28%
         ),
+
         radial-gradient(
             circle at 12% 80%,
             rgba(255,106,0,0.05),
             transparent 26%
         ),
+
         linear-gradient(
             180deg,
             #111114,
@@ -1494,6 +1631,7 @@ img {
 }
 
 .why-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -1505,6 +1643,7 @@ img {
 }
 
 .why-card {
+
     min-height: 300px;
 
     padding: 30px;
@@ -1515,11 +1654,13 @@ img {
         1px solid rgba(255,255,255,0.09);
 
     background:
+
         radial-gradient(
             circle at 90% 90%,
             rgba(255,106,0,0.06),
             transparent 38%
         ),
+
         linear-gradient(
             145deg,
             #202024,
@@ -1528,6 +1669,7 @@ img {
 }
 
 .why-icon {
+
     width: 50px;
     height: 50px;
 
@@ -1547,12 +1689,14 @@ img {
 }
 
 .why-card h3 {
+
     margin-top: 25px;
 
     font-size: 19px;
 }
 
 .why-card p {
+
     margin-top: 12px;
 
     color:
@@ -1568,20 +1712,24 @@ img {
 ========================================================= */
 
 .community-section {
+
     padding:
         120px 0;
 
     background:
+
         radial-gradient(
             circle at 82% 25%,
             rgba(145,70,255,0.18),
             transparent 30%
         ),
+
         radial-gradient(
             circle at 10% 80%,
             rgba(255,106,0,0.11),
             transparent 28%
         ),
+
         linear-gradient(
             180deg,
             #15121c,
@@ -1593,6 +1741,7 @@ img {
 }
 
 .community-box {
+
     padding:
         58px 50px;
 
@@ -1602,16 +1751,19 @@ img {
         1px solid rgba(255,106,0,0.22);
 
     background:
+
         radial-gradient(
             circle at 85% 30%,
             rgba(145,70,255,0.17),
             transparent 35%
         ),
+
         radial-gradient(
             circle at 8% 90%,
             rgba(255,106,0,0.10),
             transparent 30%
         ),
+
         linear-gradient(
             145deg,
             #211d29,
@@ -1620,6 +1772,7 @@ img {
 }
 
 .community-box h2 {
+
     margin-top: 10px;
 
     font-size:
@@ -1631,6 +1784,7 @@ img {
 }
 
 .community-copy {
+
     max-width: 680px;
 
     margin-top: 15px;
@@ -1642,6 +1796,7 @@ img {
 }
 
 .community-actions {
+
     display: grid;
 
     grid-template-columns:
@@ -1653,6 +1808,7 @@ img {
 }
 
 .community-card {
+
     min-height: 130px;
 
     padding: 22px;
@@ -1676,6 +1832,7 @@ img {
 }
 
 .community-info {
+
     display: flex;
 
     align-items: center;
@@ -1684,6 +1841,7 @@ img {
 }
 
 .community-icon {
+
     width: 54px;
     height: 54px;
 
@@ -1697,6 +1855,7 @@ img {
 }
 
 .community-icon svg {
+
     width: 27px;
     height: 27px;
 
@@ -1704,6 +1863,7 @@ img {
 }
 
 .discord-icon {
+
     background:
         linear-gradient(
             135deg,
@@ -1713,6 +1873,7 @@ img {
 }
 
 .twitch-icon {
+
     background:
         linear-gradient(
             135deg,
@@ -1726,6 +1887,7 @@ img {
 }
 
 .community-info span {
+
     display: block;
 
     margin-top: 5px;
@@ -1737,6 +1899,7 @@ img {
 }
 
 .community-button {
+
     min-height: 40px;
 
     padding:
@@ -1756,6 +1919,7 @@ img {
 }
 
 .discord-button {
+
     background:
         linear-gradient(
             135deg,
@@ -1765,6 +1929,7 @@ img {
 }
 
 .twitch-button {
+
     color:
         #e1d0ff;
 
@@ -1780,20 +1945,24 @@ img {
 ========================================================= */
 
 .faq-section {
+
     padding:
         120px 0;
 
     background:
+
         radial-gradient(
             circle at 15% 10%,
             rgba(255,106,0,0.09),
             transparent 24%
         ),
+
         radial-gradient(
             circle at 90% 75%,
             rgba(145,70,255,0.05),
             transparent 28%
         ),
+
         linear-gradient(
             180deg,
             #121214,
@@ -1802,6 +1971,7 @@ img {
 }
 
 .faq-grid {
+
     margin-top: 43px;
 
     display: grid;
@@ -1810,6 +1980,7 @@ img {
 }
 
 details {
+
     overflow: hidden;
 
     border-radius: 16px;
@@ -1826,6 +1997,7 @@ details {
 }
 
 summary {
+
     list-style: none;
 
     cursor: pointer;
@@ -1850,6 +2022,7 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
+
     content: "+";
 
     width: 32px;
@@ -1877,6 +2050,7 @@ details[open] summary::after {
 }
 
 .faq-answer {
+
     padding:
         0 24px 25px;
 
@@ -1889,6 +2063,7 @@ details[open] summary::after {
 }
 
 .responsible-box {
+
     margin-top: 35px;
 
     padding: 24px;
@@ -1914,6 +2089,7 @@ details[open] summary::after {
 ========================================================= */
 
 .footer {
+
     padding:
         55px 0 30px;
 
@@ -1921,11 +2097,13 @@ details[open] summary::after {
         1px solid rgba(255,255,255,0.07);
 
     background:
+
         radial-gradient(
             circle at 80% 100%,
             rgba(255,106,0,0.05),
             transparent 30%
         ),
+
         linear-gradient(
             180deg,
             #0a0a0c,
@@ -1934,6 +2112,7 @@ details[open] summary::after {
 }
 
 .footer-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -1943,6 +2122,7 @@ details[open] summary::after {
 }
 
 .footer-brand {
+
     display: inline-flex;
 
     align-items: center;
@@ -1951,6 +2131,7 @@ details[open] summary::after {
 }
 
 .footer-logo-image {
+
     width: 74px;
     height: 74px;
 
@@ -1960,6 +2141,7 @@ details[open] summary::after {
 }
 
 .footer-logo-text {
+
     display: inline-flex;
 
     font-size: 24px;
@@ -1968,6 +2150,7 @@ details[open] summary::after {
 }
 
 .footer-description {
+
     margin-top: 14px;
 
     color:
@@ -1977,6 +2160,7 @@ details[open] summary::after {
 }
 
 .footer-column-title {
+
     margin-bottom: 15px;
 
     color:
@@ -1988,12 +2172,14 @@ details[open] summary::after {
 }
 
 .footer-links {
+
     display: grid;
 
     gap: 10px;
 }
 
 .footer-links a {
+
     width: fit-content;
 
     color:
@@ -2003,6 +2189,7 @@ details[open] summary::after {
 }
 
 .footer-bottom {
+
     margin-top: 45px;
 
     padding-top: 20px;
@@ -2028,6 +2215,7 @@ details[open] summary::after {
 ========================================================= */
 
 .reveal {
+
     opacity: 0;
 
     transform:
@@ -2039,6 +2227,7 @@ details[open] summary::after {
 }
 
 .reveal.visible {
+
     opacity: 1;
 
     transform:
@@ -2064,15 +2253,13 @@ details[open] summary::after {
     }
 
     .deal-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .deal-side {
         grid-template-columns:
             1fr 1fr;
+    }
 
-        grid-template-rows:
-            auto;
+    .spintroll-card {
+        grid-column:
+            span 2;
     }
 
     .why-grid {
@@ -2092,10 +2279,13 @@ details[open] summary::after {
 
     .container,
     .navbar {
-        width: calc(100% - 28px);
+
+        width:
+            calc(100% - 28px);
     }
 
     .logo-image {
+
         width: 44px;
         height: 44px;
     }
@@ -2108,21 +2298,55 @@ details[open] summary::after {
         display: none;
     }
 
+    .age-card {
+        padding:
+            31px 21px;
+    }
+
+    .age-badge {
+
+        width: 78px;
+        height: 78px;
+
+        font-size: 27px;
+    }
+
+    .age-logo {
+
+        width: 54px;
+        height: 54px;
+    }
+
+    .age-brand-text {
+        font-size: 19px;
+    }
+
+    .age-card h2 {
+        font-size: 24px;
+    }
+
     .hero {
         min-height: 740px;
     }
 
     .hero-bg {
-        background-position: 60% center;
+        background-position:
+            60% center;
     }
 
     .hero h1 {
+
         font-size: 50px;
 
         letter-spacing: -3px;
     }
 
+    .hero-description {
+        font-size: 13px;
+    }
+
     .hero-actions {
+
         display: grid;
 
         grid-template-columns: 1fr;
@@ -2137,6 +2361,7 @@ details[open] summary::after {
     }
 
     .hero-info-item {
+
         border-right: none;
 
         border-bottom:
@@ -2148,24 +2373,28 @@ details[open] summary::after {
     .why-section,
     .community-section,
     .faq-section {
+
         padding:
             82px 0;
     }
 
     .spotlight-card {
+
         min-height: 450px;
 
         padding: 24px;
     }
 
     .spotlight-logo {
-        width: 220px;
-        height: 135px;
+
+        width: 240px;
+        height: 130px;
 
         margin-top: 55px;
     }
 
     .section-head {
+
         align-items:
             flex-start;
 
@@ -2173,8 +2402,17 @@ details[open] summary::after {
             column;
     }
 
-    .deal-side {
+    .deal-grid {
         grid-template-columns: 1fr;
+    }
+
+    .spintroll-card {
+        grid-column:
+            span 1;
+    }
+
+    .deal-card {
+        min-height: 360px;
     }
 
     .community-box {
@@ -2183,6 +2421,7 @@ details[open] summary::after {
     }
 
     .community-card {
+
         flex-direction: column;
 
         align-items:
@@ -2305,7 +2544,10 @@ details[open] summary::after {
 
 <nav class="navbar">
 
-    <a href="#top" class="logo">
+    <a
+        href="#top"
+        class="logo"
+    >
 
         <img
             src="images/jumaabonus-logo.png"
@@ -2329,10 +2571,21 @@ details[open] summary::after {
 
     <div class="nav-links">
 
-        <a href="#deals">Deals</a>
-        <a href="#vorteile">Vorteile</a>
-        <a href="#community">Community</a>
-        <a href="#faq">FAQ</a>
+        <a href="#deals">
+            Deals
+        </a>
+
+        <a href="#vorteile">
+            Vorteile
+        </a>
+
+        <a href="#community">
+            Community
+        </a>
+
+        <a href="#faq">
+            FAQ
+        </a>
 
     </div>
 
@@ -2346,7 +2599,9 @@ details[open] summary::after {
         >
 
             <svg viewBox="0 0 24 24">
+
                 <path d="M4 2h17v12l-5 5h-4l-3 3v-3H4V2zm2 2v13h5v2l2-2h3l3-3V4H6zm4 3h2v6h-2V7zm5 0h2v6h-2V7z"/>
+
             </svg>
 
             TWITCH
@@ -2378,14 +2633,28 @@ details[open] summary::after {
 
 <!-- MOBILE MENU -->
 
-<div class="mobile-menu" id="mobileMenu">
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+>
 
 <div class="mobile-menu-inner">
 
-    <a href="#deals">Deals</a>
-    <a href="#vorteile">Vorteile</a>
-    <a href="#community">Community</a>
-    <a href="#faq">FAQ</a>
+    <a href="#deals">
+        Deals
+    </a>
+
+    <a href="#vorteile">
+        Vorteile
+    </a>
+
+    <a href="#community">
+        Community
+    </a>
+
+    <a href="#faq">
+        FAQ
+    </a>
 
     <a
         href="https://www.twitch.tv/jumaabonus"
@@ -2520,7 +2789,7 @@ details[open] summary::after {
 </section>
 
 <!-- =========================================================
-     SLOTORO SPOTLIGHT
+     SPINTROLL TOP DEAL
 ========================================================= -->
 
 <section class="spotlight">
@@ -2538,18 +2807,18 @@ details[open] summary::after {
         Unser Spotlight:
 
         <span>
-            Slotoro.
+            Spintroll.
         </span>
 
     </h2>
 
     <p>
 
-        Slotoro ist aktuell unser hervorgehobener
+        Spintroll ist aktuell unser hervorgehobener
         JumaaBonus-Partner.
 
         Über unseren Partner-Link gelangst du direkt
-        zum aktuellen Angebot.
+        zur Spintroll-Seite.
 
     </p>
 
@@ -2581,7 +2850,7 @@ details[open] summary::after {
                 ✓
             </span>
 
-            Weitere Deals werden ergänzt
+            Aktueller Top Deal
 
         </div>
 
@@ -2613,27 +2882,27 @@ details[open] summary::after {
     <div class="spotlight-logo">
 
         <img
-            src="images/slottoro-logo.png"
-            alt="Slotoro Casino Logo"
+            src="images/spintroll-logo.png"
+            alt="Spintroll Logo"
         >
 
     </div>
 
     <h3>
-        Slotoro Casino
+        Spintroll
     </h3>
 
     <div class="spotlight-sub">
-        Aktueller JumaaBonus Partner
+        Aktueller JumaaBonus Top Partner
     </div>
 
     <a
-        href="https://promo-click.com/l/6ab147c99ecd8c60ff04daf2?sub_id={sub_id_1}&amp;click_id={click_id}"
+        href="https://spintroll.com/?r=Jumaa"
         target="_blank"
         rel="noopener noreferrer sponsored"
         class="spotlight-cta"
     >
-        SLOTORO ANSEHEN →
+        SPINTROLL ANSEHEN →
     </a>
 
 </div>
@@ -2677,20 +2946,64 @@ details[open] summary::after {
 </div>
 
 <div class="partner-count">
-    2 AKTIVE PARTNER
+    3 AKTIVE PARTNER
 </div>
 
 </div>
 
 <div class="deal-grid">
 
-<article class="deal-main reveal">
+<!-- SPINTROLL -->
+
+<article class="deal-card spintroll-card reveal">
 
     <div class="deal-chip top">
         ★ TOP DEAL
     </div>
 
-    <div class="deal-main-logo">
+    <div class="deal-logo spintroll-logo-box">
+
+        <img
+            src="images/spintroll-logo.png"
+            alt="Spintroll Logo"
+        >
+
+    </div>
+
+    <h3>
+        Spintroll
+    </h3>
+
+    <p>
+
+        Spintroll ist aktuell unser hervorgehobener
+        JumaaBonus Partner.
+
+        Über unseren Partner-Link gelangst du
+        direkt zur Spintroll-Seite.
+
+    </p>
+
+    <a
+        href="https://spintroll.com/?r=Jumaa"
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        class="deal-link spintroll-link"
+    >
+        SPINTROLL ANSEHEN →
+    </a>
+
+</article>
+
+<!-- SLOTORO -->
+
+<article class="deal-card slotoro-card reveal">
+
+    <div class="deal-chip partner">
+        PARTNER
+    </div>
+
+    <div class="deal-logo slotoro-logo-box">
 
         <img
             src="images/slottoro-logo.png"
@@ -2705,10 +3018,9 @@ details[open] summary::after {
 
     <p>
 
-        Slotoro ist aktuell unser hervorgehobener Partner.
-
-        Über unseren JumaaBonus-Link gelangst du direkt
-        zur Partnerseite.
+        Entdecke Slotoro über JumaaBonus und
+        gelang direkt über unseren Partner-Link
+        zur Casino-Seite.
 
     </p>
 
@@ -2716,22 +3028,22 @@ details[open] summary::after {
         href="https://promo-click.com/l/6ab147c99ecd8c60ff04daf2?sub_id={sub_id_1}&amp;click_id={click_id}"
         target="_blank"
         rel="noopener noreferrer sponsored"
-        class="deal-main-link"
+        class="deal-link slotoro-link"
     >
-        DEAL ANSEHEN →
+        SLOTORO ANSEHEN →
     </a>
 
 </article>
 
-<div class="deal-side">
+<!-- BITKINGZ -->
 
-<article class="deal-small bitkingz reveal">
+<article class="deal-card bitkingz-card reveal">
 
-    <div class="deal-chip">
+    <div class="deal-chip partner">
         PARTNER
     </div>
 
-    <div class="small-deal-logo">
+    <div class="deal-logo bitkingz-logo-box">
 
         <img
             src="images/bitkingz-logo.png"
@@ -2745,37 +3057,23 @@ details[open] summary::after {
     </h3>
 
     <p>
-        Aktuelles Partner-Angebot von JumaaBonus.
+
+        Entdecke das aktuelle BitKingz-Angebot
+        über JumaaBonus und gelang direkt
+        über unseren Partner-Link zur Seite.
+
     </p>
 
     <a
         href="https://www.bitkingzmedia.com/aevsnqrhw"
         target="_blank"
         rel="noopener noreferrer sponsored"
-        class="deal-small-link"
+        class="deal-link bitkingz-link"
     >
-        ANSEHEN →
+        BITKINGZ ANSEHEN →
     </a>
 
 </article>
-
-<article class="deal-small placeholder-card reveal">
-
-    <div class="placeholder-icon">
-        +
-    </div>
-
-    <h3>
-        Neuer Partner
-    </h3>
-
-    <p>
-        Weitere Angebote folgen in Kürze.
-    </p>
-
-</article>
-
-</div>
 
 </div>
 
@@ -2835,6 +3133,11 @@ details[open] summary::after {
         werden übersichtlich und zentral
         auf JumaaBonus dargestellt.
 
+        <br><br>
+
+        Neue Partner und Deals können jederzeit
+        ergänzt werden.
+
     </p>
 
 </article>
@@ -2855,6 +3158,11 @@ details[open] summary::after {
         Streams und weiteren Content rund
         um JumaaBonus.
 
+        <br><br>
+
+        Twitch erreichst du direkt über
+        unsere Website.
+
     </p>
 
 </article>
@@ -2873,6 +3181,11 @@ details[open] summary::after {
 
         Unser Discord ist der Treffpunkt
         für Deals, Updates und Community.
+
+        <br><br>
+
+        Dort bleibst du über neue Inhalte,
+        Partner und Streams informiert.
 
     </p>
 
@@ -3045,6 +3358,12 @@ details[open] summary::after {
         Casino-Content, aktuelle Deals,
         Streams und Entertainment.
 
+        <br><br>
+
+        Unser Ziel ist es,
+        aktuelle Partnerschaften und Community-Inhalte
+        übersichtlich an einem Ort zusammenzubringen.
+
     </div>
 
 </details>
@@ -3057,8 +3376,13 @@ details[open] summary::after {
 
     <div class="faq-answer">
 
-        Aktuell findest du Slotoro Casino
-        und BitKingz als Partner auf unserer Website.
+        Aktuell findest du Spintroll,
+        Slotoro Casino und BitKingz
+        als Partner auf unserer Website.
+
+        <br><br>
+
+        Spintroll ist derzeit unser hervorgehobener Top Deal.
 
     </div>
 
@@ -3077,8 +3401,9 @@ details[open] summary::after {
 
         <br><br>
 
-        Einige Links sind Affiliate-Links.
-        Dadurch kann JumaaBonus eine Provision erhalten.
+        Einige Links auf JumaaBonus sind Affiliate-Links.
+        Dadurch kann JumaaBonus eine Provision erhalten,
+        ohne dass dir dadurch zusätzliche Kosten entstehen.
 
     </div>
 
@@ -3123,7 +3448,28 @@ details[open] summary::after {
 
     <div class="faq-answer">
 
-        Ja. JumaaBonus soll Schritt für Schritt wachsen.
+        Ja.
+
+        JumaaBonus soll Schritt für Schritt wachsen
+        und weitere Partnerschaften und Angebote ergänzen.
+
+    </div>
+
+</details>
+
+<details>
+
+    <summary>
+        Kostet JumaaBonus etwas?
+    </summary>
+
+    <div class="faq-answer">
+
+        Nein.
+
+        Die Nutzung unserer Website,
+        unseres Twitch-Kanals und der
+        Discord-Community ist grundsätzlich kostenlos.
 
     </div>
 
@@ -3137,8 +3483,11 @@ details[open] summary::after {
 
     <div class="faq-answer">
 
-        Ja. Casino- und Glücksspielinhalte
-        richten sich ausschließlich an volljährige Personen.
+        Ja.
+
+        Casino- und Glücksspielinhalte
+        richten sich ausschließlich
+        an volljährige Personen.
 
     </div>
 
@@ -3154,14 +3503,19 @@ details[open] summary::after {
 
     <br><br>
 
-    Glücksspiel kann süchtig machen.
+    Glücksspiel kann süchtig machen und zu finanziellen
+    Problemen führen.
 
     Spiele nur mit Geld,
-    dessen Verlust du verkraften kannst.
+    dessen Verlust du verkraften kannst,
+    und nur wenn Glücksspiel an deinem Aufenthaltsort
+    legal ist und du volljährig bist.
 
     <br><br>
 
     Einige Links auf dieser Website sind Affiliate-Links.
+    Dadurch kann JumaaBonus eine Provision erhalten,
+    ohne dass dir dadurch zusätzliche Kosten entstehen.
 
 </div>
 
@@ -3491,7 +3845,7 @@ document
 );
 
 /* =========================================================
-   SLOTORO 3D CARD
+   SPINTROLL 3D CARD
 ========================================================= */
 
 const showcase =
